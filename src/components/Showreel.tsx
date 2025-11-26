@@ -1,6 +1,5 @@
 const Showreel = () => {
-  return (
-    <section id="showreel" className="relative py-32 px-6 overflow-hidden">
+  return <section id="showreel" className="relative py-32 px-6 overflow-hidden">
       {/* Geometric shapes */}
       <div className="geometric-shape top-20 left-[5%] w-72 h-72 rounded-full bg-accent-purple opacity-[0.04] blur-3xl" />
       <div className="geometric-shape bottom-20 right-[10%] w-96 h-96 rounded-3xl bg-accent-purple opacity-[0.05] blur-2xl rotate-12" />
@@ -17,9 +16,9 @@ const Showreel = () => {
           {/* Left text block - desktop only */}
           <div className="hidden lg:block relative">
             <div className="glass-card p-6 space-y-3">
-              <p className="text-sm text-muted-foreground">Short-form edits</p>
-              <p className="text-sm text-muted-foreground">Reels</p>
-              <p className="text-sm text-muted-foreground">Hooks</p>
+              <p className="text-sm text-muted-foreground text-center">Short-form edits</p>
+              <p className="text-sm text-muted-foreground text-center">Reels</p>
+              <p className="text-sm text-muted-foreground text-center">Hooks</p>
             </div>
             {/* Geometric shape behind */}
             <div className="geometric-shape -top-10 -left-10 w-32 h-32 rounded-2xl bg-accent-purple opacity-[0.05] blur-xl" />
@@ -39,17 +38,15 @@ const Showreel = () => {
           {/* Right text block - desktop only */}
           <div className="hidden lg:block relative">
             <div className="glass-card p-6 space-y-3">
-              <p className="text-sm text-muted-foreground">Cinematic cuts</p>
-              <p className="text-sm text-muted-foreground">Color grading</p>
-              <p className="text-sm text-muted-foreground">Sound design</p>
+              <p className="text-sm text-muted-foreground text-center">Cinematic cuts</p>
+              <p className="text-sm text-muted-foreground text-center">Color grading</p>
+              <p className="text-sm text-muted-foreground text-center">Sound design</p>
             </div>
             {/* Geometric shape behind */}
             <div className="geometric-shape -bottom-10 -right-10 w-40 h-40 rounded-3xl bg-accent-purple opacity-[0.06] blur-xl rotate-45" />
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Showreel;
