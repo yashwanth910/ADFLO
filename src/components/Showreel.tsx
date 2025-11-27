@@ -1,8 +1,20 @@
+import geometricShape2 from "@/assets/geometric-shape-2.png";
+import geometricShape3 from "@/assets/geometric-shape-3.png";
+
 const Showreel = () => {
   return <section id="showreel" className="relative py-32 px-6 overflow-hidden">
       {/* Geometric shapes */}
-      <div className="geometric-shape top-20 left-[5%] w-72 h-72 rounded-full bg-accent-purple opacity-[0.04] blur-3xl" />
-      <div className="geometric-shape bottom-20 right-[10%] w-96 h-96 rounded-3xl bg-accent-purple opacity-[0.05] blur-2xl rotate-12" />
+      <img 
+        src={geometricShape2}
+        alt=""
+        className="geometric-shape top-20 left-[5%] w-72 h-72 opacity-[0.04] blur-3xl"
+      />
+      <img 
+        src={geometricShape3}
+        alt=""
+        className="geometric-shape bottom-20 right-[10%] w-96 h-96 opacity-[0.05] blur-2xl"
+        style={{ transform: "rotate(12deg)" }}
+      />
 
       <div className="container mx-auto">
         <div className="text-center mb-16 space-y-4">
@@ -21,7 +33,11 @@ const Showreel = () => {
               <p className="text-sm text-muted-foreground text-center">Hooks</p>
             </div>
             {/* Geometric shape behind */}
-            <div className="geometric-shape -top-10 -left-10 w-32 h-32 rounded-2xl bg-accent-purple opacity-[0.05] blur-xl" />
+            <img 
+              src={geometricShape2}
+              alt=""
+              className="geometric-shape -top-10 -left-10 w-32 h-32 opacity-[0.05] blur-xl"
+            />
           </div>
 
           {/* Showreel video card */}
@@ -32,7 +48,11 @@ const Showreel = () => {
               </div>
             </div>
             {/* Intersecting shapes */}
-            <div className="geometric-shape -top-16 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full bg-accent-purple opacity-[0.04] blur-2xl" />
+            <img 
+              src={geometricShape3}
+              alt=""
+              className="geometric-shape -top-16 left-1/2 -translate-x-1/2 w-48 h-48 opacity-[0.04] blur-2xl"
+            />
           </div>
 
           {/* Right text block - desktop only */}
@@ -43,7 +63,12 @@ const Showreel = () => {
               <p className="text-sm text-muted-foreground text-center">Sound design</p>
             </div>
             {/* Geometric shape behind */}
-            <div className="geometric-shape -bottom-10 -right-10 w-40 h-40 rounded-3xl bg-accent-purple opacity-[0.06] blur-xl rotate-45" />
+            <img 
+              src={geometricShape2}
+              alt=""
+              className="geometric-shape -bottom-10 -right-10 w-40 h-40 opacity-[0.06] blur-xl"
+              style={{ transform: "rotate(45deg)" }}
+            />
           </div>
         </div>
       </div>

@@ -82,6 +82,15 @@ All colors MUST be HSL.
   z-index: 0;
 }
 
+/* Hide scrollbar for testimonials carousel */
+*::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Smooth scroll offset for fixed navbar */
 section {
   scroll-margin-top: 80px;

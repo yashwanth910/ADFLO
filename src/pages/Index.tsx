@@ -1,11 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Showreel from "@/components/Showreel";
-import WorkGrid from "@/components/WorkGrid";
+import WorkGridVideo from "@/components/WorkGridVideo";
+import WorkGridDesign from "@/components/WorkGridDesign";
 import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
-import Pricing from "@/components/Pricing";
+import PricingNew from "@/components/PricingNew";
 import Testimonials from "@/components/Testimonials";
+import Team from "@/components/Team";
 import Contact from "@/components/Contact";
 
 const Index = () => {
@@ -14,12 +16,13 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Showreel />
-      <WorkGrid id="video-work" title="Video Work" type="video" />
-      <WorkGrid id="design-work" title="Design Work" type="design" />
+      <WorkGridVideo id="video-work" title="Video Work" />
+      <WorkGridDesign id="design-work" title="Design Work" />
       <AboutUs />
       <Services />
-      <Pricing />
+      <PricingNew />
       <Testimonials />
+      <Team />
       <Contact />
     </div>
   );

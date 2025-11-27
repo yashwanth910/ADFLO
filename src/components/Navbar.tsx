@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logoPlaceholder from "@/assets/logo-placeholder.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,9 +31,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-muted to-accent flex items-center justify-center">
-              <span className="text-lg font-bold">CS</span>
-            </div>
+            <img 
+              src={logoPlaceholder} 
+              alt="Studio Logo" 
+              className="h-10 w-auto object-contain"
+            />
           </div>
 
           {/* Desktop Navigation */}

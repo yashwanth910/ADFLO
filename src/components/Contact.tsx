@@ -3,6 +3,10 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { useState } from "react";
+import palmLeaf2 from "@/assets/palm-leaf-2.png";
+import geometricShape1 from "@/assets/geometric-shape-1.png";
+import geometricShape2 from "@/assets/geometric-shape-2.png";
+import geometricShape3 from "@/assets/geometric-shape-3.png";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -44,17 +48,29 @@ const Contact = () => {
   return (
     <section id="contact" className="relative py-32 px-6 overflow-hidden">
       {/* Large purple palm-leaf silhouette - centered behind contact card */}
-      <div 
+      <img 
+        src={palmLeaf2}
+        alt=""
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-[0.06] blur-[20px] pointer-events-none"
-        style={{
-          background: "radial-gradient(circle, hsl(262, 100%, 71%) 0%, transparent 70%)",
-        }}
       />
 
       {/* Geometric shapes intersecting contact card */}
-      <div className="geometric-shape top-32 left-[8%] w-80 h-80 rounded-full bg-accent-purple opacity-[0.04] blur-3xl" />
-      <div className="geometric-shape bottom-20 right-[10%] w-72 h-72 rounded-3xl bg-accent-purple opacity-[0.05] blur-2xl rotate-12" />
-      <div className="geometric-shape top-1/4 right-[15%] w-56 h-56 rounded-2xl bg-accent-purple opacity-[0.03] blur-xl" />
+      <img 
+        src={geometricShape1}
+        alt=""
+        className="geometric-shape top-32 left-[8%] w-80 h-80 opacity-[0.04] blur-3xl"
+      />
+      <img 
+        src={geometricShape2}
+        alt=""
+        className="geometric-shape bottom-20 right-[10%] w-72 h-72 opacity-[0.05] blur-2xl"
+        style={{ transform: "rotate(12deg)" }}
+      />
+      <img 
+        src={geometricShape3}
+        alt=""
+        className="geometric-shape top-1/4 right-[15%] w-56 h-56 opacity-[0.03] blur-xl"
+      />
 
       <div className="container mx-auto">
         <div className="text-center mb-16 space-y-4">
@@ -62,6 +78,15 @@ const Contact = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Ready to elevate your visual story? Get in touch and let's bring your vision to life.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-muted-foreground pt-4">
+            <a href="mailto:cypher.ark.yt@gmail.com" className="hover:text-foreground transition-colors">
+              Email: cypher.ark.yt@gmail.com
+            </a>
+            <span className="hidden sm:inline">|</span>
+            <a href="mailto:cypher.ark.yt@gmail.com" className="hover:text-foreground transition-colors">
+              Business: cypher.ark.yt@gmail.com
+            </a>
+          </div>
         </div>
 
         <div className="relative z-10 max-w-2xl mx-auto glass-card p-10 hover:shadow-2xl hover:shadow-muted/10 transition-all duration-500">
