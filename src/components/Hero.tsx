@@ -1,4 +1,8 @@
 import { Button } from "@/components/ui/button";
+import palmLeaf1 from "@/assets/palm-leaf-1.png";
+import geometricShape1 from "@/assets/geometric-shape-1.png";
+import geometricShape2 from "@/assets/geometric-shape-2.png";
+
 const Hero = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
@@ -11,15 +15,30 @@ const Hero = () => {
   };
   return <section id="hero" className="relative min-h-screen flex items-center justify-center px-6 py-32 overflow-hidden">
       {/* Purple palm leaf silhouette - bottom right */}
-      <div className="absolute bottom-10 right-10 w-[600px] h-[600px] opacity-[0.07] blur-[18px] pointer-events-none" style={{
-      background: "radial-gradient(circle, hsl(262, 100%, 71%) 0%, transparent 70%)",
-      transform: "rotate(-25deg)"
-    }} />
+      <img 
+        src={palmLeaf1}
+        alt=""
+        className="absolute bottom-10 right-10 w-[600px] h-[600px] opacity-[0.07] blur-[18px] pointer-events-none"
+        style={{ transform: "rotate(-25deg)" }}
+      />
 
       {/* Geometric shapes behind hero card */}
-      <div className="geometric-shape top-20 left-[10%] w-64 h-64 rounded-full bg-accent-purple opacity-[0.04] blur-2xl" />
-      <div className="geometric-shape top-40 right-[15%] w-80 h-80 rounded-3xl bg-accent-purple opacity-[0.05] blur-3xl rotate-45" />
-      <div className="geometric-shape bottom-32 left-[20%] w-48 h-48 rounded-2xl bg-accent-purple opacity-[0.03] blur-xl" />
+      <img 
+        src={geometricShape1}
+        alt=""
+        className="geometric-shape top-20 left-[10%] w-64 h-64 opacity-[0.04] blur-2xl"
+      />
+      <img 
+        src={geometricShape2}
+        alt=""
+        className="geometric-shape top-40 right-[15%] w-80 h-80 opacity-[0.05] blur-3xl"
+        style={{ transform: "rotate(45deg)" }}
+      />
+      <img 
+        src={geometricShape1}
+        alt=""
+        className="geometric-shape bottom-32 left-[20%] w-48 h-48 opacity-[0.03] blur-xl"
+      />
 
       {/* Hero card */}
       <div className="relative z-10 glass-card max-w-5xl w-full p-12 md:p-16 text-center space-y-8 hover:shadow-2xl hover:shadow-muted/10 transition-all duration-500">

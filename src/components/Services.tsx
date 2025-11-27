@@ -1,11 +1,13 @@
 import { Film, Smartphone, Layers, Sparkles, RefreshCw } from "lucide-react";
+import geometricShape2 from "@/assets/geometric-shape-2.png";
+import geometricShape3 from "@/assets/geometric-shape-3.png";
 
 const Services = () => {
   const services = [
     {
       icon: Film,
       title: "Video Editing",
-      description: "Professional editing with cinematic flair. Color grading, sound design, and seamless transitions.",
+      description: "Story-driven edits with seamless transitions, color grading, and sound design.",
     },
     {
       icon: Smartphone,
@@ -19,8 +21,8 @@ const Services = () => {
     },
     {
       icon: Sparkles,
-      title: "Branding & Identity",
-      description: "Cohesive visual systems that define and elevate your brand presence.",
+      title: "Color Grading",
+      description: "Professional color correction and cinematic grading for stunning visuals.",
     },
     {
       icon: RefreshCw,
@@ -32,9 +34,22 @@ const Services = () => {
   return (
     <section id="services" className="relative py-32 px-6 overflow-hidden">
       {/* Purple geometric shapes */}
-      <div className="geometric-shape top-32 left-[10%] w-96 h-96 rounded-full bg-accent-purple opacity-[0.04] blur-3xl" />
-      <div className="geometric-shape bottom-20 right-[12%] w-80 h-80 rounded-3xl bg-accent-purple opacity-[0.05] blur-2xl rotate-45" />
-      <div className="geometric-shape top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-2xl bg-accent-purple opacity-[0.03] blur-xl" />
+      <img 
+        src={geometricShape2}
+        alt=""
+        className="geometric-shape top-32 left-[10%] w-96 h-96 opacity-[0.05] blur-3xl"
+      />
+      <img 
+        src={geometricShape3}
+        alt=""
+        className="geometric-shape bottom-20 right-[15%] w-72 h-72 opacity-[0.04] blur-2xl"
+        style={{ transform: "rotate(12deg)" }}
+      />
+      <img 
+        src={geometricShape2}
+        alt=""
+        className="geometric-shape top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 opacity-[0.03] blur-xl"
+      />
 
       <div className="container mx-auto">
         <div className="text-center mb-16 space-y-4">
@@ -79,7 +94,11 @@ const Services = () => {
           </div>
 
           {/* Additional intersecting shapes */}
-          <div className="geometric-shape top-1/4 right-[5%] w-64 h-64 rounded-full bg-accent-purple opacity-[0.04] blur-2xl" />
+          <img 
+            src={geometricShape3}
+            alt=""
+            className="geometric-shape top-1/4 right-[5%] w-64 h-64 opacity-[0.04] blur-2xl"
+          />
         </div>
       </div>
     </section>
