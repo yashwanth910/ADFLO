@@ -56,16 +56,15 @@ const Testimonials = () => {
 
     animationId = requestAnimationFrame(scroll);
 
-    const handleMouseEnter = () => { isPaused = true; };
-    const handleMouseLeave = () => { isPaused = false; };
+    const handleClick = () => { 
+      isPaused = !isPaused;
+    };
 
-    scrollContainer.addEventListener("mouseenter", handleMouseEnter);
-    scrollContainer.addEventListener("mouseleave", handleMouseLeave);
+    scrollContainer.addEventListener("click", handleClick);
 
     return () => {
       cancelAnimationFrame(animationId);
-      scrollContainer?.removeEventListener("mouseenter", handleMouseEnter);
-      scrollContainer?.removeEventListener("mouseleave", handleMouseLeave);
+      scrollContainer?.removeEventListener("click", handleClick);
     };
   }, []);
 
@@ -94,14 +93,14 @@ const Testimonials = () => {
 
         <div 
           ref={scrollRef}
-          className="overflow-x-hidden relative"
+          className="overflow-x-hidden relative pt-4 cursor-pointer"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           <div className="flex gap-8" style={{ width: 'max-content' }}>
             {duplicatedTestimonials.map((testimonial, idx) => (
               <div
                 key={idx}
-                className="glass-card p-8 space-y-6 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]"
+                className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]"
               >
                 <div className="flex gap-1">
                   {Array.from({ length: testimonial.rating }).map((_, starIdx) => (

@@ -1,6 +1,8 @@
 import { Image as ImageIcon } from "lucide-react";
+import { useState } from "react";
 import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape3 from "@/assets/geometric-shape-3.png";
+import ImageLightbox from "./ImageLightbox";
 
 interface WorkGridDesignProps {
   id: string;
@@ -8,6 +10,9 @@ interface WorkGridDesignProps {
 }
 
 const WorkGridDesign = ({ id, title }: WorkGridDesignProps) => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const items = [
     {
       title: "Design Project 1",
@@ -36,8 +41,32 @@ const WorkGridDesign = ({ id, title }: WorkGridDesignProps) => {
     },
   ];
 
+  const handleImageClick = (index: number) => {
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const handlePrevious = () => {
+    setCurrentImageIndex((prev) => (prev === 0 ? items.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrentImageIndex((prev) => (prev === items.length - 1 ? 0 : prev + 1));
+  };
+
   return (
-    <section id={id} className="relative py-32 px-6 overflow-hidden">
+    <>
+      {lightboxOpen && (
+        <ImageLightbox
+          images={items}
+          currentIndex={currentImageIndex}
+          onClose={() => setLightboxOpen(false)}
+          onPrevious={handlePrevious}
+          onNext={handleNext}
+        />
+      )}
+
+      <section id={id} className="relative py-32 px-6 overflow-hidden">
       {/* Geometric shapes behind grid */}
       <img 
         src={geometricShape3}
@@ -65,7 +94,8 @@ const WorkGridDesign = ({ id, title }: WorkGridDesignProps) => {
             {items.slice(0, 3).map((item, idx) => (
               <div
                 key={idx}
-                className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 relative overflow-hidden"
+                className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 relative overflow-hidden cursor-pointer"
+                onClick={() => handleImageClick(idx)}
               >
                 <img 
                   src={item.image} 
@@ -86,7 +116,8 @@ const WorkGridDesign = ({ id, title }: WorkGridDesignProps) => {
             {items.slice(3).map((item, idx) => (
               <div
                 key={idx + 3}
-                className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 relative overflow-hidden"
+                className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 relative overflow-hidden cursor-pointer"
+                onClick={() => handleImageClick(idx + 3)}
               >
                 <img 
                   src={item.image} 
@@ -116,6 +147,7 @@ const WorkGridDesign = ({ id, title }: WorkGridDesignProps) => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
