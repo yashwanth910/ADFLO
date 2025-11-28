@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Showreel from "@/components/Showreel";
+import QuickStats from "@/components/QuickStats";
 import WorkGridVideo from "@/components/WorkGridVideo";
 import WorkGridDesign from "@/components/WorkGridDesign";
 import AboutUs from "@/components/AboutUs";
@@ -15,7 +15,7 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
-      <Showreel />
+      <QuickStats />
       <WorkGridVideo id="video-work" title="Video Work" />
       <WorkGridDesign id="design-work" title="Design Work" />
       <AboutUs />

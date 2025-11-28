@@ -87,30 +87,34 @@ const PricingNew = () => {
           {plans.map((plan, idx) => (
             <div
               key={idx}
-              className="glass-card p-8 space-y-6 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300"
+              className="glass-card p-8 flex flex-col hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300"
             >
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold">{plan.name}</h3>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-2xl font-bold">{plan.price}</span>
+              <div className="flex-1 space-y-6">
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold">{plan.name}</h3>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-2xl font-bold">{plan.price}</span>
+                  </div>
                 </div>
+
+                <ul className="space-y-3">
+                  {plan.features.map((feature, featureIdx) => (
+                    <li key={featureIdx} className="flex items-start gap-3">
+                      <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                      <span className="text-sm text-muted-foreground">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              <ul className="space-y-3">
-                {plan.features.map((feature, featureIdx) => (
-                  <li key={featureIdx} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-muted-foreground">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <Button
-                className="w-full glass-card hover:bg-muted/50 transition-all duration-300"
-                onClick={plan.isCustom ? scrollToContact : scrollToContact}
-              >
-                {plan.cta}
-              </Button>
+              <div className="mt-6">
+                <Button
+                  className="w-full glass-card hover:bg-muted/50 transition-all duration-300"
+                  onClick={plan.isCustom ? scrollToContact : scrollToContact}
+                >
+                  {plan.cta}
+                </Button>
+              </div>
             </div>
           ))}
 

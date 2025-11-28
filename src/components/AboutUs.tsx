@@ -42,10 +42,10 @@ const AboutUs = () => {
   ];
 
   return (
-    <section id="about-us" className="relative py-32 px-6 overflow-hidden">
-      {/* Geometric shapes */}
-      <div className="geometric-shape top-20 left-[10%] w-96 h-96 rounded-full bg-accent-purple opacity-[0.04] blur-3xl" />
-      <div className="geometric-shape bottom-32 right-[15%] w-80 h-80 rounded-3xl bg-accent-purple opacity-[0.05] blur-2xl rotate-45" />
+    <section id="about-us" className="relative py-32 px-6 overflow-visible">
+      {/* Geometric shapes with edge fade */}
+      <div className="geometric-shape top-20 left-[10%] w-96 h-96 rounded-full bg-accent-purple opacity-[0.03] blur-3xl" style={{ maskImage: 'radial-gradient(circle, black 50%, transparent 100%)' }} />
+      <div className="geometric-shape bottom-32 right-[15%] w-80 h-80 rounded-3xl bg-accent-purple opacity-[0.04] blur-2xl rotate-45" style={{ maskImage: 'radial-gradient(circle, black 50%, transparent 100%)' }} />
 
       <div className="container mx-auto space-y-32">
         {/* Why Us */}
@@ -132,7 +132,7 @@ const AboutUs = () => {
                 <AccordionItem
                   key={idx}
                   value={`item-${idx}`}
-                  className="glass-card px-6 border-0"
+                  className="glass-card px-6 border-0 hover:scale-[1.02] hover:shadow-lg hover:shadow-muted/10 transition-all duration-300 focus-within:scale-[1.02] focus-within:shadow-lg"
                 >
                   <AccordionTrigger className="text-left hover:no-underline py-6">
                     {faq.question}
