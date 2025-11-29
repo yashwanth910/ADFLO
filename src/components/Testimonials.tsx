@@ -5,35 +5,6 @@ import geometricShape3 from "@/assets/geometric-shape-3.png";
 
 const Testimonials = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      role: "Content Creator",
-      content: "Absolutely transformed my content. The attention to detail and creative vision is unmatched.",
-      rating: 5,
-    },
-    {
-      name: "Marcus Rodriguez",
-      role: "Brand Director",
-      content: "Professional, efficient, and incredibly talented. Our brand has never looked better.",
-      rating: 5,
-    },
-    {
-      name: "Emily Thompson",
-      role: "Marketing Manager",
-      content: "The team understood our vision perfectly and delivered beyond expectations. Highly recommend!",
-      rating: 5,
-    },
-    {
-      name: "David Park",
-      role: "Startup Founder",
-      content: "Fast turnaround without compromising quality. They're now our go-to creative partner.",
-      rating: 5,
-    },
-  ];
-
-  // Duplicate testimonials for seamless loop
-  const duplicatedTestimonials = [...testimonials, ...testimonials];
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -44,10 +15,11 @@ const Testimonials = () => {
 
     const scroll = () => {
       if (!isPaused && scrollContainer) {
-        scrollContainer.scrollLeft += 0.5;
+        scrollContainer.scrollLeft += 0.5; // Slow smooth scroll
         
-        // Reset scroll position when reaching halfway (seamless loop)
-        if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+        // Reset when reaching halfway for seamless loop
+        const maxScroll = scrollContainer.scrollWidth / 2;
+        if (scrollContainer.scrollLeft >= maxScroll) {
           scrollContainer.scrollLeft = 0;
         }
       }
@@ -69,8 +41,8 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="relative py-32 px-6 overflow-hidden">
-      {/* Geometric shapes behind testimonials */}
+    <section className="relative py-32 overflow-hidden">
+      {/* Geometric shapes - All Editable */}
       <img 
         src={geometricShape1}
         alt=""
@@ -83,45 +55,178 @@ const Testimonials = () => {
         style={{ transform: "rotate(45deg)" }}
       />
 
-      <div className="container mx-auto">
+      <div className="container mx-auto px-6">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">What Clients Say</h2>
           <p className="text-xl text-muted-foreground">
             Trusted by creators and brands worldwide
           </p>
         </div>
+      </div>
 
-        <div 
-          ref={scrollRef}
-          className="overflow-x-hidden relative pt-4 cursor-pointer"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
-          <div className="flex gap-8" style={{ width: 'max-content' }}>
-            {duplicatedTestimonials.map((testimonial, idx) => (
-              <div
-                key={idx}
-                className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]"
-              >
-                <div className="flex gap-1">
-                  {Array.from({ length: testimonial.rating }).map((_, starIdx) => (
-                    <Star key={starIdx} className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground italic">&ldquo;{testimonial.content}&rdquo;</p>
-                <div>
-                  <p className="font-semibold">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                </div>
-              </div>
-            ))}
+      {/* Full-width scrolling container with padding */}
+      <div 
+        ref={scrollRef}
+        className="overflow-x-hidden relative cursor-pointer"
+        style={{ 
+          scrollbarWidth: 'none', 
+          msOverflowStyle: 'none',
+          paddingTop: '60px',
+          paddingBottom: '60px'
+        }}
+      >
+        <div className="flex gap-8 px-0" style={{ width: 'max-content' }}>
+          {/* Review Card 1 - All Editable */}
+          <div className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]">
+            <div className="flex gap-1">
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+            </div>
+            <p className="text-muted-foreground italic">&ldquo;Absolutely transformed my content. The attention to detail and creative vision is unmatched.&rdquo;</p>
+            <div>
+              <p className="font-semibold">Sarah Chen</p>
+              <p className="text-sm text-muted-foreground">Content Creator</p>
+            </div>
           </div>
 
-          {/* Intersecting shape */}
-          <img 
-            src={geometricShape1}
-            alt=""
-            className="geometric-shape absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 opacity-[0.03] blur-xl pointer-events-none"
-          />
+          {/* Review Card 2 - All Editable */}
+          <div className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]">
+            <div className="flex gap-1">
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+            </div>
+            <p className="text-muted-foreground italic">&ldquo;Professional, efficient, and incredibly talented. Our brand has never looked better.&rdquo;</p>
+            <div>
+              <p className="font-semibold">Marcus Rodriguez</p>
+              <p className="text-sm text-muted-foreground">Brand Director</p>
+            </div>
+          </div>
+
+          {/* Review Card 3 - All Editable */}
+          <div className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]">
+            <div className="flex gap-1">
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+            </div>
+            <p className="text-muted-foreground italic">&ldquo;The team understood our vision perfectly and delivered beyond expectations. Highly recommend!&rdquo;</p>
+            <div>
+              <p className="font-semibold">Emily Thompson</p>
+              <p className="text-sm text-muted-foreground">Marketing Manager</p>
+            </div>
+          </div>
+
+          {/* Review Card 4 - All Editable */}
+          <div className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]">
+            <div className="flex gap-1">
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+            </div>
+            <p className="text-muted-foreground italic">&ldquo;Fast turnaround without compromising quality. They're now our go-to creative partner.&rdquo;</p>
+            <div>
+              <p className="font-semibold">David Park</p>
+              <p className="text-sm text-muted-foreground">Startup Founder</p>
+            </div>
+          </div>
+
+          {/* Review Card 5 - All Editable */}
+          <div className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]">
+            <div className="flex gap-1">
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+            </div>
+            <p className="text-muted-foreground italic">&ldquo;Exceptional work that elevated our entire content strategy. Worth every penny!&rdquo;</p>
+            <div>
+              <p className="font-semibold">Jessica Wang</p>
+              <p className="text-sm text-muted-foreground">Creative Director</p>
+            </div>
+          </div>
+
+          {/* Duplicate all 5 cards for seamless loop */}
+          <div className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]">
+            <div className="flex gap-1">
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+            </div>
+            <p className="text-muted-foreground italic">&ldquo;Absolutely transformed my content. The attention to detail and creative vision is unmatched.&rdquo;</p>
+            <div>
+              <p className="font-semibold">Sarah Chen</p>
+              <p className="text-sm text-muted-foreground">Content Creator</p>
+            </div>
+          </div>
+          <div className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]">
+            <div className="flex gap-1">
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+            </div>
+            <p className="text-muted-foreground italic">&ldquo;Professional, efficient, and incredibly talented. Our brand has never looked better.&rdquo;</p>
+            <div>
+              <p className="font-semibold">Marcus Rodriguez</p>
+              <p className="text-sm text-muted-foreground">Brand Director</p>
+            </div>
+          </div>
+          <div className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]">
+            <div className="flex gap-1">
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+            </div>
+            <p className="text-muted-foreground italic">&ldquo;The team understood our vision perfectly and delivered beyond expectations. Highly recommend!&rdquo;</p>
+            <div>
+              <p className="font-semibold">Emily Thompson</p>
+              <p className="text-sm text-muted-foreground">Marketing Manager</p>
+            </div>
+          </div>
+          <div className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]">
+            <div className="flex gap-1">
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+            </div>
+            <p className="text-muted-foreground italic">&ldquo;Fast turnaround without compromising quality. They're now our go-to creative partner.&rdquo;</p>
+            <div>
+              <p className="font-semibold">David Park</p>
+              <p className="text-sm text-muted-foreground">Startup Founder</p>
+            </div>
+          </div>
+          <div className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]">
+            <div className="flex gap-1">
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+              <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
+            </div>
+            <p className="text-muted-foreground italic">&ldquo;Exceptional work that elevated our entire content strategy. Worth every penny!&rdquo;</p>
+            <div>
+              <p className="font-semibold">Jessica Wang</p>
+              <p className="text-sm text-muted-foreground">Creative Director</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

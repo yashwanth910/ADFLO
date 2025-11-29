@@ -5,16 +5,6 @@ import logoPlaceholder from "@/assets/logo-placeholder.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    { name: "Home", href: "#hero" },
-    { name: "Video Work", href: "#video-work" },
-    { name: "Design Work", href: "#design-work" },
-    { name: "About Us", href: "#about-us" },
-    { name: "Services", href: "#services" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Contact", href: "#contact" },
-  ];
-
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
@@ -25,31 +15,69 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-0 border-b border-border/50">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-0 border-b border-border/50" style={{ height: '70px' }}>
+      <div className="container mx-auto px-6 h-full">
+        <div className="flex items-center justify-between h-full">
+          {/* Logo Image - Editable */}
           <div className="flex items-center">
             <img 
               src={logoPlaceholder} 
               alt="Studio Logo" 
-              className="h-10 w-auto object-contain"
+              className="h-12 w-12 object-contain rounded-xl"
             />
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - All Static Links */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className="text-sm text-muted-foreground hover:text-foreground transition-all duration-300 relative group"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-foreground group-hover:w-full transition-all duration-300"></span>
-              </a>
-            ))}
+            <a
+              href="#hero"
+              onClick={(e) => scrollToSection(e, "#hero")}
+              className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300"
+            >
+              Home
+            </a>
+            <a
+              href="#video-work"
+              onClick={(e) => scrollToSection(e, "#video-work")}
+              className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300"
+            >
+              Video Work
+            </a>
+            <a
+              href="#design-work"
+              onClick={(e) => scrollToSection(e, "#design-work")}
+              className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300"
+            >
+              Design Work
+            </a>
+            <a
+              href="#about-us"
+              onClick={(e) => scrollToSection(e, "#about-us")}
+              className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300"
+            >
+              About Us
+            </a>
+            <a
+              href="#services"
+              onClick={(e) => scrollToSection(e, "#services")}
+              className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300"
+            >
+              Services
+            </a>
+            <a
+              href="#pricing"
+              onClick={(e) => scrollToSection(e, "#pricing")}
+              className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300"
+            >
+              Pricing
+            </a>
+            <a
+              href="#contact"
+              onClick={(e) => scrollToSection(e, "#contact")}
+              className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300"
+            >
+              Contact
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -64,17 +92,28 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden mt-4 pb-4 space-y-4 animate-fade-up">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
-                className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.name}
-              </a>
-            ))}
+          <div className="lg:hidden pb-4 space-y-4 animate-fade-up">
+            <a href="#hero" onClick={(e) => scrollToSection(e, "#hero")} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Home
+            </a>
+            <a href="#video-work" onClick={(e) => scrollToSection(e, "#video-work")} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Video Work
+            </a>
+            <a href="#design-work" onClick={(e) => scrollToSection(e, "#design-work")} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Design Work
+            </a>
+            <a href="#about-us" onClick={(e) => scrollToSection(e, "#about-us")} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+              About Us
+            </a>
+            <a href="#services" onClick={(e) => scrollToSection(e, "#services")} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Services
+            </a>
+            <a href="#pricing" onClick={(e) => scrollToSection(e, "#pricing")} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Pricing
+            </a>
+            <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Contact
+            </a>
           </div>
         )}
       </div>

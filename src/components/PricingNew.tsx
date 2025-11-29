@@ -4,50 +4,6 @@ import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape2 from "@/assets/geometric-shape-2.png";
 
 const PricingNew = () => {
-  const plans = [
-    {
-      name: "Digital Marketing",
-      price: "Starting at $250",
-      features: [
-        "Social Strategy",
-        "Ad Optimization",
-        "Analytics & Reporting",
-      ],
-      cta: "Start Project",
-    },
-    {
-      name: "Graphic Designing",
-      price: "Starting at $175",
-      features: [
-        "Branding",
-        "Visual Assets",
-        "Mockups",
-      ],
-      cta: "Start Project",
-    },
-    {
-      name: "Video Editing",
-      price: "Starting at $350",
-      features: [
-        "Story-driven edit",
-        "Color grading",
-        "Delivery formats",
-      ],
-      cta: "Start Project",
-    },
-    {
-      name: "Custom Plan",
-      price: "Custom",
-      features: [
-        "Scoped proposal",
-        "Custom quote",
-        "Fast turnaround",
-      ],
-      cta: "Contact Us",
-      isCustom: true,
-    },
-  ];
-
   const scrollToContact = () => {
     const element = document.querySelector("#contact");
     if (element) {
@@ -56,8 +12,8 @@ const PricingNew = () => {
   };
 
   return (
-    <section id="pricing" className="relative py-32 px-6 overflow-hidden">
-      {/* Purple fog and geometric shapes */}
+    <section id="pricing" className="relative py-32 px-6 overflow-visible">
+      {/* Geometric shapes - All Editable */}
       <img 
         src={geometricShape1}
         alt=""
@@ -83,48 +39,159 @@ const PricingNew = () => {
           </p>
         </div>
 
+        {/* 4 Static Pricing Cards - All Individually Editable */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto relative">
-          {plans.map((plan, idx) => (
-            <div
-              key={idx}
-              className="glass-card p-8 flex flex-col hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300"
-            >
-              <div className="flex-1 space-y-6">
-                <div className="space-y-2">
-                  <h3 className="text-xl font-bold">{plan.name}</h3>
-                  <div className="flex items-baseline gap-2">
-                    <span className="text-2xl font-bold">{plan.price}</span>
-                  </div>
+          {/* Pricing Card 1 - Digital Marketing */}
+          <div className="glass-card p-8 flex flex-col hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300" style={{ minHeight: '480px' }}>
+            <div className="flex-1 space-y-6">
+              <div className="space-y-2">
+                <h3 className="text-xl font-bold">Digital Marketing</h3>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-2xl font-bold">Starting at $250</span>
                 </div>
-
-                <ul className="space-y-3">
-                  {plan.features.map((feature, featureIdx) => (
-                    <li key={featureIdx} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
 
-              <div className="mt-6">
-                <Button
-                  className="w-full glass-card hover:bg-muted/50 transition-all duration-300"
-                  onClick={plan.isCustom ? scrollToContact : scrollToContact}
-                >
-                  {plan.cta}
-                </Button>
-              </div>
+              <ul className="space-y-3 flex-1">
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Social Strategy</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Ad Optimization</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Analytics & Reporting</span>
+                </li>
+              </ul>
             </div>
-          ))}
 
-          {/* Intersecting shapes */}
-          <img 
-            src={geometricShape2}
-            alt=""
-            className="geometric-shape -top-20 left-1/4 w-56 h-56 opacity-[0.04] blur-2xl"
-          />
+            <div className="mt-8">
+              <Button
+                className="w-full glass-card text-white hover:bg-muted/50 hover:shadow-[0_0_20px_rgba(167,117,255,0.3)] transition-all duration-300"
+                onClick={scrollToContact}
+              >
+                Start Project
+              </Button>
+            </div>
+          </div>
+
+          {/* Pricing Card 2 - Graphic Designing */}
+          <div className="glass-card p-8 flex flex-col hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300" style={{ minHeight: '480px' }}>
+            <div className="flex-1 space-y-6">
+              <div className="space-y-2">
+                <h3 className="text-xl font-bold">Graphic Designing</h3>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-2xl font-bold">Starting at $175</span>
+                </div>
+              </div>
+
+              <ul className="space-y-3 flex-1">
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Branding</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Visual Assets</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Mockups</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mt-8">
+              <Button
+                className="w-full glass-card text-white hover:bg-muted/50 hover:shadow-[0_0_20px_rgba(167,117,255,0.3)] transition-all duration-300"
+                onClick={scrollToContact}
+              >
+                Start Project
+              </Button>
+            </div>
+          </div>
+
+          {/* Pricing Card 3 - Video Editing */}
+          <div className="glass-card p-8 flex flex-col hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300" style={{ minHeight: '480px' }}>
+            <div className="flex-1 space-y-6">
+              <div className="space-y-2">
+                <h3 className="text-xl font-bold">Video Editing</h3>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-2xl font-bold">Starting at $350</span>
+                </div>
+              </div>
+
+              <ul className="space-y-3 flex-1">
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Story-driven edit</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Color grading</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Delivery formats</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mt-8">
+              <Button
+                className="w-full glass-card text-white hover:bg-muted/50 hover:shadow-[0_0_20px_rgba(167,117,255,0.3)] transition-all duration-300"
+                onClick={scrollToContact}
+              >
+                Start Project
+              </Button>
+            </div>
+          </div>
+
+          {/* Pricing Card 4 - Custom Plan */}
+          <div className="glass-card p-8 flex flex-col hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300" style={{ minHeight: '480px' }}>
+            <div className="flex-1 space-y-6">
+              <div className="space-y-2">
+                <h3 className="text-xl font-bold">Custom Plan</h3>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-2xl font-bold">Custom</span>
+                </div>
+              </div>
+
+              <ul className="space-y-3 flex-1">
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Scoped proposal</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Custom quote</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                  <span className="text-sm text-muted-foreground">Fast turnaround</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mt-8">
+              <Button
+                className="w-full glass-card text-white hover:bg-muted/50 hover:shadow-[0_0_20px_rgba(167,117,255,0.3)] transition-all duration-300"
+                onClick={scrollToContact}
+              >
+                Contact Us
+              </Button>
+            </div>
+          </div>
         </div>
+
+        {/* Additional intersecting shape */}
+        <img 
+          src={geometricShape2}
+          alt=""
+          className="geometric-shape -top-20 left-1/4 w-56 h-56 opacity-[0.04] blur-2xl"
+        />
       </div>
     </section>
   );

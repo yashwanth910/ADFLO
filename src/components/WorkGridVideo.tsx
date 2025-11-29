@@ -17,48 +17,10 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
     isVimeo?: boolean;
   } | null>(null);
 
-  const items = [
-    {
-      title: "Video Project 1",
-      description: "Cinematic storytelling",
-      thumbnail: "/placeholder.svg",
-      videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      isYouTube: true,
-    },
-    {
-      title: "Video Project 2",
-      description: "Creative reel",
-      thumbnail: "/placeholder.svg",
-      videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      isYouTube: true,
-    },
-    {
-      title: "Video Project 3",
-      description: "Brand video",
-      thumbnail: "/placeholder.svg",
-      videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      isYouTube: true,
-    },
-    {
-      title: "Video Project 4",
-      description: "Product showcase",
-      thumbnail: "/placeholder.svg",
-      videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      isYouTube: true,
-    },
-    {
-      title: "Video Project 5",
-      description: "Social media content",
-      thumbnail: "/placeholder.svg",
-      videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      isYouTube: true,
-    },
-  ];
-
   return (
     <>
-      <section id={id} className="relative py-32 px-6 overflow-hidden">
-        {/* Geometric shapes behind grid */}
+      <section id={id} className="relative py-32 px-6 overflow-visible">
+        {/* Geometric shapes - All Editable */}
         <img 
           src={geometricShape1}
           alt=""
@@ -79,60 +41,120 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
             </p>
           </div>
 
-          {/* Grid: 3 top row, 2 centered bottom row */}
+          {/* Grid: 3 top row, 2 centered bottom row - All Static Cards */}
           <div className="relative">
+            {/* First Row - 3 Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-              {items.slice(0, 3).map((item, idx) => (
-                <div
-                  key={idx}
-                  onClick={() => setSelectedVideo({
-                    url: item.videoUrl,
-                    title: item.title,
-                    isYouTube: item.isYouTube,
-                  })}
-                  className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden"
-                >
-                  <img 
-                    src={item.thumbnail} 
-                    alt={item.title}
-                    className="absolute inset-0 w-full h-full object-cover opacity-30"
-                  />
-                  <div className="relative z-10 flex flex-col items-center space-y-2">
-                    <Play className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
-                    <p className="text-sm font-semibold">{item.title}</p>
-                    <p className="text-xs text-muted-foreground">{item.description}</p>
-                  </div>
+              {/* Video Card 1 - All Editable */}
+              <div
+                onClick={() => setSelectedVideo({
+                  url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                  title: "Video Project 1",
+                  isYouTube: true,
+                })}
+                className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden"
+              >
+                <img 
+                  src="/placeholder.svg" 
+                  alt="Video Project 1"
+                  className="absolute inset-0 w-full h-full object-cover opacity-30"
+                />
+                <div className="relative z-10 flex flex-col items-center space-y-2">
+                  <Play className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
+                  <p className="text-sm font-semibold">Video Project 1</p>
+                  <p className="text-xs text-muted-foreground">Cinematic storytelling</p>
                 </div>
-              ))}
+              </div>
+
+              {/* Video Card 2 - All Editable */}
+              <div
+                onClick={() => setSelectedVideo({
+                  url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                  title: "Video Project 2",
+                  isYouTube: true,
+                })}
+                className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden"
+              >
+                <img 
+                  src="/placeholder.svg" 
+                  alt="Video Project 2"
+                  className="absolute inset-0 w-full h-full object-cover opacity-30"
+                />
+                <div className="relative z-10 flex flex-col items-center space-y-2">
+                  <Play className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
+                  <p className="text-sm font-semibold">Video Project 2</p>
+                  <p className="text-xs text-muted-foreground">Creative reel</p>
+                </div>
+              </div>
+
+              {/* Video Card 3 - All Editable */}
+              <div
+                onClick={() => setSelectedVideo({
+                  url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                  title: "Video Project 3",
+                  isYouTube: true,
+                })}
+                className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden"
+              >
+                <img 
+                  src="/placeholder.svg" 
+                  alt="Video Project 3"
+                  className="absolute inset-0 w-full h-full object-cover opacity-30"
+                />
+                <div className="relative z-10 flex flex-col items-center space-y-2">
+                  <Play className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
+                  <p className="text-sm font-semibold">Video Project 3</p>
+                  <p className="text-xs text-muted-foreground">Brand video</p>
+                </div>
+              </div>
             </div>
 
-            {/* Centered 2 cards */}
+            {/* Second Row - 2 Centered Cards */}
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {items.slice(3).map((item, idx) => (
-                <div
-                  key={idx + 3}
-                  onClick={() => setSelectedVideo({
-                    url: item.videoUrl,
-                    title: item.title,
-                    isYouTube: item.isYouTube,
-                  })}
-                  className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden"
-                >
-                  <img 
-                    src={item.thumbnail} 
-                    alt={item.title}
-                    className="absolute inset-0 w-full h-full object-cover opacity-30"
-                  />
-                  <div className="relative z-10 flex flex-col items-center space-y-2">
-                    <Play className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
-                    <p className="text-sm font-semibold">{item.title}</p>
-                    <p className="text-xs text-muted-foreground">{item.description}</p>
-                  </div>
+              {/* Video Card 4 - All Editable */}
+              <div
+                onClick={() => setSelectedVideo({
+                  url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                  title: "Video Project 4",
+                  isYouTube: true,
+                })}
+                className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden"
+              >
+                <img 
+                  src="/placeholder.svg" 
+                  alt="Video Project 4"
+                  className="absolute inset-0 w-full h-full object-cover opacity-30"
+                />
+                <div className="relative z-10 flex flex-col items-center space-y-2">
+                  <Play className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
+                  <p className="text-sm font-semibold">Video Project 4</p>
+                  <p className="text-xs text-muted-foreground">Product showcase</p>
                 </div>
-              ))}
+              </div>
+
+              {/* Video Card 5 - All Editable */}
+              <div
+                onClick={() => setSelectedVideo({
+                  url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+                  title: "Video Project 5",
+                  isYouTube: true,
+                })}
+                className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden"
+              >
+                <img 
+                  src="/placeholder.svg" 
+                  alt="Video Project 5"
+                  className="absolute inset-0 w-full h-full object-cover opacity-30"
+                />
+                <div className="relative z-10 flex flex-col items-center space-y-2">
+                  <Play className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
+                  <p className="text-sm font-semibold">Video Project 5</p>
+                  <p className="text-xs text-muted-foreground">Social media content</p>
+                </div>
+              </div>
             </div>
 
-            {/* Intersecting shapes */}
+            {/* Additional Intersecting shapes */}
             <img 
               src={geometricShape1}
               alt=""
