@@ -3,37 +3,9 @@ import geometricShape2 from "@/assets/geometric-shape-2.png";
 import geometricShape3 from "@/assets/geometric-shape-3.png";
 
 const Services = () => {
-  const services = [
-    {
-      icon: Film,
-      title: "Video Editing",
-      description: "Story-driven edits with seamless transitions, color grading, and sound design.",
-    },
-    {
-      icon: Smartphone,
-      title: "Reels & Short-Form",
-      description: "Attention-grabbing content optimized for social platforms. Maximum impact in minimal time.",
-    },
-    {
-      icon: Layers,
-      title: "Graphic Design",
-      description: "From logos to full brand suites. Visual design that tells your story.",
-    },
-    {
-      icon: Sparkles,
-      title: "Color Grading",
-      description: "Professional color correction and cinematic grading for stunning visuals.",
-    },
-    {
-      icon: RefreshCw,
-      title: "Content Repurposing",
-      description: "Transform one piece of content into multiple formats across all platforms.",
-    },
-  ];
-
   return (
-    <section id="services" className="relative py-32 px-6 overflow-hidden">
-      {/* Purple geometric shapes */}
+    <section id="services" className="relative py-32 px-6 overflow-visible">
+      {/* Geometric shapes - All Editable */}
       <img 
         src={geometricShape2}
         alt=""
@@ -59,38 +31,47 @@ const Services = () => {
           </p>
         </div>
 
-        {/* 3 + 2 centered layout */}
+        {/* 3 + 2 centered layout - All Static Cards */}
         <div className="relative">
+          {/* First Row - 3 Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-            {services.slice(0, 3).map((service, idx) => {
-              const Icon = service.icon;
-              return (
-                <div
-                  key={idx}
-                  className="glass-card p-8 space-y-4 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 group"
-                >
-                  <Icon className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
-                  <h3 className="text-2xl font-semibold">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
-                </div>
-              );
-            })}
+            {/* Service Card 1 - Video Editing */}
+            <div className="glass-card p-8 space-y-4 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 group">
+              <Film className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
+              <h3 className="text-2xl font-semibold">Video Editing</h3>
+              <p className="text-muted-foreground">Story-driven edits with seamless transitions, colour grading, and sound design.</p>
+            </div>
+
+            {/* Service Card 2 - Reels & Shorts */}
+            <div className="glass-card p-8 space-y-4 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 group">
+              <Smartphone className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
+              <h3 className="text-2xl font-semibold">Reels & Shorts</h3>
+              <p className="text-muted-foreground">Attention-grabbing content optimized for social platforms. Maximum impact in minimal time.</p>
+            </div>
+
+            {/* Service Card 3 - Graphic Design */}
+            <div className="glass-card p-8 space-y-4 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 group">
+              <Layers className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
+              <h3 className="text-2xl font-semibold">Graphic Design</h3>
+              <p className="text-muted-foreground">From logos to full brand suites. Visual design that tells your story.</p>
+            </div>
           </div>
 
+          {/* Second Row - 2 Centered Cards */}
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {services.slice(3).map((service, idx) => {
-              const Icon = service.icon;
-              return (
-                <div
-                  key={idx + 3}
-                  className="glass-card p-8 space-y-4 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 group"
-                >
-                  <Icon className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
-                  <h3 className="text-2xl font-semibold">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
-                </div>
-              );
-            })}
+            {/* Service Card 4 - Branding & Identity */}
+            <div className="glass-card p-8 space-y-4 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 group">
+              <Sparkles className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
+              <h3 className="text-2xl font-semibold">Branding & Identity</h3>
+              <p className="text-muted-foreground">Creating memorable brand experiences that resonate with your audience.</p>
+            </div>
+
+            {/* Service Card 5 - Content Repurposing */}
+            <div className="glass-card p-8 space-y-4 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 group">
+              <RefreshCw className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
+              <h3 className="text-2xl font-semibold">Content Repurposing</h3>
+              <p className="text-muted-foreground">Transform one piece of content into multiple formats across all platforms.</p>
+            </div>
           </div>
 
           {/* Additional intersecting shapes */}

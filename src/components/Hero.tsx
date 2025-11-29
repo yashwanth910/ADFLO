@@ -2,27 +2,27 @@ import { Button } from "@/components/ui/button";
 import palmLeaf1 from "@/assets/palm-leaf-1.png";
 import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape2 from "@/assets/geometric-shape-2.png";
+import geometricShape3 from "@/assets/geometric-shape-3.png";
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
-  return <section id="hero" className="relative min-h-screen flex items-center justify-center px-6 py-32 overflow-hidden">
-      {/* Purple palm leaf silhouette - bottom right */}
+
+  return (
+    <section id="hero" className="relative min-h-screen flex items-center justify-center px-6 py-32 overflow-visible">
+      {/* Purple palm leaf silhouette - Editable */}
       <img 
         src={palmLeaf1}
         alt=""
-        className="absolute bottom-10 right-10 w-[600px] h-[600px] opacity-[0.07] blur-[18px] pointer-events-none"
+        className="absolute bottom-10 right-10 w-[600px] h-[600px] opacity-[0.07] pointer-events-none"
         style={{ transform: "rotate(-25deg)" }}
       />
 
-      {/* Geometric shapes behind hero card */}
+      {/* Geometric shapes - All Editable, Overflow Visible */}
       <img 
         src={geometricShape1}
         alt=""
@@ -35,28 +35,39 @@ const Hero = () => {
         style={{ transform: "rotate(45deg)" }}
       />
       <img 
-        src={geometricShape1}
+        src={geometricShape3}
         alt=""
         className="geometric-shape bottom-32 left-[20%] w-48 h-48 opacity-[0.03] blur-xl"
       />
 
-      {/* Hero card */}
+      {/* Hero card - All Static Editable Text */}
       <div className="relative z-10 glass-card max-w-5xl w-full p-12 md:p-16 text-center space-y-8 hover:shadow-2xl hover:shadow-muted/10 transition-all duration-500">
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
+        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
           Elevate Your Visual Story
         </h1>
         <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
           Premium video editing & graphic design crafted for creators, brands, and visionaries.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-          <Button size="lg" className="glass-card hover:bg-muted/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-muted/20" onClick={() => scrollToSection("#video-work")}>
+          <Button 
+            size="lg" 
+            className="glass-card text-white hover:bg-muted/50 hover:shadow-[0_0_20px_rgba(167,117,255,0.4)] transition-all duration-300 hover:-translate-y-1" 
+            onClick={() => scrollToSection("#video-work")}
+          >
             View Work
           </Button>
-          <Button size="lg" variant="outline" className="glass-card border-border hover:bg-muted/30 transition-all duration-300 hover:-translate-y-1" onClick={() => scrollToSection("#contact")}>
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className="glass-card border-border text-white hover:bg-muted/30 transition-all duration-300 hover:-translate-y-1" 
+            onClick={() => scrollToSection("#contact")}
+          >
             Contact Us
           </Button>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
