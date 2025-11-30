@@ -71,8 +71,8 @@ const Testimonials = () => {
         style={{ 
           scrollbarWidth: 'none', 
           msOverflowStyle: 'none',
-          paddingTop: '60px',
-          paddingBottom: '60px'
+          paddingTop: '100px',
+          paddingBottom: '100px'
         }}
       >
         <div className="flex gap-8 px-0" style={{ width: 'max-content' }}>
