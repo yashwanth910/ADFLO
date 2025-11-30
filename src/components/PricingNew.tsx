@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape2 from "@/assets/geometric-shape-2.png";
+import geometricShape3 from "@/assets/geometric-shape-3.png";
 
 const PricingNew = () => {
   const scrollToContact = () => {
@@ -13,6 +14,17 @@ const PricingNew = () => {
 
   return (
     <section id="pricing" className="relative py-32 px-6 overflow-visible">
+      {/* Additional geometric shapes */}
+      <img 
+        src={geometricShape3}
+        alt=""
+        className="geometric-shape bottom-20 right-[18%] w-60 h-60 opacity-[0.04] blur-2xl"
+        style={{ 
+          transform: "rotate(150deg)",
+          maskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)"
+        }}
+      />
       {/* Geometric shapes - All Editable */}
       <img 
         src={geometricShape1}

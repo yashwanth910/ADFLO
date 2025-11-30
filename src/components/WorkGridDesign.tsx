@@ -49,6 +49,17 @@ const WorkGridDesign = ({ id, title }: WorkGridDesignProps) => {
       )}
 
       <section id={id} className="relative py-32 px-6 overflow-visible">
+        {/* Additional geometric shapes */}
+        <img 
+          src={geometricShape1}
+          alt=""
+          className="geometric-shape bottom-32 left-[12%] w-72 h-72 opacity-[0.04] blur-3xl"
+          style={{ 
+            transform: "rotate(200deg)",
+            maskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)",
+            WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)"
+          }}
+        />
         {/* Geometric shapes - All Editable */}
         <img 
           src={geometricShape3}

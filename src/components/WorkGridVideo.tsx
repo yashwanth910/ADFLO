@@ -3,6 +3,7 @@ import { useState } from "react";
 import VideoModal from "./VideoModal";
 import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape2 from "@/assets/geometric-shape-2.png";
+import geometricShape3 from "@/assets/geometric-shape-3.png";
 
 interface WorkGridVideoProps {
   id: string;
@@ -20,6 +21,17 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
   return (
     <>
       <section id={id} className="relative py-32 px-6 overflow-visible">
+        {/* Additional geometric shapes */}
+        <img 
+          src={geometricShape3}
+          alt=""
+          className="geometric-shape top-20 right-[8%] w-64 h-64 opacity-[0.03] blur-2xl"
+          style={{ 
+            transform: "rotate(75deg)",
+            maskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)",
+            WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)"
+          }}
+        />
         {/* Geometric shapes - All Editable */}
         <img 
           src={geometricShape1}

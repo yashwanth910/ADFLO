@@ -5,6 +5,17 @@ import geometricShape3 from "@/assets/geometric-shape-3.png";
 const Services = () => {
   return (
     <section id="services" className="relative py-32 px-6 overflow-visible">
+      {/* Additional geometric shapes */}
+      <img 
+        src={geometricShape2}
+        alt=""
+        className="geometric-shape top-40 left-[5%] w-80 h-80 opacity-[0.03] blur-3xl"
+        style={{ 
+          transform: "rotate(90deg)",
+          maskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)"
+        }}
+      />
       {/* Geometric shapes - All Editable */}
       <img 
         src={geometricShape2}
