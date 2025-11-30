@@ -18,12 +18,12 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-0 border-b border-border/50" style={{ height: '70px' }}>
       <div className="container mx-auto px-6 h-full">
         <div className="flex items-center justify-between h-full">
-          {/* Logo Image - Editable */}
+          {/* Logo Image - Editable - Rectangular */}
           <div className="flex items-center">
             <img 
               src={logoPlaceholder} 
               alt="Studio Logo" 
-              className="h-12 w-12 object-contain rounded-xl"
+              className="h-12 w-24 object-cover rounded-xl"
             />
           </div>
 
@@ -72,6 +72,13 @@ const Navbar = () => {
               Pricing
             </a>
             <a
+              href="#team"
+              onClick={(e) => scrollToSection(e, "#team")}
+              className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300"
+            >
+              Team
+            </a>
+            <a
               href="#contact"
               onClick={(e) => scrollToSection(e, "#contact")}
               className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300"
@@ -110,6 +117,9 @@ const Navbar = () => {
             </a>
             <a href="#pricing" onClick={(e) => scrollToSection(e, "#pricing")} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
               Pricing
+            </a>
+            <a href="#team" onClick={(e) => scrollToSection(e, "#team")} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Team
             </a>
             <a href="#contact" onClick={(e) => scrollToSection(e, "#contact")} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
               Contact

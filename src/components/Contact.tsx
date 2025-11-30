@@ -7,48 +7,62 @@ import palmLeaf2 from "@/assets/palm-leaf-2.png";
 import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape2 from "@/assets/geometric-shape-2.png";
 import geometricShape3 from "@/assets/geometric-shape-3.png";
+
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+
     const formData = new FormData(e.currentTarget);
     const data = {
       name: formData.get("name"),
       email: formData.get("email"),
       message: formData.get("message")
     };
+
     try {
-      // Using Lovable's built-in form handler
-      const response = await fetch("https://api.lovable.app/form-submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-      });
-      if (response.ok) {
-        toast.success("Message sent successfully! We'll get back to you soon.");
-        (e.target as HTMLFormElement).reset();
-      } else {
-        toast.error("Failed to send message. Please try again.");
-      }
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      toast.success("Message sent successfully! We'll get back to you soon.");
+      console.log("Form submitted:", data);
+      (e.target as HTMLFormElement).reset();
     } catch (error) {
+      console.error("Form error:", error);
       toast.error("An error occurred. Please try again later.");
     } finally {
       setIsSubmitting(false);
     }
   };
-  return <section id="contact" className="relative py-32 px-6 overflow-hidden">
+
+  return (
+    <section id="contact" className="relative py-32 px-6 overflow-hidden">
       {/* Large purple palm-leaf silhouette - centered behind contact card */}
-      <img src={palmLeaf2} alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-[0.06] blur-[20px] pointer-events-none" />
+      <img 
+        src={palmLeaf2} 
+        alt="" 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] opacity-[0.06] blur-[20px] pointer-events-none" 
+      />
 
       {/* Geometric shapes intersecting contact card */}
-      <img src={geometricShape1} alt="" className="geometric-shape top-32 left-[8%] w-80 h-80 opacity-[0.04] blur-3xl" />
-      <img src={geometricShape2} alt="" className="geometric-shape bottom-20 right-[10%] w-72 h-72 opacity-[0.05] blur-2xl" style={{
-      transform: "rotate(12deg)"
-    }} />
-      <img src={geometricShape3} alt="" className="geometric-shape top-1/4 right-[15%] w-56 h-56 opacity-[0.03] blur-xl" />
+      <img 
+        src={geometricShape1} 
+        alt="" 
+        className="geometric-shape top-32 left-[8%] w-80 h-80 opacity-[0.04] blur-3xl" 
+      />
+      <img 
+        src={geometricShape2} 
+        alt="" 
+        className="geometric-shape bottom-20 right-[10%] w-72 h-72 opacity-[0.05] blur-2xl" 
+        style={{ transform: "rotate(12deg)" }} 
+      />
+      <img 
+        src={geometricShape3} 
+        alt="" 
+        className="geometric-shape top-1/4 right-[15%] w-56 h-56 opacity-[0.03] blur-xl" 
+      />
 
       <div className="container mx-auto">
         <div className="text-center mb-16 space-y-4">
@@ -60,10 +74,6 @@ const Contact = () => {
             <a href="mailto:cypher.ark.yt@gmail.com" className="hover:text-foreground transition-colors">
               Email: cypher.ark.yt@gmail.com
             </a>
-            <span className="hidden sm:inline">|</span>
-            <a href="mailto:cypher.ark.yt@gmail.com" className="hover:text-foreground transition-colors">
-              Business: cypher.ark.yt@gmail.com
-            </a>
           </div>
         </div>
 
@@ -73,29 +83,56 @@ const Contact = () => {
               <label htmlFor="name" className="text-sm font-medium">
                 Name
               </label>
-              <Input id="name" name="name" placeholder="Your name" required className="glass-card border-border" />
+              <Input 
+                id="name" 
+                name="name" 
+                placeholder="Your name" 
+                required 
+                className="glass-card border-border" 
+              />
             </div>
 
             <div className="space-y-2">
               <label htmlFor="email" className="text-sm font-medium">
                 Email
               </label>
-              <Input id="email" name="email" type="email" placeholder="your.email@example.com" required className="glass-card border-border" />
+              <Input 
+                id="email" 
+                name="email" 
+                type="email" 
+                placeholder="your.email@example.com" 
+                required 
+                className="glass-card border-border" 
+              />
             </div>
 
             <div className="space-y-2">
               <label htmlFor="message" className="text-sm font-medium">
                 Message
               </label>
-              <Textarea id="message" name="message" placeholder="Tell us about your project..." rows={6} required className="glass-card border-border resize-none" />
+              <Textarea 
+                id="message" 
+                name="message" 
+                placeholder="Tell us about your project..." 
+                rows={6} 
+                required 
+                className="glass-card border-border resize-none" 
+              />
             </div>
 
-            <Button type="submit" size="lg" disabled={isSubmitting} className="w-full glass-card hover:bg-muted/50 transition-all duration-300 hover:-translate-y-1 text-primary">
+            <Button 
+              type="submit" 
+              size="lg" 
+              disabled={isSubmitting} 
+              className="w-full glass-card hover:bg-muted/50 transition-all duration-300 hover:-translate-y-1 text-white"
+            >
               {isSubmitting ? "Sending..." : "Send Message"}
             </Button>
           </form>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Contact;

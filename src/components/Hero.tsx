@@ -14,30 +14,45 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center px-6 py-32 overflow-visible">
-      {/* Purple palm leaf silhouette - Editable */}
-      <img 
-        src={palmLeaf1}
-        alt=""
-        className="absolute bottom-10 right-10 w-[600px] h-[600px] opacity-[0.07] pointer-events-none"
-        style={{ transform: "rotate(-25deg)" }}
-      />
-
-      {/* Geometric shapes - All Editable, Overflow Visible */}
+      {/* Geometric shapes - All Editable, Overflow Visible with Fade */}
       <img 
         src={geometricShape1}
         alt=""
         className="geometric-shape top-20 left-[10%] w-64 h-64 opacity-[0.04] blur-2xl"
+        style={{ 
+          maskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)"
+        }}
       />
       <img 
         src={geometricShape2}
         alt=""
         className="geometric-shape top-40 right-[15%] w-80 h-80 opacity-[0.05] blur-3xl"
-        style={{ transform: "rotate(45deg)" }}
+        style={{ 
+          transform: "rotate(45deg)",
+          maskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)"
+        }}
       />
       <img 
         src={geometricShape3}
         alt=""
         className="geometric-shape bottom-32 left-[20%] w-48 h-48 opacity-[0.03] blur-xl"
+        style={{ 
+          maskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)"
+        }}
+      />
+      {/* Additional shapes for empty spaces */}
+      <img 
+        src={geometricShape1}
+        alt=""
+        className="geometric-shape bottom-10 right-[25%] w-56 h-56 opacity-[0.03] blur-2xl"
+        style={{ 
+          transform: "rotate(120deg)",
+          maskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)",
+          WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)"
+        }}
       />
 
       {/* Hero card - All Static Editable Text */}

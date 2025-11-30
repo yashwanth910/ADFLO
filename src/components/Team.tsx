@@ -24,12 +24,12 @@ const Team = () => {
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">Meet the Team</h2>
           <p className="text-xl text-muted-foreground">
-            Five creators building stories together
+            Six creators building stories together
           </p>
         </div>
 
-        {/* 5 Static Team Cards - All Individually Editable */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-9 max-w-7xl mx-auto">
+        {/* 6 Static Team Cards - All Individually Editable */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-9 max-w-7xl mx-auto">
           {/* Team Member 1 - Arin Sharma */}
           <div 
             className="glass-card p-7 flex flex-col items-center space-y-4 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer"
@@ -213,6 +213,45 @@ const Team = () => {
               <p className="text-sm text-muted-foreground mb-3">Producer</p>
               <div className="flex gap-3 justify-center">
                 <a href="mailto:karan@flyn.example" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Mail className="w-4 h-4" />
+                </a>
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Instagram className="w-4 h-4" />
+                </a>
+                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <Linkedin className="w-4 h-4" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Team Member 6 - Riya Singh */}
+          <div 
+            className="glass-card p-7 flex flex-col items-center space-y-4 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer"
+            style={{ minHeight: '380px', borderRadius: '16px' }}
+            onClick={() => handleMemberClick({
+              name: "Riya Singh",
+              role: "Content Strategist",
+              bio: "Storytelling frameworks and audience engagement strategies.",
+              email: "riya@flyn.example",
+              image: "/placeholder.svg"
+            })}
+          >
+            <div 
+              className="w-[170px] h-[170px] mx-auto rounded-full overflow-hidden"
+              style={{ border: '6px solid rgba(255, 255, 255, 0.08)' }}
+            >
+              <img 
+                src="/placeholder.svg" 
+                alt="Riya Singh"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="text-center flex-1 flex flex-col justify-center">
+              <p className="font-semibold text-lg">Riya Singh</p>
+              <p className="text-sm text-muted-foreground mb-3">Content Strategist</p>
+              <div className="flex gap-3 justify-center">
+                <a href="mailto:riya@flyn.example" className="text-muted-foreground hover:text-foreground transition-colors">
                   <Mail className="w-4 h-4" />
                 </a>
                 <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
