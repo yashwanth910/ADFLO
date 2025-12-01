@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center px-6 py-32 overflow-visible">
-      {/* Geometric shapes - All Editable, Overflow Visible with Fade */}
+      {/* Geometric shapes - All Editable, Overflow Visible with Fade - Reduced on mobile */}
       <img 
         src={geometricShape1}
         alt=""
@@ -34,20 +34,21 @@ const Hero = () => {
           WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)"
         }}
       />
+      {/* Hidden on mobile to reduce clutter */}
       <img 
         src={geometricShape3}
         alt=""
-        className="geometric-shape bottom-32 left-[20%] w-48 h-48 opacity-[0.03] blur-xl"
+        className="geometric-shape bottom-32 left-[20%] w-48 h-48 opacity-[0.03] blur-xl hidden md:block"
         style={{ 
           maskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)",
           WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)"
         }}
       />
-      {/* Additional shapes for empty spaces */}
+      {/* Additional shape - hidden on mobile */}
       <img 
         src={geometricShape1}
         alt=""
-        className="geometric-shape bottom-10 right-[25%] w-56 h-56 opacity-[0.03] blur-2xl"
+        className="geometric-shape bottom-10 right-[25%] w-56 h-56 opacity-[0.03] blur-2xl hidden md:block"
         style={{ 
           transform: "rotate(120deg)",
           maskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)",

@@ -97,9 +97,9 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Now positioned absolute to avoid being cut off */}
         {isOpen && (
-          <div className="lg:hidden pb-4 space-y-4 animate-fade-up">
+          <div className="lg:hidden absolute top-full left-0 right-0 glass-card border-t border-border/50 pb-4 pt-4 px-6 space-y-4 animate-fade-up">
             <a href="#hero" onClick={(e) => scrollToSection(e, "#hero")} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
               Home
             </a>

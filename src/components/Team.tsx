@@ -28,8 +28,8 @@ const Team = () => {
           </p>
         </div>
 
-        {/* 6 Static Team Cards - All Individually Editable */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-9 max-w-7xl mx-auto">
+        {/* 6 Static Team Cards - 3 per row on desktop - All Individually Editable */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-9 max-w-7xl mx-auto">
           {/* Team Member 1 - Arin Sharma */}
           <div 
             className="glass-card p-7 flex flex-col items-center space-y-4 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer"
