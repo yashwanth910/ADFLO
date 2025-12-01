@@ -17,17 +17,21 @@ const Contact = () => {
 
     const formData = new FormData(e.currentTarget);
     const data = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message")
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      message: formData.get("message") as string
     };
 
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { supabase } = await import("@/integrations/supabase/client");
       
-      toast.success("Message sent successfully! We'll get back to you soon.");
-      console.log("Form submitted:", data);
+      const { error } = await supabase.functions.invoke("send-contact-email", {
+        body: data
+      });
+
+      if (error) throw error;
+      
+      toast.success("Message received, we'll contact you soon");
       (e.target as HTMLFormElement).reset();
     } catch (error) {
       console.error("Form error:", error);
@@ -72,7 +76,7 @@ const Contact = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-muted-foreground pt-4">
             <a href="mailto:cypher.ark.yt@gmail.com" className="hover:text-foreground transition-colors">
-              Email: cypher.ark.yt@gmail.com
+              cypher.ark.yt@gmail.com
             </a>
           </div>
         </div>
