@@ -1,10 +1,4 @@
 import { CheckCircle, Zap, Award, Users, Video, Palette, Sparkles, TrendingUp } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape2 from "@/assets/geometric-shape-2.png";
 
@@ -121,73 +115,36 @@ const AboutUs = () => {
             <p className="text-xl text-muted-foreground">Everything you need to know</p>
           </div>
 
-          <div className="max-w-3xl mx-auto relative">
-            <Accordion type="single" collapsible className="space-y-4">
-              {/* FAQ Item 1 */}
-              <AccordionItem
-                value="item-1"
-                className="glass-card px-6 border-0 hover:scale-[1.02] hover:shadow-lg hover:shadow-muted/10 transition-all duration-300 focus-within:scale-[1.02] focus-within:shadow-lg"
-              >
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  What's your typical turnaround time?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
-                  Most projects are completed within 3-5 business days, with rush options available for urgent needs.
-                </AccordionContent>
-              </AccordionItem>
+          <div className="max-w-3xl mx-auto relative space-y-6">
+            {/* FAQ Item 1 */}
+            <div className="glass-card p-6 hover:scale-[1.02] hover:shadow-lg hover:shadow-muted/10 transition-all duration-300">
+              <h3 className="text-lg font-semibold mb-3">What's your typical turnaround time?</h3>
+              <p className="text-muted-foreground">Most projects are completed within 3-5 business days, with rush options available for urgent needs.</p>
+            </div>
 
-              {/* FAQ Item 2 */}
-              <AccordionItem
-                value="item-2"
-                className="glass-card px-6 border-0 hover:scale-[1.02] hover:shadow-lg hover:shadow-muted/10 transition-all duration-300 focus-within:scale-[1.02] focus-within:shadow-lg"
-              >
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  Do you offer revisions?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
-                  Yes! All packages include up to 3 rounds of revisions to ensure your complete satisfaction.
-                </AccordionContent>
-              </AccordionItem>
+            {/* FAQ Item 2 */}
+            <div className="glass-card p-6 hover:scale-[1.02] hover:shadow-lg hover:shadow-muted/10 transition-all duration-300">
+              <h3 className="text-lg font-semibold mb-3">Do you offer revisions?</h3>
+              <p className="text-muted-foreground">Yes! All packages include up to 3 rounds of revisions to ensure your complete satisfaction.</p>
+            </div>
 
-              {/* FAQ Item 3 */}
-              <AccordionItem
-                value="item-3"
-                className="glass-card px-6 border-0 hover:scale-[1.02] hover:shadow-lg hover:shadow-muted/10 transition-all duration-300 focus-within:scale-[1.02] focus-within:shadow-lg"
-              >
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  What file formats do you deliver?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
-                  We deliver in all major formats including MP4, MOV, PNG, JPEG, SVG, and source files upon request.
-                </AccordionContent>
-              </AccordionItem>
+            {/* FAQ Item 3 */}
+            <div className="glass-card p-6 hover:scale-[1.02] hover:shadow-lg hover:shadow-muted/10 transition-all duration-300">
+              <h3 className="text-lg font-semibold mb-3">What file formats do you deliver?</h3>
+              <p className="text-muted-foreground">We deliver in all major formats including MP4, MOV, PNG, JPEG, SVG, and source files upon request.</p>
+            </div>
 
-              {/* FAQ Item 4 */}
-              <AccordionItem
-                value="item-4"
-                className="glass-card px-6 border-0 hover:scale-[1.02] hover:shadow-lg hover:shadow-muted/10 transition-all duration-300 focus-within:scale-[1.02] focus-within:shadow-lg"
-              >
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  Can you work with my existing brand guidelines?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
-                  Absolutely! We specialize in maintaining brand consistency while elevating your visual presence.
-                </AccordionContent>
-              </AccordionItem>
+            {/* FAQ Item 4 */}
+            <div className="glass-card p-6 hover:scale-[1.02] hover:shadow-lg hover:shadow-muted/10 transition-all duration-300">
+              <h3 className="text-lg font-semibold mb-3">Can you work with my existing brand guidelines?</h3>
+              <p className="text-muted-foreground">Absolutely! We specialize in maintaining brand consistency while elevating your visual presence.</p>
+            </div>
 
-              {/* FAQ Item 5 */}
-              <AccordionItem
-                value="item-5"
-                className="glass-card px-6 border-0 hover:scale-[1.02] hover:shadow-lg hover:shadow-muted/10 transition-all duration-300 focus-within:scale-[1.02] focus-within:shadow-lg"
-              >
-                <AccordionTrigger className="text-left hover:no-underline py-6">
-                  What is your pricing structure?
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-6">
-                  We offer flexible pricing based on project scope and requirements. Check our Pricing section for starting rates or contact us for a custom quote.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+            {/* FAQ Item 5 */}
+            <div className="glass-card p-6 hover:scale-[1.02] hover:shadow-lg hover:shadow-muted/10 transition-all duration-300">
+              <h3 className="text-lg font-semibold mb-3">What is your pricing structure?</h3>
+              <p className="text-muted-foreground">We offer flexible pricing based on project scope and requirements. Check our Pricing section for starting rates or contact us for a custom quote.</p>
+            </div>
           </div>
         </div>
       </div>
