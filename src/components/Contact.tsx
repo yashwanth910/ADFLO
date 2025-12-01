@@ -75,9 +75,12 @@ const Contact = () => {
             Ready to elevate your visual story? Get in touch and let's bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-muted-foreground pt-4">
-            <a href="mailto:cypher.ark.yt@gmail.com" className="hover:text-foreground transition-colors">
-              cypher.ark.yt@gmail.com
-            </a>
+            <span className="flex items-center gap-2">
+              <span>Email:</span>
+              <a href="mailto:cypher.ark.yt@gmail.com" className="hover:text-foreground transition-colors">
+                cypher.ark.yt@gmail.com
+              </a>
+            </span>
           </div>
         </div>
 
