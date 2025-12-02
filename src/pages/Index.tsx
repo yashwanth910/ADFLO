@@ -9,6 +9,7 @@ import PricingNew from "@/components/PricingNew";
 import Testimonials from "@/components/Testimonials";
 import Team from "@/components/Team";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
       <Testimonials />
       <Team />
       <Contact />
+      <Footer />
     </div>
   );
 };

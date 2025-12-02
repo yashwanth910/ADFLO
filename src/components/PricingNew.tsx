@@ -56,10 +56,11 @@ const PricingNew = () => {
           {/* Pricing Card 1 - Digital Marketing */}
           <div className="glass-card p-8 flex flex-col hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300" style={{ minHeight: '480px' }}>
             <div className="flex-1 space-y-6">
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold">Digital Marketing</h3>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-2xl font-bold">Starting at $250</span>
+              <div className="space-y-3">
+                <h3 className="text-2xl font-bold">Digital Marketing</h3>
+                <div className="space-y-1">
+                  <span className="text-sm text-muted-foreground">Starting at</span>
+                  <p className="text-lg font-medium">$250</p>
                 </div>
               </div>
 
@@ -92,10 +93,11 @@ const PricingNew = () => {
           {/* Pricing Card 2 - Graphic Designing */}
           <div className="glass-card p-8 flex flex-col hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300" style={{ minHeight: '480px' }}>
             <div className="flex-1 space-y-6">
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold">Graphic Designing</h3>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-2xl font-bold">Starting at $175</span>
+              <div className="space-y-3">
+                <h3 className="text-2xl font-bold">Graphic Designing</h3>
+                <div className="space-y-1">
+                  <span className="text-sm text-muted-foreground">Starting at</span>
+                  <p className="text-lg font-medium">$175</p>
                 </div>
               </div>
 
@@ -128,10 +130,11 @@ const PricingNew = () => {
           {/* Pricing Card 3 - Video Editing */}
           <div className="glass-card p-8 flex flex-col hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300" style={{ minHeight: '480px' }}>
             <div className="flex-1 space-y-6">
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold">Video Editing</h3>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-2xl font-bold">Starting at $350</span>
+              <div className="space-y-3">
+                <h3 className="text-2xl font-bold">Video Editing</h3>
+                <div className="space-y-1">
+                  <span className="text-sm text-muted-foreground">Starting at</span>
+                  <p className="text-lg font-medium">$350</p>
                 </div>
               </div>
 
@@ -164,10 +167,11 @@ const PricingNew = () => {
           {/* Pricing Card 4 - Custom Plan */}
           <div className="glass-card p-8 flex flex-col hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300" style={{ minHeight: '480px' }}>
             <div className="flex-1 space-y-6">
-              <div className="space-y-2">
-                <h3 className="text-xl font-bold">Custom Plan</h3>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-2xl font-bold">Custom</span>
+              <div className="space-y-3">
+                <h3 className="text-2xl font-bold">Custom Plan</h3>
+                <div className="space-y-1">
+                  <span className="text-sm text-muted-foreground">Price</span>
+                  <p className="text-lg font-medium">Custom</p>
                 </div>
               </div>
 
