@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Instagram } from "lucide-react";
+import { Mail } from "lucide-react";
 import { useState } from "react";
 import geometricShape2 from "@/assets/geometric-shape-2.png";
 
@@ -55,17 +55,13 @@ const Team = () => {
             <div className="text-center flex-1 flex flex-col justify-center">
               <p className="font-semibold text-lg">Arin Sharma</p>
               <p className="text-sm text-muted-foreground mb-3">Lead Editor</p>
-              <div className="flex gap-3 justify-center">
-                <a href="mailto:arin@flyn.example" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Mail className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Linkedin className="w-4 h-4" />
-                </a>
-              </div>
+              <a 
+                href="mailto:arin@flyn.example" 
+                className="flex justify-center text-muted-foreground hover:text-foreground transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Mail className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
@@ -94,17 +90,13 @@ const Team = () => {
             <div className="text-center flex-1 flex flex-col justify-center">
               <p className="font-semibold text-lg">Mira Patel</p>
               <p className="text-sm text-muted-foreground mb-3">Motion/Graphics Lead</p>
-              <div className="flex gap-3 justify-center">
-                <a href="mailto:mira@flyn.example" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Mail className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Linkedin className="w-4 h-4" />
-                </a>
-              </div>
+              <a 
+                href="mailto:mira@flyn.example" 
+                className="flex justify-center text-muted-foreground hover:text-foreground transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Mail className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
@@ -133,17 +125,13 @@ const Team = () => {
             <div className="text-center flex-1 flex flex-col justify-center">
               <p className="font-semibold text-lg">Dev Rao</p>
               <p className="text-sm text-muted-foreground mb-3">Colourist & Sound Designer</p>
-              <div className="flex gap-3 justify-center">
-                <a href="mailto:dev@flyn.example" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Mail className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Linkedin className="w-4 h-4" />
-                </a>
-              </div>
+              <a 
+                href="mailto:dev@flyn.example" 
+                className="flex justify-center text-muted-foreground hover:text-foreground transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Mail className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
@@ -172,17 +160,13 @@ const Team = () => {
             <div className="text-center flex-1 flex flex-col justify-center">
               <p className="font-semibold text-lg">Isha Kapoor</p>
               <p className="text-sm text-muted-foreground mb-3">Graphic Designer</p>
-              <div className="flex gap-3 justify-center">
-                <a href="mailto:isha@flyn.example" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Mail className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Linkedin className="w-4 h-4" />
-                </a>
-              </div>
+              <a 
+                href="mailto:isha@flyn.example" 
+                className="flex justify-center text-muted-foreground hover:text-foreground transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Mail className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
@@ -211,17 +195,13 @@ const Team = () => {
             <div className="text-center flex-1 flex flex-col justify-center">
               <p className="font-semibold text-lg">Karan Mehta</p>
               <p className="text-sm text-muted-foreground mb-3">Producer</p>
-              <div className="flex gap-3 justify-center">
-                <a href="mailto:karan@flyn.example" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Mail className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Linkedin className="w-4 h-4" />
-                </a>
-              </div>
+              <a 
+                href="mailto:karan@flyn.example" 
+                className="flex justify-center text-muted-foreground hover:text-foreground transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Mail className="w-5 h-5" />
+              </a>
             </div>
           </div>
 
@@ -250,17 +230,13 @@ const Team = () => {
             <div className="text-center flex-1 flex flex-col justify-center">
               <p className="font-semibold text-lg">Riya Singh</p>
               <p className="text-sm text-muted-foreground mb-3">Content Strategist</p>
-              <div className="flex gap-3 justify-center">
-                <a href="mailto:riya@flyn.example" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Mail className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">
-                  <Linkedin className="w-4 h-4" />
-                </a>
-              </div>
+              <a 
+                href="mailto:riya@flyn.example" 
+                className="flex justify-center text-muted-foreground hover:text-foreground transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Mail className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
@@ -298,8 +274,9 @@ const Team = () => {
                 <p className="text-muted-foreground">{selectedMember.bio}</p>
                 <a 
                   href={`mailto:${selectedMember.email}`}
-                  className="inline-block text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 >
+                  <Mail className="w-4 h-4" />
                   {selectedMember.email}
                 </a>
               </div>
