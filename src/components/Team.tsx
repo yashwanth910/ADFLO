@@ -209,7 +209,7 @@ const Team = () => {
                 {/* EDITABLE: Bio */}
                 <p className="text-muted-foreground">Supervising the entire editing process, ensuring consistency across all outputs.</p>
                 {/* EDITABLE: Email link */}
-                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:\u200Baadarshkrishna585@gmail.com">
+                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:aadarshkrishna585@gmail.com">
                   <Mail className="w-4 h-4" />
                   ​aadarshkrishna585@gmail.com
                 </a>
