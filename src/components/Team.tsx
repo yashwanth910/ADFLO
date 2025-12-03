@@ -323,15 +323,15 @@ const Team = () => {
           }} />
               <div className="flex-1 space-y-4 text-center md:text-left">
                 {/* EDITABLE: Name */}
-                <h3 className="text-3xl font-bold">Riya Singh</h3>
+                <h3 className="text-3xl font-bold">Ashiel JR</h3>
                 {/* EDITABLE: Role */}
                 <p className="text-lg text-muted-foreground">Content Strategist</p>
                 {/* EDITABLE: Bio */}
-                <p className="text-muted-foreground">Storytelling frameworks and audience engagement strategies.</p>
+                <p className="text-muted-foreground">Planning what content works best for the client's goals.</p>
                 {/* EDITABLE: Email link */}
-                <a href="mailto:riya@flyn.example" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:ashielraj05@gmail.com">
                   <Mail className="w-4 h-4" />
-                  riya@flyn.example
+                  ​ashielraj05@gmail.com
                 </a>
               </div>
             </div>
