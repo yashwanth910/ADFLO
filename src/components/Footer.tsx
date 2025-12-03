@@ -1,8 +1,6 @@
 import { Mail } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="relative py-16 px-6 border-t border-white/10">
+  return <footer className="relative py-16 px-6 border-t border-white/10">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-3 gap-12">
           {/* Brand Column */}
@@ -29,10 +27,7 @@ const Footer = () => {
           {/* Contact Column */}
           <div className="space-y-4">
             <h4 className="font-semibold">Get in Touch</h4>
-            <a 
-              href="mailto:cypher.ark.yt@gmail.com" 
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
+            <a href="mailto:cypher.ark.yt@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
               <Mail className="w-4 h-4" />
               cypher.ark.yt@gmail.com
             </a>
@@ -41,11 +36,9 @@ const Footer = () => {
         
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-muted-foreground">
-          <p>© 2024 FLYN STUDIOS. All rights reserved.</p>
+          <p>© 2025 FLYN STUDIOS. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
