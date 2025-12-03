@@ -237,7 +237,7 @@ const Team = () => {
                 {/* EDITABLE: Role */}
                 <p className="text-lg text-muted-foreground">​Video-Editing Lead   </p>
                 {/* EDITABLE: Bio */}
-                <p className="text-muted-foreground">Supervising the video editing processes and the outputs. </p>
+                <p className="text-muted-foreground">Supervising the video editing processes and managing the outputs. </p>
                 {/* EDITABLE: Email link */}
                 <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:rahulsabaris7@gmail.com">
                   <Mail className="w-4 h-4" />
