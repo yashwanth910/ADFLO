@@ -161,7 +161,7 @@ const PricingNew = () => {
               <ul className="space-y-3 flex-1">
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Fully personalised workflow &amp; deliverables</span>
+                  <span className="text-sm text-muted-foreground">​​​​360 ° Ads service (shooting, editing and marketing) </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />

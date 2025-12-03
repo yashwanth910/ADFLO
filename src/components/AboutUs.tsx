@@ -2,35 +2,23 @@ import { useState } from "react";
 import { CheckCircle, Zap, Award, Users, Video, Palette, Sparkles, TrendingUp, ChevronDown } from "lucide-react";
 import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape2 from "@/assets/geometric-shape-2.png";
-
 const AboutUs = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
   };
-
   const handleKeyDown = (e: React.KeyboardEvent, index: number) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       toggleFaq(index);
     }
   };
-
-  return (
-    <section id="about-us" className="relative py-32 px-6 overflow-visible">
+  return <section id="about-us" className="relative py-32 px-6 overflow-visible">
       {/* Geometric shapes - All Editable */}
-      <img 
-        src={geometricShape1}
-        alt=""
-        className="geometric-shape top-20 left-[10%] w-96 h-96 opacity-[0.03] blur-3xl"
-      />
-      <img 
-        src={geometricShape2}
-        alt=""
-        className="geometric-shape bottom-32 right-[15%] w-80 h-80 opacity-[0.04] blur-2xl"
-        style={{ transform: "rotate(45deg)" }}
-      />
+      <img src={geometricShape1} alt="" className="geometric-shape top-20 left-[10%] w-96 h-96 opacity-[0.03] blur-3xl" />
+      <img src={geometricShape2} alt="" className="geometric-shape bottom-32 right-[15%] w-80 h-80 opacity-[0.04] blur-2xl" style={{
+      transform: "rotate(45deg)"
+    }} />
 
       <div className="container mx-auto space-y-32">
         {/* Why Choose Us - 4 Static Cards */}
@@ -98,8 +86,8 @@ const AboutUs = () => {
               {/* Capability Card 3 */}
               <div className="glass-card p-8 space-y-4 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300">
                 <Sparkles className="w-10 h-10 text-muted-foreground" />
-                <h3 className="text-xl font-semibold">Motion Graphics</h3>
-                <p className="text-sm text-muted-foreground">Dynamic animations that engage</p>
+                <h3 className="text-xl font-semibold">​Colour Grading </h3>
+                <p className="text-sm text-muted-foreground">​Cinematic tone - frame by frame</p>
               </div>
             </div>
 
@@ -132,14 +120,7 @@ const AboutUs = () => {
           <div className="max-w-3xl mx-auto relative space-y-4">
             {/* FAQ Item 1 - EDITABLE */}
             <div className="glass-card rounded-2xl border border-white/10 overflow-hidden">
-              <div 
-                role="button"
-                tabIndex={0}
-                aria-expanded={openFaq === 1}
-                onClick={() => toggleFaq(1)}
-                onKeyDown={(e) => handleKeyDown(e, 1)}
-                className="p-6 cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:shadow-lg flex justify-between items-center"
-              >
+              <div role="button" tabIndex={0} aria-expanded={openFaq === 1} onClick={() => toggleFaq(1)} onKeyDown={e => handleKeyDown(e, 1)} className="p-6 cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:shadow-lg flex justify-between items-center">
                 <h3 className="text-lg md:text-xl font-semibold">What's your typical turnaround time?</h3>
                 <ChevronDown className={`w-5 h-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ${openFaq === 1 ? 'rotate-180' : ''}`} />
               </div>
@@ -152,14 +133,7 @@ const AboutUs = () => {
 
             {/* FAQ Item 2 - EDITABLE */}
             <div className="glass-card rounded-2xl border border-white/10 overflow-hidden">
-              <div 
-                role="button"
-                tabIndex={0}
-                aria-expanded={openFaq === 2}
-                onClick={() => toggleFaq(2)}
-                onKeyDown={(e) => handleKeyDown(e, 2)}
-                className="p-6 cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:shadow-lg flex justify-between items-center"
-              >
+              <div role="button" tabIndex={0} aria-expanded={openFaq === 2} onClick={() => toggleFaq(2)} onKeyDown={e => handleKeyDown(e, 2)} className="p-6 cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:shadow-lg flex justify-between items-center">
                 <h3 className="text-lg md:text-xl font-semibold">Do you offer revisions?</h3>
                 <ChevronDown className={`w-5 h-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ${openFaq === 2 ? 'rotate-180' : ''}`} />
               </div>
@@ -172,14 +146,7 @@ const AboutUs = () => {
 
             {/* FAQ Item 3 - EDITABLE */}
             <div className="glass-card rounded-2xl border border-white/10 overflow-hidden">
-              <div 
-                role="button"
-                tabIndex={0}
-                aria-expanded={openFaq === 3}
-                onClick={() => toggleFaq(3)}
-                onKeyDown={(e) => handleKeyDown(e, 3)}
-                className="p-6 cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:shadow-lg flex justify-between items-center"
-              >
+              <div role="button" tabIndex={0} aria-expanded={openFaq === 3} onClick={() => toggleFaq(3)} onKeyDown={e => handleKeyDown(e, 3)} className="p-6 cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:shadow-lg flex justify-between items-center">
                 <h3 className="text-lg md:text-xl font-semibold">What file formats do you deliver?</h3>
                 <ChevronDown className={`w-5 h-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ${openFaq === 3 ? 'rotate-180' : ''}`} />
               </div>
@@ -192,14 +159,7 @@ const AboutUs = () => {
 
             {/* FAQ Item 4 - EDITABLE */}
             <div className="glass-card rounded-2xl border border-white/10 overflow-hidden">
-              <div 
-                role="button"
-                tabIndex={0}
-                aria-expanded={openFaq === 4}
-                onClick={() => toggleFaq(4)}
-                onKeyDown={(e) => handleKeyDown(e, 4)}
-                className="p-6 cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:shadow-lg flex justify-between items-center"
-              >
+              <div role="button" tabIndex={0} aria-expanded={openFaq === 4} onClick={() => toggleFaq(4)} onKeyDown={e => handleKeyDown(e, 4)} className="p-6 cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:shadow-lg flex justify-between items-center">
                 <h3 className="text-lg md:text-xl font-semibold">Can you work with my existing brand guidelines?</h3>
                 <ChevronDown className={`w-5 h-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ${openFaq === 4 ? 'rotate-180' : ''}`} />
               </div>
@@ -212,14 +172,7 @@ const AboutUs = () => {
 
             {/* FAQ Item 5 - EDITABLE */}
             <div className="glass-card rounded-2xl border border-white/10 overflow-hidden">
-              <div 
-                role="button"
-                tabIndex={0}
-                aria-expanded={openFaq === 5}
-                onClick={() => toggleFaq(5)}
-                onKeyDown={(e) => handleKeyDown(e, 5)}
-                className="p-6 cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:shadow-lg flex justify-between items-center"
-              >
+              <div role="button" tabIndex={0} aria-expanded={openFaq === 5} onClick={() => toggleFaq(5)} onKeyDown={e => handleKeyDown(e, 5)} className="p-6 cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:shadow-lg flex justify-between items-center">
                 <h3 className="text-lg md:text-xl font-semibold">What is your pricing structure?</h3>
                 <ChevronDown className={`w-5 h-5 text-muted-foreground transition-transform duration-300 flex-shrink-0 ${openFaq === 5 ? 'rotate-180' : ''}`} />
               </div>
@@ -232,8 +185,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutUs;
