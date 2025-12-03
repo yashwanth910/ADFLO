@@ -53,7 +53,7 @@ const PricingNew = () => {
               <ul className="space-y-3 flex-1">
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Social Strategy</span>
+                  <span className="text-sm text-muted-foreground">Competitor &amp; trend analysis</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
@@ -61,7 +61,7 @@ const PricingNew = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Analytics & Reporting</span>
+                  <span className="text-sm text-muted-foreground">Performance tracking & monthly reports</span>
                 </li>
               </ul>
             </div>
@@ -93,11 +93,11 @@ const PricingNew = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Visual Assets</span>
+                  <span className="text-sm text-muted-foreground">Colour palette & typography alignment</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Mockups</span>
+                  <span className="text-sm text-muted-foreground">Posters, flyers & promotional creatives</span>
                 </li>
               </ul>
             </div>
@@ -129,11 +129,11 @@ const PricingNew = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Color grading</span>
+                  <span className="text-sm text-muted-foreground">Colour correction + cinematic colour grading</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Delivery formats</span>
+                  <span className="text-sm text-muted-foreground">Export in required formats (horizontal/vertical)</span>
                 </li>
               </ul>
             </div>
@@ -161,15 +161,15 @@ const PricingNew = () => {
               <ul className="space-y-3 flex-1">
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Scoped proposal</span>
+                  <span className="text-sm text-muted-foreground">Fully personalised workflow &amp; deliverables</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Custom quote</span>
+                  <span className="text-sm text-muted-foreground">Combination of editing, design &amp; marketing</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Fast turnaround</span>
+                  <span className="text-sm text-muted-foreground">Scales based on your volume &amp; goals</span>
                 </li>
               </ul>
             </div>
