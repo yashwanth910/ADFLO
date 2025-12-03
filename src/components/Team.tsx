@@ -173,7 +173,7 @@ const Team = () => {
           }} />
               <div className="flex-1 space-y-4 text-center md:text-left">
                 {/* EDITABLE: Name */}
-                <h3 className="text-3xl font-bold">Arin Sharma</h3>
+                <h3 className="text-3xl font-bold">​Yashwanth </h3>
                 {/* EDITABLE: Role */}
                 <p className="text-lg text-muted-foreground">Lead Editor</p>
                 {/* EDITABLE: Bio */}
