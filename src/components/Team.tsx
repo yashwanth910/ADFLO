@@ -267,9 +267,9 @@ const Team = () => {
                 {/* EDITABLE: Role */}
                 <p className="text-lg text-muted-foreground">​Production Manager </p>
                 {/* EDITABLE: Bio */}
-                <p className="text-muted-foreground">Visual identity, thumbnails and brand systems.</p>
+                <p className="text-muted-foreground">Communicating with clients, managing deadlines, revisions, organizing the pipeline.</p>
                 {/* EDITABLE: Email link */}
-                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:kannamukesh">
+                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:kannamukesh2006@gmail.com">
                   <Mail className="w-4 h-4" />
                   ​kannamukesh2006@gmail.com
                 </a>
