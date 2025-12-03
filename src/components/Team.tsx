@@ -175,13 +175,13 @@ const Team = () => {
                 {/* EDITABLE: Name */}
                 <h3 className="text-3xl font-bold">​Yashwanth </h3>
                 {/* EDITABLE: Role */}
-                <p className="text-lg text-muted-foreground">Lead Editor</p>
+                <p className="text-lg text-muted-foreground">Creative Director</p>
                 {/* EDITABLE: Bio */}
-                <p className="text-muted-foreground">Final cut specialist; cinematic pacing & grading.</p>
+                <p className="text-muted-foreground">​Deciding the visual direction, overall style, and project tone.</p>
                 {/* EDITABLE: Email link */}
-                <a href="mailto:arin@flyn.example" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:wanth404@gmail.com">
                   <Mail className="w-4 h-4" />
-                  arin@flyn.example
+                  ​wanth404@gmail.com
                 </a>
               </div>
             </div>
