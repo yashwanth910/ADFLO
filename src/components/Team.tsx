@@ -203,11 +203,11 @@ const Team = () => {
           }} />
               <div className="flex-1 space-y-4 text-center md:text-left">
                 {/* EDITABLE: Name */}
-                <h3 className="text-3xl font-bold">Mira Patel</h3>
+                <h3 className="text-3xl font-bold">​Aadarsh Krishna </h3>
                 {/* EDITABLE: Role */}
-                <p className="text-lg text-muted-foreground">Motion/Graphics Lead</p>
+                <p className="text-lg text-muted-foreground">Post-Production Lead</p>
                 {/* EDITABLE: Bio */}
-                <p className="text-muted-foreground">Brand motion, titles and clean transitions.</p>
+                <p className="text-muted-foreground">Supervising the entire editing process, ensuring consistency across all outputs.</p>
                 {/* EDITABLE: Email link */}
                 <a href="mailto:mira@flyn.example" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                   <Mail className="w-4 h-4" />
