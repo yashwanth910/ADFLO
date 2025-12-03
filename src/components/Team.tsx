@@ -31,9 +31,9 @@ const Team = () => {
             </div>
             <div className="text-center flex-1 flex flex-col justify-center">
               {/* EDITABLE: Team member name */}
-              <p className="font-semibold text-lg">Arin Sharma</p>
+              <p className="font-semibold text-lg">​Yashwanth  </p>
               {/* EDITABLE: Team member role */}
-              <p className="text-sm text-muted-foreground mb-3">Lead Editor</p>
+              <p className="text-sm text-muted-foreground mb-3">​Creative Director </p>
               {/* EDITABLE: Email link - change href to update email */}
               <a href="mailto:arin@flyn.example" className="flex justify-center text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
                 <Mail className="w-5 h-5" />
@@ -54,9 +54,9 @@ const Team = () => {
             </div>
             <div className="text-center flex-1 flex flex-col justify-center">
               {/* EDITABLE: Team member name */}
-              <p className="font-semibold text-lg">Mira Patel</p>
+              <p className="font-semibold text-lg">​Aadarsh Krishna </p>
               {/* EDITABLE: Team member role */}
-              <p className="text-sm text-muted-foreground mb-3">Motion/Graphics Lead</p>
+              <p className="text-sm text-muted-foreground mb-3">Post-Production Lead</p>
               {/* EDITABLE: Email link - change href to update email */}
               <a href="mailto:mira@flyn.example" className="flex justify-center text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
                 <Mail className="w-5 h-5" />
@@ -77,9 +77,9 @@ const Team = () => {
             </div>
             <div className="text-center flex-1 flex flex-col justify-center">
               {/* EDITABLE: Team member name */}
-              <p className="font-semibold text-lg">Dev Rao</p>
+              <p className="font-semibold text-lg">​Rahul Sabaris </p>
               {/* EDITABLE: Team member role */}
-              <p className="text-sm text-muted-foreground mb-3">​Lead Editor  </p>
+              <p className="text-sm text-muted-foreground mb-3">​Video-Editing Lead   </p>
               {/* EDITABLE: Email link - change href to update email */}
               <a href="mailto:dev@flyn.example" className="flex justify-center text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
                 <Mail className="w-5 h-5" />
@@ -100,9 +100,9 @@ const Team = () => {
             </div>
             <div className="text-center flex-1 flex flex-col justify-center">
               {/* EDITABLE: Team member name */}
-              <p className="font-semibold text-lg">Isha Kapoor</p>
+              <p className="font-semibold text-lg">​Mukesh Kanna </p>
               {/* EDITABLE: Team member role */}
-              <p className="text-sm text-muted-foreground mb-3">​</p>
+              <p className="text-sm text-muted-foreground mb-3">Production Manager​</p>
               {/* EDITABLE: Email link - change href to update email */}
               <a href="mailto:isha@flyn.example" className="flex justify-center text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
                 <Mail className="w-5 h-5" />
@@ -123,7 +123,7 @@ const Team = () => {
             </div>
             <div className="text-center flex-1 flex flex-col justify-center">
               {/* EDITABLE: Team member name */}
-              <p className="font-semibold text-lg">Karan Mehta</p>
+              <p className="font-semibold text-lg">​Bhuvaneshram MR </p>
               {/* EDITABLE: Team member role */}
               <p className="text-sm text-muted-foreground mb-3">​Graphic-Design Lead   </p>
               {/* EDITABLE: Email link - change href to update email */}
@@ -146,7 +146,7 @@ const Team = () => {
             </div>
             <div className="text-center flex-1 flex flex-col justify-center">
               {/* EDITABLE: Team member name */}
-              <p className="font-semibold text-lg">Riya Singh</p>
+              <p className="font-semibold text-lg">​Ashiel JR </p>
               {/* EDITABLE: Team member role */}
               <p className="text-sm text-muted-foreground mb-3">Content Strategist</p>
               {/* EDITABLE: Email link - change href to update email */}
