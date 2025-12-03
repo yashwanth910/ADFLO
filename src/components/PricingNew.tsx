@@ -46,7 +46,7 @@ const PricingNew = () => {
                 <h3 className="text-2xl font-bold">Digital Marketing</h3>
                 <div className="space-y-1">
                   <span className="text-sm text-muted-foreground">Starting at</span>
-                  <p className="text-lg font-medium">$2</p>
+                  <p className="text-lg font-medium">₹12,000 / month</p>
                 </div>
               </div>
 
@@ -82,14 +82,14 @@ const PricingNew = () => {
                 <h3 className="text-2xl font-bold">Graphic Designing</h3>
                 <div className="space-y-1">
                   <span className="text-sm text-muted-foreground">Starting at</span>
-                  <p className="text-lg font-medium">$15/design</p>
+                  <p className="text-lg font-medium">₹12,000 / month </p>
                 </div>
               </div>
 
               <ul className="space-y-3 flex-1">
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                  <span className="text-sm text-muted-foreground">Branding</span>
+                  <span className="text-sm text-muted-foreground">Branding </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
@@ -118,7 +118,7 @@ const PricingNew = () => {
                 <h3 className="text-2xl font-bold">Video Editing</h3>
                 <div className="space-y-1">
                   <span className="text-sm text-muted-foreground">Starting at</span>
-                  <p className="text-lg font-medium">$20/min</p>
+                  <p className="text-lg font-medium">₹20,000 / month</p>
                 </div>
               </div>
 
@@ -154,7 +154,7 @@ const PricingNew = () => {
                 <h3 className="text-2xl font-bold">Custom Plan</h3>
                 <div className="space-y-1">
                   <span className="text-sm text-muted-foreground">Price</span>
-                  <p className="text-lg font-medium">Custom</p>
+                  <p className="text-lg font-medium">Custom   </p>
                 </div>
               </div>
 
