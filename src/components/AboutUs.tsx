@@ -45,9 +45,9 @@ const AboutUs = () => {
 
             {/* Why Us Card 3 */}
             <div className="glass-card p-8 text-center space-y-4 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300">
-              <Award className="w-10 h-10 mx-auto text-muted-foreground" />
-              <h3 className="text-xl font-semibold">Award-Winning Work</h3>
-              <p className="text-sm text-muted-foreground">Recognized excellence in visual storytelling</p>
+              <Video className="w-10 h-10 mx-auto text-muted-foreground" />
+              <h3 className="text-xl font-semibold">​Conversion Focused Ads</h3>
+              <p className="text-sm text-muted-foreground">Plan, shoot, edit, market Premium Ads   </p>
             </div>
 
             {/* Why Us Card 4 */}
