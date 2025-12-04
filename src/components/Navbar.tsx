@@ -21,7 +21,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-full">
           {/* Logo Image - Editable - Rectangular */}
           <div className="flex items-center">
-            <img alt="Studio Logo" className="h-12 w-24 object-cover rounded-xl" src="/lovable-uploads/0abc4ac0-a728-4b12-9b4c-23b7545f5674.png" />
+            <img alt="Studio Logo" className="h-12 w-24 object-cover rounded-xl" src="/lovable-uploads/b29e94c7-ea4e-433a-81c3-e23b9b2f3a04.png" />
           </div>
 
           {/* Desktop Navigation - All Static Links */}
