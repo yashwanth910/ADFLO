@@ -114,10 +114,10 @@ const Testimonials = () => {
               <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
               <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
             </div>
-            <p className="text-muted-foreground italic">&ldquo;Fast turnaround without compromising quality. They're now our go-to creative partner.&rdquo;</p>
+            <p className="text-muted-foreground italic">“I wanted reels in bulk, like 2 reels a day. When a lot of people told that was too much work, these guys delivered it on time everyday and eventually I let them manage my entire page”</p>
             <div>
-              <p className="font-semibold">David Park</p>
-              <p className="text-sm text-muted-foreground">Startup Founder</p>
+              <p className="font-semibold">​Kuldeep</p>
+              <p className="text-sm text-muted-foreground">​Content Creator </p>
             </div>
           </div>
 
@@ -130,10 +130,10 @@ const Testimonials = () => {
               <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
               <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
             </div>
-            <p className="text-muted-foreground italic">&ldquo;Exceptional work that elevated our entire content strategy. Worth every penny!&rdquo;</p>
+            <p className="text-muted-foreground italic">“I am a doctor and I post medical informative reels, these guys didn't just do the job, they wanted every single medical info to be right and got confirmation on any doubts before putting them into the context of the video, they had no wrong or misleading info peeking into the reels, not even any unrelated stock footage or photos”</p>
             <div>
-              <p className="font-semibold">Jessica Wang</p>
-              <p className="text-sm text-muted-foreground">“I wanted reels in bulk, like 2 reels a day. When a lot of people told that was too much work, these guys delivered it on time everyday and eventually they started managing my entire page”</p>
+              <p className="font-semibold">​Dr Monika Rajput </p>
+              <p className="text-sm text-muted-foreground">​Content Creator (Doctor) </p>
             </div>
           </div>
 
