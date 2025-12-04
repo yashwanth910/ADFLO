@@ -1,6 +1,5 @@
 import { Play } from "lucide-react";
 import { useState } from "react";
-import VideoModal from "./VideoModal";
 import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape2 from "@/assets/geometric-shape-2.png";
 import geometricShape3 from "@/assets/geometric-shape-3.png";
@@ -11,31 +10,12 @@ interface WorkGridVideoProps {
 }
 
 const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
-  const [selectedVideo, setSelectedVideo] = useState<{
-    url: string;
-    title: string;
-    isYouTube?: boolean;
-    isVimeo?: boolean;
-  } | null>(null);
-
-  // Helper to detect video platform
-  const detectPlatform = (url: string) => {
-    const isYouTube = url.includes('youtube.com') || url.includes('youtu.be');
-    const isVimeo = url.includes('vimeo.com');
-    return { isYouTube, isVimeo };
-  };
-
-  const handleCardClick = (cardElement: HTMLElement) => {
-    const videoUrl = cardElement.getAttribute('data-video-url') || '';
-    const videoTitle = cardElement.getAttribute('data-video-title') || '';
-    const { isYouTube, isVimeo } = detectPlatform(videoUrl);
-    setSelectedVideo({ url: videoUrl, title: videoTitle, isYouTube, isVimeo });
-  };
+  const [modalOpen, setModalOpen] = useState<number | null>(null);
 
   return (
     <>
       <section id={id} className="relative py-32 px-6 overflow-visible">
-        {/* Additional geometric shapes */}
+        {/* Geometric shapes */}
         <img 
           src={geometricShape3}
           alt=""
@@ -46,7 +26,6 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
             WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)"
           }}
         />
-        {/* Geometric shapes - All Editable */}
         <img 
           src={geometricShape1}
           alt=""
@@ -67,125 +46,113 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
             </p>
           </div>
 
-          {/* Grid: 3 top row, 2 centered bottom row - All Static Cards */}
+          {/* Grid: 3 top row, 2 centered bottom row */}
           <div className="relative">
             {/* First Row - 3 Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-              {/* Video Card 1 - EDITABLE: Change data-video-url to your video link, upload thumbnail image */}
+              
+              {/* Video Card 1 - ALL STATIC & EDITABLE */}
               <div
-                data-video-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                data-video-title="Video Project 1"
-                onClick={(e) => handleCardClick(e.currentTarget)}
-                className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden"
+                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
+                onClick={() => setModalOpen(1)}
               >
-                {/* EDITABLE: Upload your thumbnail image here */}
+                {/* EDITABLE: Thumbnail Image - Replace via Visual Editor */}
                 <img 
                   src="/placeholder.svg" 
-                  alt="Video Project 1 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover opacity-30"
+                  alt="Video 01 Thumbnail"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="relative z-10 flex flex-col items-center space-y-2">
-                  <Play className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
-                  {/* EDITABLE: Video title */}
-                  <p className="text-sm font-semibold">Video Project 1</p>
-                  {/* EDITABLE: Video description */}
-                  <p className="text-xs text-muted-foreground">Cinematic storytelling</p>
+                {/* Overlay content */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  {/* EDITABLE: Play Icon */}
+                  <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
+                  {/* EDITABLE: Text Label */}
+                  <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 01 — Ad Edit</p>
                 </div>
               </div>
 
-              {/* Video Card 2 - EDITABLE: Change data-video-url to your video link, upload thumbnail image */}
+              {/* Video Card 2 - ALL STATIC & EDITABLE */}
               <div
-                data-video-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                data-video-title="Video Project 2"
-                onClick={(e) => handleCardClick(e.currentTarget)}
-                className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden"
+                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
+                onClick={() => setModalOpen(2)}
               >
-                {/* EDITABLE: Upload your thumbnail image here */}
+                {/* EDITABLE: Thumbnail Image */}
                 <img 
                   src="/placeholder.svg" 
-                  alt="Video Project 2 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover opacity-30"
+                  alt="Video 02 Thumbnail"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="relative z-10 flex flex-col items-center space-y-2">
-                  <Play className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
-                  {/* EDITABLE: Video title */}
-                  <p className="text-sm font-semibold">Video Project 2</p>
-                  {/* EDITABLE: Video description */}
-                  <p className="text-xs text-muted-foreground">Creative reel</p>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  {/* EDITABLE: Play Icon */}
+                  <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
+                  {/* EDITABLE: Text Label */}
+                  <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 02 — Brand Film</p>
                 </div>
               </div>
 
-              {/* Video Card 3 - EDITABLE: Change data-video-url to your video link, upload thumbnail image */}
+              {/* Video Card 3 - ALL STATIC & EDITABLE */}
               <div
-                data-video-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                data-video-title="Video Project 3"
-                onClick={(e) => handleCardClick(e.currentTarget)}
-                className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden"
+                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
+                onClick={() => setModalOpen(3)}
               >
-                {/* EDITABLE: Upload your thumbnail image here */}
+                {/* EDITABLE: Thumbnail Image */}
                 <img 
                   src="/placeholder.svg" 
-                  alt="Video Project 3 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover opacity-30"
+                  alt="Video 03 Thumbnail"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="relative z-10 flex flex-col items-center space-y-2">
-                  <Play className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
-                  {/* EDITABLE: Video title */}
-                  <p className="text-sm font-semibold">Video Project 3</p>
-                  {/* EDITABLE: Video description */}
-                  <p className="text-xs text-muted-foreground">Brand video</p>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  {/* EDITABLE: Play Icon */}
+                  <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
+                  {/* EDITABLE: Text Label */}
+                  <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 03 — Reel</p>
                 </div>
               </div>
             </div>
 
             {/* Second Row - 2 Centered Cards */}
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {/* Video Card 4 - EDITABLE: Change data-video-url to your video link, upload thumbnail image */}
+              
+              {/* Video Card 4 - ALL STATIC & EDITABLE */}
               <div
-                data-video-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                data-video-title="Video Project 4"
-                onClick={(e) => handleCardClick(e.currentTarget)}
-                className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden"
+                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
+                onClick={() => setModalOpen(4)}
               >
-                {/* EDITABLE: Upload your thumbnail image here */}
+                {/* EDITABLE: Thumbnail Image */}
                 <img 
                   src="/placeholder.svg" 
-                  alt="Video Project 4 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover opacity-30"
+                  alt="Video 04 Thumbnail"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="relative z-10 flex flex-col items-center space-y-2">
-                  <Play className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
-                  {/* EDITABLE: Video title */}
-                  <p className="text-sm font-semibold">Video Project 4</p>
-                  {/* EDITABLE: Video description */}
-                  <p className="text-xs text-muted-foreground">Product showcase</p>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  {/* EDITABLE: Play Icon */}
+                  <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
+                  {/* EDITABLE: Text Label */}
+                  <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 04 — Product</p>
                 </div>
               </div>
 
-              {/* Video Card 5 - EDITABLE: Change data-video-url to your video link, upload thumbnail image */}
+              {/* Video Card 5 - ALL STATIC & EDITABLE */}
               <div
-                data-video-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                data-video-title="Video Project 5"
-                onClick={(e) => handleCardClick(e.currentTarget)}
-                className="glass-card p-6 aspect-video flex flex-col items-center justify-center space-y-4 group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden"
+                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
+                onClick={() => setModalOpen(5)}
               >
-                {/* EDITABLE: Upload your thumbnail image here */}
+                {/* EDITABLE: Thumbnail Image */}
                 <img 
                   src="/placeholder.svg" 
-                  alt="Video Project 5 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover opacity-30"
+                  alt="Video 05 Thumbnail"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="relative z-10 flex flex-col items-center space-y-2">
-                  <Play className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
-                  {/* EDITABLE: Video title */}
-                  <p className="text-sm font-semibold">Video Project 5</p>
-                  {/* EDITABLE: Video description */}
-                  <p className="text-xs text-muted-foreground">Social media content</p>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  {/* EDITABLE: Play Icon */}
+                  <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
+                  {/* EDITABLE: Text Label */}
+                  <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 05 — Social</p>
                 </div>
               </div>
             </div>
 
-            {/* Additional Intersecting shapes */}
+            {/* Additional shapes */}
             <img 
               src={geometricShape1}
               alt=""
@@ -200,14 +167,150 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
         </div>
       </section>
 
-      <VideoModal
-        isOpen={!!selectedVideo}
-        onClose={() => setSelectedVideo(null)}
-        videoUrl={selectedVideo?.url || ""}
-        title={selectedVideo?.title || ""}
-        isYouTube={selectedVideo?.isYouTube}
-        isVimeo={selectedVideo?.isVimeo}
-      />
+      {/* Modal 1 - ALL EDITABLE */}
+      {modalOpen === 1 && (
+        <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-6" onClick={() => setModalOpen(null)}>
+          <div className="relative max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
+            <button 
+              className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors"
+              onClick={() => setModalOpen(null)}
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            {/* EDITABLE: Video Source - Upload or paste URL */}
+            <video 
+              src="/placeholder.svg"
+              controls 
+              autoPlay 
+              className="w-full aspect-video rounded-xl bg-black"
+            />
+            <div className="mt-4 text-center">
+              {/* EDITABLE: Modal Title */}
+              <h3 className="text-xl font-bold text-white">Video 01 — Ad Edit</h3>
+              {/* EDITABLE: Modal Description */}
+              <p className="text-sm text-white/60 mt-1">Commercial advertisement edit for brand campaign</p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Modal 2 - ALL EDITABLE */}
+      {modalOpen === 2 && (
+        <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-6" onClick={() => setModalOpen(null)}>
+          <div className="relative max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
+            <button 
+              className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors"
+              onClick={() => setModalOpen(null)}
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            {/* EDITABLE: Video Source */}
+            <video 
+              src="/placeholder.svg"
+              controls 
+              autoPlay 
+              className="w-full aspect-video rounded-xl bg-black"
+            />
+            <div className="mt-4 text-center">
+              {/* EDITABLE: Modal Title */}
+              <h3 className="text-xl font-bold text-white">Video 02 — Brand Film</h3>
+              {/* EDITABLE: Modal Description */}
+              <p className="text-sm text-white/60 mt-1">Cinematic brand storytelling piece</p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Modal 3 - ALL EDITABLE */}
+      {modalOpen === 3 && (
+        <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-6" onClick={() => setModalOpen(null)}>
+          <div className="relative max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
+            <button 
+              className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors"
+              onClick={() => setModalOpen(null)}
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            {/* EDITABLE: Video Source */}
+            <video 
+              src="/placeholder.svg"
+              controls 
+              autoPlay 
+              className="w-full aspect-video rounded-xl bg-black"
+            />
+            <div className="mt-4 text-center">
+              {/* EDITABLE: Modal Title */}
+              <h3 className="text-xl font-bold text-white">Video 03 — Reel</h3>
+              {/* EDITABLE: Modal Description */}
+              <p className="text-sm text-white/60 mt-1">Social media reel content</p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Modal 4 - ALL EDITABLE */}
+      {modalOpen === 4 && (
+        <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-6" onClick={() => setModalOpen(null)}>
+          <div className="relative max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
+            <button 
+              className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors"
+              onClick={() => setModalOpen(null)}
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            {/* EDITABLE: Video Source */}
+            <video 
+              src="/placeholder.svg"
+              controls 
+              autoPlay 
+              className="w-full aspect-video rounded-xl bg-black"
+            />
+            <div className="mt-4 text-center">
+              {/* EDITABLE: Modal Title */}
+              <h3 className="text-xl font-bold text-white">Video 04 — Product</h3>
+              {/* EDITABLE: Modal Description */}
+              <p className="text-sm text-white/60 mt-1">Product showcase video</p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Modal 5 - ALL EDITABLE */}
+      {modalOpen === 5 && (
+        <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-6" onClick={() => setModalOpen(null)}>
+          <div className="relative max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
+            <button 
+              className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors"
+              onClick={() => setModalOpen(null)}
+            >
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            {/* EDITABLE: Video Source */}
+            <video 
+              src="/placeholder.svg"
+              controls 
+              autoPlay 
+              className="w-full aspect-video rounded-xl bg-black"
+            />
+            <div className="mt-4 text-center">
+              {/* EDITABLE: Modal Title */}
+              <h3 className="text-xl font-bold text-white">Video 05 — Social</h3>
+              {/* EDITABLE: Modal Description */}
+              <p className="text-sm text-white/60 mt-1">Social media content piece</p>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 };
