@@ -132,7 +132,7 @@ const Team = () => {
               <p className="text-sm text-muted-foreground mb-3">Graphic-Design Lead</p>
               <div className="flex justify-center items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
-                <a href="mailto:bhuvaneshram@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
+                <a href="mailto:bhuvanesh2035@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
                   <Mail className="w-5 h-5" />
                 </a>
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
@@ -155,7 +155,7 @@ const Team = () => {
               <p className="text-sm text-muted-foreground mb-3">Content Strategist</p>
               <div className="flex justify-center items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
-                <a href="mailto:ashieljr@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
+                <a href="mailto:ashielraj05@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
                   <Mail className="w-5 h-5" />
                 </a>
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
