@@ -146,9 +146,9 @@ const Testimonials = () => {
               <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
               <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
             </div>
-            <p className="text-muted-foreground italic">&ldquo;Absolutely transformed my content. The attention to detail and creative vision is unmatched.&rdquo;</p>
+            <p className="text-muted-foreground italic">“Absolutely transformed my content. The attention to detail and creative vision is unmatched, I thought this would be just another editing gig coz they told they'll deliver the video within 2 days, but then the results were awesome. No careless misses, loved their dedication and attention to detail”</p>
             <div>
-              <p className="font-semibold">Sarah Chen</p>
+              <p className="font-semibold">​Chandru </p>
               <p className="text-sm text-muted-foreground">Content Creator</p>
             </div>
           </div>
@@ -160,10 +160,10 @@ const Testimonials = () => {
               <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
               <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
             </div>
-            <p className="text-muted-foreground italic">&ldquo;Professional, efficient, and incredibly talented. Our brand has never looked better.&rdquo;</p>
+            <p className="text-muted-foreground italic">“These guys were a recommendation form a friend of mine, they are still young and in college but the amount of work and dedication they put in is unmatched.”</p>
             <div>
-              <p className="font-semibold">Marcus Rodriguez</p>
-              <p className="text-sm text-muted-foreground">Brand Director</p>
+              <p className="font-semibold">​Swetha</p>
+              <p className="text-sm text-muted-foreground">​Metro Cafe - Manager </p>
             </div>
           </div>
           <div className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]">
