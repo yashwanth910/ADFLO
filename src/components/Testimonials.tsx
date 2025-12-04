@@ -133,7 +133,7 @@ const Testimonials = () => {
             <p className="text-muted-foreground italic">&ldquo;Exceptional work that elevated our entire content strategy. Worth every penny!&rdquo;</p>
             <div>
               <p className="font-semibold">Jessica Wang</p>
-              <p className="text-sm text-muted-foreground">Creative Director</p>
+              <p className="text-sm text-muted-foreground">“I wanted reels in bulk, like 2 reels a day. When a lot of people told that was too much work, these guys delivered it on time everyday and eventually they started managing my entire page”</p>
             </div>
           </div>
 
