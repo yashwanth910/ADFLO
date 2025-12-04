@@ -311,9 +311,9 @@ const Team = () => {
                 <h3 className="text-3xl font-bold">Ashiel JR</h3>
                 <p className="text-lg text-muted-foreground">Content Strategist</p>
                 <p className="text-muted-foreground">Developing content strategy and creative direction for all projects.</p>
-                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:ashieljr@gmail.com">
+                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:ashielraj05@gmail.com">
                   <Mail className="w-4 h-4" />
-                  ashieljr@gmail.com
+                  ashielraj05@gmail.com
                 </a>
               </div>
             </div>
