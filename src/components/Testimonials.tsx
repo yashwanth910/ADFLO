@@ -183,7 +183,7 @@ const Testimonials = () => {
               <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
             </div>
             <p className="text-muted-foreground italic">
-              "Loved the dedication of the team, some days work went on till 3 AM in the nights and the video got delivered on time in the morning"
+              &quot;Loved the dedication of the team, some days work went on till 3 AM in the nights and the video got delivered on time in the morning, they are the ones who manage my other clothing brand called Aswathi too&quot;
             </p>
             <div>
               <p className="font-semibold">Nithin</p>
