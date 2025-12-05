@@ -2,17 +2,13 @@ import { Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape3 from "@/assets/geometric-shape-3.png";
-
 const Testimonials = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isPaused, setIsPaused] = useState(false);
-
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
-
     let animationId: number;
-
     const scroll = () => {
       if (!isPaused && scrollContainer) {
         scrollContainer.scrollLeft += 0.5;
@@ -25,38 +21,26 @@ const Testimonials = () => {
       }
       animationId = requestAnimationFrame(scroll);
     };
-
     animationId = requestAnimationFrame(scroll);
-
     return () => {
       cancelAnimationFrame(animationId);
     };
   }, [isPaused]);
 
   // Card component - hover only animates, click toggles pause
-  const ReviewCard = ({ children }: { children: React.ReactNode }) => (
-    <div
-      className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px] cursor-pointer"
-      onClick={() => setIsPaused(!isPaused)}
-    >
+  const ReviewCard = ({
+    children
+  }: {
+    children: React.ReactNode;
+  }) => <div className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px] cursor-pointer" onClick={() => setIsPaused(!isPaused)}>
       {children}
-    </div>
-  );
-
-  return (
-    <section className="relative py-32 overflow-hidden">
+    </div>;
+  return <section className="relative py-32 overflow-hidden">
       {/* Geometric shapes - All Editable */}
-      <img
-        src={geometricShape1}
-        alt=""
-        className="geometric-shape top-32 right-[12%] w-80 h-80 opacity-[0.04] blur-3xl"
-      />
-      <img
-        src={geometricShape3}
-        alt=""
-        className="geometric-shape bottom-20 left-[10%] w-72 h-72 opacity-[0.05] blur-2xl"
-        style={{ transform: "rotate(45deg)" }}
-      />
+      <img src={geometricShape1} alt="" className="geometric-shape top-32 right-[12%] w-80 h-80 opacity-[0.04] blur-3xl" />
+      <img src={geometricShape3} alt="" className="geometric-shape bottom-20 left-[10%] w-72 h-72 opacity-[0.05] blur-2xl" style={{
+      transform: "rotate(45deg)"
+    }} />
 
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 space-y-4">
@@ -68,17 +52,15 @@ const Testimonials = () => {
       </div>
 
       {/* Full-width scrolling container */}
-      <div
-        ref={scrollRef}
-        className="overflow-x-hidden relative"
-        style={{
-          scrollbarWidth: "none",
-          msOverflowStyle: "none",
-          paddingTop: "100px",
-          paddingBottom: "100px",
-        }}
-      >
-        <div className="flex gap-8 px-0" style={{ width: "max-content" }}>
+      <div ref={scrollRef} className="overflow-x-hidden relative" style={{
+      scrollbarWidth: "none",
+      msOverflowStyle: "none",
+      paddingTop: "100px",
+      paddingBottom: "100px"
+    }}>
+        <div className="flex gap-8 px-0" style={{
+        width: "max-content"
+      }}>
           {/* ===== ORIGINAL 6 REVIEW CARDS - ALL EDITABLE ===== */}
 
           {/* Review Card 1 - EDITABLE */}
@@ -145,7 +127,7 @@ const Testimonials = () => {
               <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
             </div>
             <p className="text-muted-foreground italic">
-              "I am a doctor and I post medical informative reels, these guys didn't just do the job, they wanted every single medical info to be right and got confirmation on any doubts before putting them into the context of the video"
+              &quot;I am a doctor and I post medical informative reels, these guys didn't just do the job, they wanted every single medical info to be right and got confirmation on any doubts before putting them into the context of the video, they had no wrong or misleading info peeking into the reels, not even any unrelated stock footage or photos&quot;
             </p>
             <div>
               <p className="font-semibold">Dr Monika Rajput</p>
@@ -300,8 +282,6 @@ const Testimonials = () => {
           </ReviewCard>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Testimonials;
