@@ -145,7 +145,7 @@ const Testimonials = () => {
               <Star className="w-5 h-5 fill-muted-foreground text-muted-foreground" />
             </div>
             <p className="text-muted-foreground italic">
-              "Absolutely transformed my content. The attention to detail and creative vision is unmatched, I thought this would be just another editing gig but then the results were awesome. No careless misses, loved their dedication"
+              &quot;Absolutely transformed my content. The attention to detail and creative vision is unmatched, I thought this would be just another editing gig but then the results were awesome. No careless misses, loved their dedication and attention to detail.&quot;
             </p>
             <div>
               <p className="font-semibold">Chandru</p>
