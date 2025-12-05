@@ -46,7 +46,7 @@ const Testimonials = () => {
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl md:text-5xl font-bold">What Clients Say</h2>
           <p className="text-xl text-muted-foreground">
-            Trusted by creators and brands worldwide
+            ​Hear from some of our closest clients                    
           </p>
         </div>
       </div>
