@@ -164,18 +164,15 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE: Video Source - Upload video file or paste URL */}
+            {/* EDITABLE: Video Source - Change src attribute to your video file/URL */}
             <video
               ref={videoRef1}
+              src="/placeholder.svg"
               controls
               autoPlay
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
-            >
-              {/* EDITABLE: Change this source URL */}
-              <source src="/placeholder.svg" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            />
             <div className="mt-4 text-center">
               {/* EDITABLE: Modal Title */}
               <h3 className="text-xl font-bold text-white">Video 01 — Ad Edit</h3>
@@ -195,17 +192,15 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE: Video Source */}
+            {/* EDITABLE: Video Source - Change src attribute to your video file/URL */}
             <video
               ref={videoRef2}
+              src="/placeholder.svg"
               controls
               autoPlay
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
-            >
-              <source src="/placeholder.svg" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            />
             <div className="mt-4 text-center">
               <h3 className="text-xl font-bold text-white">Video 02 — Brand Film</h3>
               <p className="text-sm text-white/60 mt-1">Cinematic brand storytelling piece</p>
@@ -223,17 +218,15 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE: Video Source */}
+            {/* EDITABLE: Video Source - Change src attribute to your video file/URL */}
             <video
               ref={videoRef3}
+              src="/placeholder.svg"
               controls
               autoPlay
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
-            >
-              <source src="/placeholder.svg" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            />
             <div className="mt-4 text-center">
               <h3 className="text-xl font-bold text-white">Video 03 — Reel</h3>
               <p className="text-sm text-white/60 mt-1">Social media reel content</p>
@@ -251,17 +244,15 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE: Video Source */}
+            {/* EDITABLE: Video Source - Change src attribute to your video file/URL */}
             <video
               ref={videoRef4}
+              src="/placeholder.svg"
               controls
               autoPlay
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
-            >
-              <source src="/placeholder.svg" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            />
             <div className="mt-4 text-center">
               <h3 className="text-xl font-bold text-white">Video 04 — Product</h3>
               <p className="text-sm text-white/60 mt-1">Product showcase video</p>
@@ -279,17 +270,15 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE: Video Source */}
+            {/* EDITABLE: Video Source - Change src attribute to your video file/URL */}
             <video
               ref={videoRef5}
+              src="/placeholder.svg"
               controls
               autoPlay
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
-            >
-              <source src="/placeholder.svg" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            />
             <div className="mt-4 text-center">
               <h3 className="text-xl font-bold text-white">Video 05 — Social</h3>
               <p className="text-sm text-white/60 mt-1">Social media content piece</p>
