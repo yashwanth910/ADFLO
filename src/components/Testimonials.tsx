@@ -33,12 +33,11 @@ const Testimonials = () => {
     };
   }, [isPaused]);
 
-  // Card component for reuse
+  // Card component - hover only animates, click toggles pause
   const ReviewCard = ({ children }: { children: React.ReactNode }) => (
     <div
-      className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px]"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
+      className="glass-card p-8 space-y-6 hover:scale-[1.04] hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 flex-shrink-0 w-[400px] cursor-pointer"
+      onClick={() => setIsPaused(!isPaused)}
     >
       {children}
     </div>
