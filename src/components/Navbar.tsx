@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoPlaceholder from "@/assets/logo-placeholder.png";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const element = document.querySelector(href);
@@ -14,52 +15,97 @@ const Navbar = () => {
       setIsOpen(false);
     }
   };
-  return <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-0 border-b border-border/50" style={{
-    height: '70px'
-  }}>
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-0 border-b border-border/50" style={{ height: '70px' }}>
       <div className="container mx-auto px-6 h-full">
         <div className="flex items-center justify-between h-full">
-          {/* Logo Image - Editable - Rectangular */}
+          {/* Logo - Left */}
           <div className="flex items-center">
-            <img alt="Studio Logo" className="h-12 w-24 object-cover rounded-xl" src="/lovable-uploads/b29e94c7-ea4e-433a-81c3-e23b9b2f3a04.png" />
+            <img
+              alt="Studio Logo"
+              className="h-12 w-24 object-cover rounded-xl"
+              src="/lovable-uploads/b29e94c7-ea4e-433a-81c3-e23b9b2f3a04.png"
+            />
           </div>
 
-          {/* Desktop Navigation - All Static Links */}
-          <div className="hidden lg:flex items-center space-x-8">
-            <a href="#hero" onClick={e => scrollToSection(e, "#hero")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
-              Home
-            </a>
-            <a href="#video-work" onClick={e => scrollToSection(e, "#video-work")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
-              Video Work
-            </a>
-            <a href="#design-work" onClick={e => scrollToSection(e, "#design-work")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
-              Design Work
-            </a>
-            <a href="#about-us" onClick={e => scrollToSection(e, "#about-us")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
-              About Us
-            </a>
-            <a href="#services" onClick={e => scrollToSection(e, "#services")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
-              Services
-            </a>
-            <a href="#pricing" onClick={e => scrollToSection(e, "#pricing")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
-              Pricing
-            </a>
-            <a href="#team" onClick={e => scrollToSection(e, "#team")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
-              Team
-            </a>
-            <a href="#contact" onClick={e => scrollToSection(e, "#contact")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
-              Contact
+          {/* Desktop Navigation - Centered between logo and contact */}
+          <div className="hidden lg:flex items-center justify-center flex-1 px-8">
+            <div className="flex items-center space-x-8">
+              <a href="#hero" onClick={e => scrollToSection(e, "#hero")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
+                Home
+              </a>
+              <a href="#video-work" onClick={e => scrollToSection(e, "#video-work")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
+                Video Work
+              </a>
+              <a href="#design-work" onClick={e => scrollToSection(e, "#design-work")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
+                Design Work
+              </a>
+              <a href="#about-us" onClick={e => scrollToSection(e, "#about-us")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
+                About Us
+              </a>
+              <a href="#services" onClick={e => scrollToSection(e, "#services")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
+                Services
+              </a>
+              <a href="#pricing" onClick={e => scrollToSection(e, "#pricing")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
+                Pricing
+              </a>
+              <a href="#team" onClick={e => scrollToSection(e, "#team")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
+                Team
+              </a>
+            </div>
+          </div>
+
+          {/* Contact Button - Right (Desktop) */}
+          <div className="hidden lg:flex items-center">
+            <a
+              href="#contact"
+              onClick={e => scrollToSection(e, "#contact")}
+              className="relative px-6 py-2 text-sm font-bold text-foreground rounded-full overflow-hidden group"
+            >
+              {/* Rotating glow border */}
+              <span className="absolute inset-0 rounded-full border-2 border-transparent bg-clip-padding">
+                <span className="absolute inset-[-2px] rounded-full animate-spin-slow bg-[conic-gradient(from_0deg,transparent_0deg,transparent_60deg,hsl(var(--foreground)/0.8)_120deg,transparent_180deg,transparent_360deg)]" />
+              </span>
+              {/* Inner background */}
+              <span className="absolute inset-[2px] rounded-full bg-background" />
+              {/* Static border */}
+              <span className="absolute inset-0 rounded-full border border-foreground/30" />
+              {/* Text */}
+              <span className="relative z-10">Contact</span>
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button className="lg:hidden p-2 text-foreground" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile: Menu button (center) and Contact button (right) */}
+          <div className="lg:hidden flex items-center gap-4">
+            {/* Mobile Contact Button */}
+            <a
+              href="#contact"
+              onClick={e => scrollToSection(e, "#contact")}
+              className="relative px-4 py-1.5 text-xs font-bold text-foreground rounded-full overflow-hidden"
+            >
+              <span className="absolute inset-0 rounded-full border-2 border-transparent bg-clip-padding">
+                <span className="absolute inset-[-2px] rounded-full animate-spin-slow bg-[conic-gradient(from_0deg,transparent_0deg,transparent_60deg,hsl(var(--foreground)/0.8)_120deg,transparent_180deg,transparent_360deg)]" />
+              </span>
+              <span className="absolute inset-[2px] rounded-full bg-background" />
+              <span className="absolute inset-0 rounded-full border border-foreground/30" />
+              <span className="relative z-10">Contact</span>
+            </a>
+
+            {/* Menu Button */}
+            <button
+              className="p-2 text-foreground"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
-        {/* Mobile Navigation - Now positioned absolute to avoid being cut off */}
-        {isOpen && <div className="lg:hidden absolute top-full left-0 right-0 glass-card border-t border-border/50 pb-4 pt-4 px-6 space-y-4 animate-fade-up">
+        {/* Mobile Navigation Dropdown */}
+        {isOpen && (
+          <div className="lg:hidden absolute top-full left-0 right-0 glass-card border-t border-border/50 pb-4 pt-4 px-6 space-y-4 animate-fade-up">
             <a href="#hero" onClick={e => scrollToSection(e, "#hero")} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
               Home
             </a>
@@ -81,11 +127,11 @@ const Navbar = () => {
             <a href="#team" onClick={e => scrollToSection(e, "#team")} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
               Team
             </a>
-            <a href="#contact" onClick={e => scrollToSection(e, "#contact")} className="block text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Contact
-            </a>
-          </div>}
+          </div>
+        )}
       </div>
-    </nav>;
+    </nav>
+  );
 };
+
 export default Navbar;
