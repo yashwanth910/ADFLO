@@ -121,3 +121,17 @@ section {
     @apply bg-background text-foreground;
   }
 }
+
+/* Slow spinning animation for contact button glow */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}

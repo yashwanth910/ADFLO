@@ -1,5 +1,5 @@
 import { Play } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState } from "react";
 import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape2 from "@/assets/geometric-shape-2.png";
 import geometricShape3 from "@/assets/geometric-shape-3.png";
@@ -11,13 +11,6 @@ interface WorkGridVideoProps {
 
 const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
   const [modalOpen, setModalOpen] = useState<number | null>(null);
-  
-  // Refs for video elements to control playback
-  const videoRef1 = useRef<HTMLVideoElement>(null);
-  const videoRef2 = useRef<HTMLVideoElement>(null);
-  const videoRef3 = useRef<HTMLVideoElement>(null);
-  const videoRef4 = useRef<HTMLVideoElement>(null);
-  const videoRef5 = useRef<HTMLVideoElement>(null);
 
   const handleCloseModal = () => {
     setModalOpen(null);
@@ -55,31 +48,27 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
           <div className="relative">
             {/* First Row - 3 Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-              {/* Video Card 1 - STATIC & EDITABLE */}
+              {/* Video Card 1 */}
               <div
                 className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
                 onClick={() => setModalOpen(1)}
               >
-                {/* EDITABLE: Thumbnail Image */}
                 <img
                   src="/lovable-uploads/f81e1001-7d19-4959-88e4-f553d5f452fa.jpg"
                   alt="Video 01 Thumbnail"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  {/* EDITABLE: Play Icon */}
                   <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
-                  {/* EDITABLE: Text Label */}
                   <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 01 — Ad Edit</p>
                 </div>
               </div>
 
-              {/* Video Card 2 - STATIC & EDITABLE */}
+              {/* Video Card 2 */}
               <div
                 className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
                 onClick={() => setModalOpen(2)}
               >
-                {/* EDITABLE: Thumbnail Image */}
                 <img
                   src="/placeholder.svg"
                   alt="Video 02 Thumbnail"
@@ -91,12 +80,11 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 </div>
               </div>
 
-              {/* Video Card 3 - STATIC & EDITABLE */}
+              {/* Video Card 3 */}
               <div
                 className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
                 onClick={() => setModalOpen(3)}
               >
-                {/* EDITABLE: Thumbnail Image */}
                 <img
                   src="/placeholder.svg"
                   alt="Video 03 Thumbnail"
@@ -111,12 +99,11 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
 
             {/* Second Row - 2 Centered Cards */}
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {/* Video Card 4 - STATIC & EDITABLE */}
+              {/* Video Card 4 */}
               <div
                 className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
                 onClick={() => setModalOpen(4)}
               >
-                {/* EDITABLE: Thumbnail Image */}
                 <img
                   src="/placeholder.svg"
                   alt="Video 04 Thumbnail"
@@ -128,12 +115,11 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 </div>
               </div>
 
-              {/* Video Card 5 - STATIC & EDITABLE */}
+              {/* Video Card 5 */}
               <div
                 className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
                 onClick={() => setModalOpen(5)}
               >
-                {/* EDITABLE: Thumbnail Image */}
                 <img
                   src="/placeholder.svg"
                   alt="Video 05 Thumbnail"
@@ -153,7 +139,7 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
         </div>
       </section>
 
-      {/* ===== VIDEO MODALS - Each with EDITABLE video source ===== */}
+      {/* ===== VIDEO MODALS - Each with separately editable video source ===== */}
 
       {/* Modal 1 */}
       {modalOpen === 1 && (
@@ -164,19 +150,18 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE: Video Source - Change src attribute to your video file/URL */}
+            {/* EDITABLE VIDEO: Upload or set URL via Visual Edits */}
             <video
-              ref={videoRef1}
-              src="/placeholder.svg"
               controls
               autoPlay
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
-            />
+              poster="/lovable-uploads/f81e1001-7d19-4959-88e4-f553d5f452fa.jpg"
+            >
+              <source src="/placeholder.svg" type="video/mp4" />
+            </video>
             <div className="mt-4 text-center">
-              {/* EDITABLE: Modal Title */}
               <h3 className="text-xl font-bold text-white">Video 01 — Ad Edit</h3>
-              {/* EDITABLE: Modal Description */}
               <p className="text-sm text-white/60 mt-1">Commercial advertisement edit for brand campaign</p>
             </div>
           </div>
@@ -192,15 +177,16 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE: Video Source - Change src attribute to your video file/URL */}
+            {/* EDITABLE VIDEO: Upload or set URL via Visual Edits */}
             <video
-              ref={videoRef2}
-              src="/placeholder.svg"
               controls
               autoPlay
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
-            />
+              poster="/placeholder.svg"
+            >
+              <source src="/placeholder.svg" type="video/mp4" />
+            </video>
             <div className="mt-4 text-center">
               <h3 className="text-xl font-bold text-white">Video 02 — Brand Film</h3>
               <p className="text-sm text-white/60 mt-1">Cinematic brand storytelling piece</p>
@@ -218,15 +204,16 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE: Video Source - Change src attribute to your video file/URL */}
+            {/* EDITABLE VIDEO: Upload or set URL via Visual Edits */}
             <video
-              ref={videoRef3}
-              src="/placeholder.svg"
               controls
               autoPlay
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
-            />
+              poster="/placeholder.svg"
+            >
+              <source src="/placeholder.svg" type="video/mp4" />
+            </video>
             <div className="mt-4 text-center">
               <h3 className="text-xl font-bold text-white">Video 03 — Reel</h3>
               <p className="text-sm text-white/60 mt-1">Social media reel content</p>
@@ -244,15 +231,16 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE: Video Source - Change src attribute to your video file/URL */}
+            {/* EDITABLE VIDEO: Upload or set URL via Visual Edits */}
             <video
-              ref={videoRef4}
-              src="/placeholder.svg"
               controls
               autoPlay
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
-            />
+              poster="/placeholder.svg"
+            >
+              <source src="/placeholder.svg" type="video/mp4" />
+            </video>
             <div className="mt-4 text-center">
               <h3 className="text-xl font-bold text-white">Video 04 — Product</h3>
               <p className="text-sm text-white/60 mt-1">Product showcase video</p>
@@ -270,15 +258,16 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE: Video Source - Change src attribute to your video file/URL */}
+            {/* EDITABLE VIDEO: Upload or set URL via Visual Edits */}
             <video
-              ref={videoRef5}
-              src="/placeholder.svg"
               controls
               autoPlay
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
-            />
+              poster="/placeholder.svg"
+            >
+              <source src="/placeholder.svg" type="video/mp4" />
+            </video>
             <div className="mt-4 text-center">
               <h3 className="text-xl font-bold text-white">Video 05 — Social</h3>
               <p className="text-sm text-white/60 mt-1">Social media content piece</p>
