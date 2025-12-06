@@ -32,25 +32,25 @@ const Navbar = () => {
           {/* Desktop Navigation - Centered between logo and contact */}
           <div className="hidden lg:flex items-center justify-center flex-1 px-8">
             <div className="flex items-center space-x-8">
-              <a href="#hero" onClick={e => scrollToSection(e, "#hero")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
+              <a href="#hero" onClick={e => scrollToSection(e, "#hero")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 hover:scale-110 transition-all duration-300">
                 Home
               </a>
-              <a href="#video-work" onClick={e => scrollToSection(e, "#video-work")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
+              <a href="#video-work" onClick={e => scrollToSection(e, "#video-work")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 hover:scale-110 transition-all duration-300">
                 Video Work
               </a>
-              <a href="#design-work" onClick={e => scrollToSection(e, "#design-work")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
+              <a href="#design-work" onClick={e => scrollToSection(e, "#design-work")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 hover:scale-110 transition-all duration-300">
                 Design Work
               </a>
-              <a href="#about-us" onClick={e => scrollToSection(e, "#about-us")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
+              <a href="#about-us" onClick={e => scrollToSection(e, "#about-us")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 hover:scale-110 transition-all duration-300">
                 About Us
               </a>
-              <a href="#services" onClick={e => scrollToSection(e, "#services")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
+              <a href="#services" onClick={e => scrollToSection(e, "#services")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 hover:scale-110 transition-all duration-300">
                 Services
               </a>
-              <a href="#pricing" onClick={e => scrollToSection(e, "#pricing")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
+              <a href="#pricing" onClick={e => scrollToSection(e, "#pricing")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 hover:scale-110 transition-all duration-300">
                 Pricing
               </a>
-              <a href="#team" onClick={e => scrollToSection(e, "#team")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 transition-all duration-300">
+              <a href="#team" onClick={e => scrollToSection(e, "#team")} className="text-sm text-muted-foreground hover:text-foreground hover:brightness-110 hover:scale-110 transition-all duration-300">
                 Team
               </a>
             </div>
@@ -61,18 +61,18 @@ const Navbar = () => {
             <a
               href="#contact"
               onClick={e => scrollToSection(e, "#contact")}
-              className="relative px-6 py-2 text-sm font-bold text-foreground rounded-full overflow-hidden group"
+              className="relative px-6 py-2 text-sm font-bold text-foreground rounded-full overflow-hidden group hover:scale-105 transition-transform duration-300"
             >
               {/* Rotating glow border */}
               <span className="absolute inset-0 rounded-full border-2 border-transparent bg-clip-padding">
                 <span className="absolute inset-[-2px] rounded-full animate-spin-slow bg-[conic-gradient(from_0deg,transparent_0deg,transparent_60deg,hsl(var(--foreground)/0.8)_120deg,transparent_180deg,transparent_360deg)]" />
               </span>
-              {/* Inner background */}
-              <span className="absolute inset-[2px] rounded-full bg-background" />
+              {/* Inner glassmorphism background */}
+              <span className="absolute inset-[2px] rounded-full bg-background/30 backdrop-blur-md" />
               {/* Static border */}
               <span className="absolute inset-0 rounded-full border border-foreground/30" />
               {/* Text */}
-              <span className="relative z-10">Contact</span>
+              <span className="relative z-10">Contact Us</span>
             </a>
           </div>
 
@@ -87,14 +87,14 @@ const Navbar = () => {
               <span className="absolute inset-0 rounded-full border-2 border-transparent bg-clip-padding">
                 <span className="absolute inset-[-2px] rounded-full animate-spin-slow bg-[conic-gradient(from_0deg,transparent_0deg,transparent_60deg,hsl(var(--foreground)/0.8)_120deg,transparent_180deg,transparent_360deg)]" />
               </span>
-              <span className="absolute inset-[2px] rounded-full bg-background" />
+              <span className="absolute inset-[2px] rounded-full bg-background/30 backdrop-blur-md" />
               <span className="absolute inset-0 rounded-full border border-foreground/30" />
-              <span className="relative z-10">Contact</span>
+              <span className="relative z-10">Contact Us</span>
             </a>
 
             {/* Menu Button */}
             <button
-              className="p-2 text-foreground"
+              className="p-2 text-foreground hover:scale-110 transition-transform duration-300"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle menu"
             >

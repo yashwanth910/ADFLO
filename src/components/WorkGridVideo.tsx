@@ -150,16 +150,15 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE VIDEO: Upload or set URL via Visual Edits */}
+            {/* EDITABLE VIDEO: Upload mp4/mov via Visual Edits src attribute */}
             <video
               controls
               autoPlay
+              src="/lovable-uploads/f81e1001-7d19-4959-88e4-f553d5f452fa.jpg"
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
               poster="/lovable-uploads/f81e1001-7d19-4959-88e4-f553d5f452fa.jpg"
-            >
-              <source src="/placeholder.svg" type="video/mp4" />
-            </video>
+            />
             <div className="mt-4 text-center">
               <h3 className="text-xl font-bold text-white">Video 01 — Ad Edit</h3>
               <p className="text-sm text-white/60 mt-1">Commercial advertisement edit for brand campaign</p>
@@ -177,16 +176,15 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE VIDEO: Upload or set URL via Visual Edits */}
+            {/* EDITABLE VIDEO: Upload mp4/mov via Visual Edits src attribute */}
             <video
               controls
               autoPlay
+              src="/placeholder.svg"
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
               poster="/placeholder.svg"
-            >
-              <source src="/placeholder.svg" type="video/mp4" />
-            </video>
+            />
             <div className="mt-4 text-center">
               <h3 className="text-xl font-bold text-white">Video 02 — Brand Film</h3>
               <p className="text-sm text-white/60 mt-1">Cinematic brand storytelling piece</p>
@@ -204,16 +202,15 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE VIDEO: Upload or set URL via Visual Edits */}
+            {/* EDITABLE VIDEO: Upload mp4/mov via Visual Edits src attribute */}
             <video
               controls
               autoPlay
+              src="/placeholder.svg"
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
               poster="/placeholder.svg"
-            >
-              <source src="/placeholder.svg" type="video/mp4" />
-            </video>
+            />
             <div className="mt-4 text-center">
               <h3 className="text-xl font-bold text-white">Video 03 — Reel</h3>
               <p className="text-sm text-white/60 mt-1">Social media reel content</p>
@@ -231,16 +228,15 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE VIDEO: Upload or set URL via Visual Edits */}
+            {/* EDITABLE VIDEO: Upload mp4/mov via Visual Edits src attribute */}
             <video
               controls
               autoPlay
+              src="/placeholder.svg"
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
               poster="/placeholder.svg"
-            >
-              <source src="/placeholder.svg" type="video/mp4" />
-            </video>
+            />
             <div className="mt-4 text-center">
               <h3 className="text-xl font-bold text-white">Video 04 — Product</h3>
               <p className="text-sm text-white/60 mt-1">Product showcase video</p>
@@ -258,16 +254,15 @@ const WorkGridVideo = ({ id, title }: WorkGridVideoProps) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            {/* EDITABLE VIDEO: Upload or set URL via Visual Edits */}
+            {/* EDITABLE VIDEO: Upload mp4/mov via Visual Edits src attribute */}
             <video
               controls
               autoPlay
+              src="/placeholder.svg"
               className="w-full rounded-xl bg-black"
               style={{ maxHeight: "75vh", objectFit: "contain" }}
               poster="/placeholder.svg"
-            >
-              <source src="/placeholder.svg" type="video/mp4" />
-            </video>
+            />
             <div className="mt-4 text-center">
               <h3 className="text-xl font-bold text-white">Video 05 — Social</h3>
               <p className="text-sm text-white/60 mt-1">Social media content piece</p>
