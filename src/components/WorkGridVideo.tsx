@@ -3,6 +3,41 @@ import { useState } from "react";
 import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape2 from "@/assets/geometric-shape-2.png";
 import geometricShape3 from "@/assets/geometric-shape-3.png";
+import VideoModal from "./VideoModal";
+
+const videos = [
+  {
+    id: 1,
+    title: "Video 01 — Ad Edit",
+    thumbnail: "/lovable-uploads/video1-thumb.jpg",
+    videoUrl: "https://cdn.coverr.co/videos/coverr-waves-crashing-near-the-coast-4158/720p.mp4",
+  },
+  {
+    id: 2,
+    title: "Video 02 — Brand Film",
+    thumbnail: "/lovable-uploads/video2-thumb.jpg",
+    videoUrl: "/lovable-uploads/video2.mp4",
+  },
+  {
+    id: 3,
+    title: "Video 03 — Reel",
+    thumbnail: "/lovable-uploads/video3-thumb.jpg",
+    videoUrl: "/lovable-uploads/video3.mp4",
+  },
+  {
+    id: 4,
+    title: "Video 04 — Product",
+    thumbnail: "/lovable-uploads/video4-thumb.jpg",
+    videoUrl: "/lovable-uploads/video4.mp4",
+  },
+  {
+    id: 5,
+    title: "Video 05 — Social",
+    thumbnail: "/lovable-uploads/video5-thumb.jpg",
+    videoUrl: "/lovable-uploads/video5.mp4",
+  },
+];
+
 interface WorkGridVideoProps {
   id: string;
   title: string;
@@ -15,6 +50,9 @@ const WorkGridVideo = ({
   const handleCloseModal = () => {
     setModalOpen(null);
   };
+
+  const activeVideo = videos.find(v => v.id === modalOpen);
+
   return <>
       <section id={id} className="relative py-32 px-6 overflow-visible">
         {/* Geometric shapes */}
@@ -40,7 +78,7 @@ const WorkGridVideo = ({
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
               {/* Video Card 1 */}
               <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(1)}>
-                <img src="/lovable-uploads/f81e1001-7d19-4959-88e4-f553d5f452fa.jpg" alt="Video 01 Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={videos[0].thumbnail} alt="Video 01 Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
                   <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 01 — Ad Edit</p>
@@ -49,7 +87,7 @@ const WorkGridVideo = ({
 
               {/* Video Card 2 */}
               <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(2)}>
-                <img alt="Video 02 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/1f6759a5-a72c-4ef3-9533-eac76be78f59.jpg" />
+                <img alt="Video 02 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src={videos[1].thumbnail} />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
                   <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 02 — Brand Film</p>
@@ -58,7 +96,7 @@ const WorkGridVideo = ({
 
               {/* Video Card 3 */}
               <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(3)}>
-                <img src="/placeholder.svg" alt="Video 03 Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={videos[2].thumbnail} alt="Video 03 Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
                   <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 03 — Reel</p>
@@ -70,7 +108,7 @@ const WorkGridVideo = ({
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {/* Video Card 4 */}
               <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(4)}>
-                <img src="/placeholder.svg" alt="Video 04 Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={videos[3].thumbnail} alt="Video 04 Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
                   <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 04 — Product</p>
@@ -79,7 +117,7 @@ const WorkGridVideo = ({
 
               {/* Video Card 5 */}
               <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(5)}>
-                <img src="/placeholder.svg" alt="Video 05 Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
+                <img src={videos[4].thumbnail} alt="Video 05 Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
                   <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 05 — Social</p>
@@ -94,107 +132,13 @@ const WorkGridVideo = ({
         </div>
       </section>
 
-      {/* ===== VIDEO MODALS - Each with separately editable video source ===== */}
-
-      {/* Modal 1 */}
-      {modalOpen === 1 && <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-6" onClick={handleCloseModal}>
-          <div className="relative max-w-5xl w-full" onClick={e => e.stopPropagation()}>
-            <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={handleCloseModal}>
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            {/* EDITABLE VIDEO: Upload mp4/mov via Visual Edits src attribute */}
-            <video controls autoPlay src="/lovable-uploads/f81e1001-7d19-4959-88e4-f553d5f452fa.jpg" className="w-full rounded-xl bg-black" style={{
-          maxHeight: "75vh",
-          objectFit: "contain"
-        }} poster="/lovable-uploads/f81e1001-7d19-4959-88e4-f553d5f452fa.jpg" />
-            <div className="mt-4 text-center">
-              <h3 className="text-xl font-bold text-white">Video 01 — Ad Edit</h3>
-              <p className="text-sm text-white/60 mt-1">Commercial advertisement edit for brand campaign</p>
-            </div>
-          </div>
-        </div>}
-
-      {/* Modal 2 */}
-      {modalOpen === 2 && <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-6" onClick={handleCloseModal}>
-          <div className="relative max-w-5xl w-full" onClick={e => e.stopPropagation()}>
-            <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={handleCloseModal}>
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            {/* EDITABLE VIDEO: Upload mp4/mov via Visual Edits src attribute */}
-            <video controls autoPlay src="/placeholder.svg" className="w-full rounded-xl bg-black" style={{
-          maxHeight: "75vh",
-          objectFit: "contain"
-        }} poster="/placeholder.svg" />
-            <div className="mt-4 text-center">
-              <h3 className="text-xl font-bold text-white">Video 02 — Brand Film</h3>
-              <p className="text-sm text-white/60 mt-1">Cinematic brand storytelling piece</p>
-            </div>
-          </div>
-        </div>}
-
-      {/* Modal 3 */}
-      {modalOpen === 3 && <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-6" onClick={handleCloseModal}>
-          <div className="relative max-w-5xl w-full" onClick={e => e.stopPropagation()}>
-            <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={handleCloseModal}>
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            {/* EDITABLE VIDEO: Upload mp4/mov via Visual Edits src attribute */}
-            <video controls autoPlay src="/placeholder.svg" className="w-full rounded-xl bg-black" style={{
-          maxHeight: "75vh",
-          objectFit: "contain"
-        }} poster="/placeholder.svg" />
-            <div className="mt-4 text-center">
-              <h3 className="text-xl font-bold text-white">Video 03 — Reel</h3>
-              <p className="text-sm text-white/60 mt-1">Social media reel content</p>
-            </div>
-          </div>
-        </div>}
-
-      {/* Modal 4 */}
-      {modalOpen === 4 && <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-6" onClick={handleCloseModal}>
-          <div className="relative max-w-5xl w-full" onClick={e => e.stopPropagation()}>
-            <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={handleCloseModal}>
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            {/* EDITABLE VIDEO: Upload mp4/mov via Visual Edits src attribute */}
-            <video controls autoPlay src="/placeholder.svg" className="w-full rounded-xl bg-black" style={{
-          maxHeight: "75vh",
-          objectFit: "contain"
-        }} poster="/placeholder.svg" />
-            <div className="mt-4 text-center">
-              <h3 className="text-xl font-bold text-white">Video 04 — Product</h3>
-              <p className="text-sm text-white/60 mt-1">Product showcase video</p>
-            </div>
-          </div>
-        </div>}
-
-      {/* Modal 5 */}
-      {modalOpen === 5 && <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-6" onClick={handleCloseModal}>
-          <div className="relative max-w-5xl w-full" onClick={e => e.stopPropagation()}>
-            <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={handleCloseModal}>
-              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            {/* EDITABLE VIDEO: Upload mp4/mov via Visual Edits src attribute */}
-            <video controls autoPlay src="/placeholder.svg" className="w-full rounded-xl bg-black" style={{
-          maxHeight: "75vh",
-          objectFit: "contain"
-        }} poster="/placeholder.svg" />
-            <div className="mt-4 text-center">
-              <h3 className="text-xl font-bold text-white">Video 05 — Social</h3>
-              <p className="text-sm text-white/60 mt-1">Social media content piece</p>
-            </div>
-          </div>
-        </div>}
+      <VideoModal
+        isOpen={!!activeVideo}
+        onClose={handleCloseModal}
+        videoUrl={activeVideo?.videoUrl || ""}
+        title={activeVideo?.title || ""}
+      />
+      
     </>;
 };
 export default WorkGridVideo;
