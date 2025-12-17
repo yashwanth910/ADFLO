@@ -10,31 +10,37 @@ const videos = [
     id: 1,
     title: "Video 01 — Ad Edit",
     thumbnail: "/lovable-uploads/video1-thumb.jpg",
-    videoUrl: "https://cdn.coverr.co/videos/coverr-waves-crashing-near-the-coast-4158/720p.mp4",
+    videoUrl: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/tcs.vs.pig.farm.mp4",
   },
   {
     id: 2,
     title: "Video 02 — Brand Film",
     thumbnail: "/lovable-uploads/video2-thumb.jpg",
-    videoUrl: "/lovable-uploads/video2.mp4",
+    videoUrl: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/documentary.mp4",
   },
   {
     id: 3,
     title: "Video 03 — Reel",
     thumbnail: "/lovable-uploads/video3-thumb.jpg",
-    videoUrl: "/lovable-uploads/video3.mp4",
+    videoUrl: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/jatti.promo.mp4",
   },
   {
     id: 4,
     title: "Video 04 — Product",
     thumbnail: "/lovable-uploads/video4-thumb.jpg",
-    videoUrl: "/lovable-uploads/video4.mp4",
+    videoUrl: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/thatha.mp4",
   },
   {
     id: 5,
     title: "Video 05 — Social",
     thumbnail: "/lovable-uploads/video5-thumb.jpg",
-    videoUrl: "/lovable-uploads/video5.mp4",
+    videoUrl: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/physiodoc.mp4",
+  },
+  {
+    id: 6,
+    title: "Video 06 — Social",
+    thumbnail: "/lovable-uploads/video5-thumb.jpg",
+    videoUrl: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/doctor.spotlight.recognition.mp4",
   },
 ];
 
@@ -105,7 +111,7 @@ const WorkGridVideo = ({
             </div>
 
             {/* Second Row - 2 Centered Cards */}
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
               {/* Video Card 4 */}
               <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(4)}>
                 <img src={videos[3].thumbnail} alt="Video 04 Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
@@ -121,6 +127,15 @@ const WorkGridVideo = ({
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
                   <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 05 — Social</p>
+                </div>
+              </div>
+
+              {/* Video Card 6 */}
+              <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(6)}>
+                <img alt="Video 06 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src={videos[5].thumbnail} />
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
+                  <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 06 — Brand Film</p>
                 </div>
               </div>
             </div>
