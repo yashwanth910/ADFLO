@@ -135,3 +135,51 @@ section {
 .animate-spin-slow {
   animation: spin-slow 3s linear infinite;
 }
+
+@keyframes rotate-glow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Outer glow wrapper */
+.nav-glow-wrapper {
+  position: absolute;
+  inset: -0.5px; /* 👈 outer edge */
+  border-radius: 9999px;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+
+
+/* Rotating comet */
+.nav-glow-rotator {
+  position: absolute;
+  inset: -50%;
+  animation: rotate-glow 4s linear infinite;
+
+  background: conic-gradient(
+  from 0deg,
+  transparent 0deg,
+  rgba(255,255,255,0.25) 65deg,
+  rgba(255,255,255,1) 110deg,
+  rgba(255,255,255,0.35) 150deg,
+  transparent 210deg,
+  transparent 360deg
+);
+
+}
+
+@media (max-width: 640px) {
+  .nav-glow-rotator {
+    animation-duration: 7s;
+  }
+
+  .nav-glow-wrapper {
+    inset: -0.4px;
+  }
+}

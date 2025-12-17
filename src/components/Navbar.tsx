@@ -58,39 +58,86 @@ const Navbar = () => {
 
           {/* Contact Button - Right (Desktop) */}
           <div className="hidden lg:flex items-center">
-            <a
-              href="#contact"
-              onClick={e => scrollToSection(e, "#contact")}
-              className="relative px-6 py-2 text-sm font-bold text-foreground rounded-full overflow-hidden group hover:scale-105 transition-transform duration-300"
-            >
-              {/* Rotating glow border */}
-              <span className="absolute inset-0 rounded-full border-2 border-transparent bg-clip-padding">
-                <span className="absolute inset-[-2px] rounded-full animate-spin-slow bg-[conic-gradient(from_0deg,transparent_0deg,transparent_60deg,hsl(var(--foreground)/0.8)_120deg,transparent_180deg,transparent_360deg)]" />
-              </span>
-              {/* Inner glassmorphism background */}
-              <span className="absolute inset-[2px] rounded-full bg-background/30 backdrop-blur-md" />
-              {/* Static border */}
-              <span className="absolute inset-0 rounded-full border border-foreground/30" />
-              {/* Text */}
-              <span className="relative z-10">Contact Us</span>
-            </a>
+<a
+  href="#contact"
+  onClick={e => scrollToSection(e, "#contact")}
+  className="relative inline-flex items-center justify-center px-6 py-2 text-sm font-semibold text-white rounded-full"
+>
+  {/* Rotating glow behind */}
+  <div className="nav-glow-wrapper">
+    <div className="nav-glow-rotator" />
+  </div>
+
+  {/* Opaque dark-purple button */}
+  <span
+  className="absolute inset-[0.5px] rounded-full
+             bg-gradient-to-br
+             from-[#140f1f]
+             via-[#1b1430]
+             to-[#140f1f]"
+/>
+
+
+  {/* Thin static outline */}
+<span
+  className="absolute inset-[0.5px] rounded-full
+             border border-white/10"
+/>
+
+
+
+  {/* Text */}
+  <span className="relative z-10">Contact Us</span>
+</a>
+
+
+
+
           </div>
 
           {/* Mobile: Menu button (center) and Contact button (right) */}
           <div className="lg:hidden flex items-center gap-4">
             {/* Mobile Contact Button */}
             <a
-              href="#contact"
-              onClick={e => scrollToSection(e, "#contact")}
-              className="relative px-4 py-1.5 text-xs font-bold text-foreground rounded-full overflow-hidden"
-            >
-              <span className="absolute inset-0 rounded-full border-2 border-transparent bg-clip-padding">
-                <span className="absolute inset-[-2px] rounded-full animate-spin-slow bg-[conic-gradient(from_0deg,transparent_0deg,transparent_60deg,hsl(var(--foreground)/0.8)_120deg,transparent_180deg,transparent_360deg)]" />
-              </span>
-              <span className="absolute inset-[2px] rounded-full bg-background/30 backdrop-blur-md" />
-              <span className="absolute inset-0 rounded-full border border-foreground/30" />
-              <span className="relative z-10">Contact Us</span>
-            </a>
+  href="#contact"
+  onClick={e => scrollToSection(e, "#contact")}
+  className="
+    relative inline-flex items-center justify-center
+    px-5 py-1.5 text-xs
+    sm:px-6 sm:py-2 sm:text-sm
+    font-semibold text-white rounded-full
+  "
+>
+  {/* Rotating glow behind */}
+  <div className="nav-glow-wrapper">
+    <div className="nav-glow-rotator" />
+  </div>
+
+  {/* Opaque dark-purple button body */}
+  <span
+    className="
+      absolute inset-[0.4px] sm:inset-[0.5px]
+      rounded-full
+      bg-gradient-to-br
+      from-[#140f1f]
+      via-[#1b1430]
+      to-[#140f1f]
+    "
+  />
+
+  {/* Thin static outline */}
+  <span
+    className="
+      absolute inset-[0.4px] sm:inset-[0.5px]
+      rounded-full
+      border border-white/10
+    "
+  />
+
+  {/* Text */}
+  <span className="relative z-10">Contact Us</span>
+</a>
+
 
             {/* Menu Button */}
             <button
