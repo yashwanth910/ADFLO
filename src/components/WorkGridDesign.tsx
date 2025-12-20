@@ -150,7 +150,7 @@ const WorkGridDesign = ({
               </svg>
             </button>
             {/* SEPARATE EDITABLE IMAGE for modal */}
-            <img src="/lovable-uploads/6ad463dc-ea13-45f1-b57a-cb5c0aac1eff.jpg" alt="Design Project 1 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" />
+            <img alt="Design Project 1 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" src="/lovable-uploads/21e3119c-2d5a-4db9-a218-ac926c99c64a.jpg" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 1</h3>
               <p className="text-sm text-muted-foreground">Brand identity design work</p>
