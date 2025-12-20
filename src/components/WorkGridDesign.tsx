@@ -285,6 +285,54 @@ const WorkGridDesign = ({
             </div>
           </div>
         </div>}
+
+        {/* Modal 10 */}
+      {modalOpen === 10 && <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
+          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={e => e.stopPropagation()}>
+            <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={closeModal}>
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img alt="Design Project 10 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" src="/lovable-uploads/3f831250-54e9-4fc1-8c41-cba35cb71c7f.jpg" />
+            <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
+              <h3 className="text-xl font-semibold mb-2">Design Project 10</h3>
+              <p className="text-sm text-muted-foreground">Audition ​Event Flyer </p>
+            </div>
+          </div>
+        </div>}
+
+        {/* Modal 11 */}
+      {modalOpen === 11 && <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
+          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={e => e.stopPropagation()}>
+            <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={closeModal}>
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img alt="Design Project 11 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" src="/lovable-uploads/3f831250-54e9-4fc1-8c41-cba35cb71c7f.jpg" />
+            <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
+              <h3 className="text-xl font-semibold mb-2">Design Project 11</h3>
+              <p className="text-sm text-muted-foreground">​Social Media Post </p>
+            </div>
+          </div>
+        </div>}
+
+        {/* Modal 12 */}
+      {modalOpen === 12 && <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
+          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={e => e.stopPropagation()}>
+            <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={closeModal}>
+              <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img alt="Design Project 12 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" src="/lovable-uploads/3f831250-54e9-4fc1-8c41-cba35cb71c7f.jpg" />
+            <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
+              <h3 className="text-xl font-semibold mb-2">Design Project 12</h3>
+              <p className="text-sm text-muted-foreground">​Logo Design </p>
+            </div>
+          </div>
+        </div>}
     </>;
 };
 export default WorkGridDesign;
