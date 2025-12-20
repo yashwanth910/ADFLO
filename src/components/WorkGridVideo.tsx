@@ -8,38 +8,38 @@ import VideoModal from "./VideoModal";
 const videos = [
   {
     id: 1,
-    title: "Video 01 — Ad Edit",
-    thumbnail: "/lovable-uploads/video1-thumb.jpg",
+    title: "Video 01 — Talking-Head Video",
+    thumbnail: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/pig.fram.thumbnail.jpeg",
     videoUrl: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/tcs.vs.pig.farm.mp4",
   },
   {
     id: 2,
-    title: "Video 02 — Brand Film",
-    thumbnail: "/lovable-uploads/video2-thumb.jpg",
+    title: "Video 02 — Documentary",
+    thumbnail: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/ctr.documentary.thumbnail.jpeg",
     videoUrl: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/documentary.mp4",
   },
   {
     id: 3,
-    title: "Video 03 — Reel",
+    title: "Video 03 — Ad Edit",
     thumbnail: "/lovable-uploads/video3-thumb.jpg",
     videoUrl: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/jatti.promo.mp4",
   },
   {
     id: 4,
-    title: "Video 04 — Product",
-    thumbnail: "/lovable-uploads/video4-thumb.jpg",
+    title: "Video 04 — Talking-Head Video",
+    thumbnail: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/sip.thatha.thumbnail.jpeg",
     videoUrl: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/thatha.mp4",
   },
   {
     id: 5,
-    title: "Video 05 — Social",
-    thumbnail: "/lovable-uploads/video5-thumb.jpg",
+    title: "Video 05 — Brand Feature Showcase",
+    thumbnail: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/physiodoc.thumbnail.jpeg",
     videoUrl: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/physiodoc.mp4",
   },
   {
     id: 6,
-    title: "Video 06 — Social",
-    thumbnail: "/lovable-uploads/video5-thumb.jpg",
+    title: "Video 06 — Spotlight Recognition",
+    thumbnail: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/spotlight.recognition.thumbnail.jpeg",
     videoUrl: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/doctor.spotlight.recognition.mp4",
   },
 ];
@@ -85,27 +85,85 @@ const WorkGridVideo = ({
               {/* Video Card 1 */}
               <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(1)}>
                 <img src={videos[0].thumbnail} alt="Video 01 Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
-                  <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 01 — Ad Edit</p>
+                  <Play
+  className="
+    w-16 h-16
+    text-white/90
+    group-hover:text-white
+    group-hover:scale-110
+    transition-all
+    drop-shadow-[0_6px_18px_rgba(0,0,0,1)]
+  "
+/>
+
+                  <p
+  className="
+    mt-3
+    text-sm
+    font-semibold
+    text-white
+    drop-shadow-[0_4px_10px_rgba(0,0,0,1)]
+  "
+>
+Video 01 — Talking-Head Video</p>
                 </div>
               </div>
 
               {/* Video Card 2 */}
               <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(2)}>
                 <img alt="Video 02 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src={videos[1].thumbnail} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
-                  <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 02 — Brand Film</p>
+                  <Play
+  className="
+    w-16 h-16
+    text-white/90
+    group-hover:text-white
+    group-hover:scale-110
+    transition-all
+    drop-shadow-[0_6px_18px_rgba(0,0,0,1)]
+  "
+/>
+
+                  <p
+  className="
+    mt-3
+    text-sm
+    font-semibold
+    text-white
+    drop-shadow-[0_4px_10px_rgba(0,0,0,1)]
+  "
+>Video 02 — Documentary</p>
                 </div>
               </div>
 
               {/* Video Card 3 */}
               <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(3)}>
                 <img src={videos[2].thumbnail} alt="Video 03 Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
-                  <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 03 — Reel</p>
+                  <Play
+  className="
+    w-16 h-16
+    text-white/90
+    group-hover:text-white
+    group-hover:scale-110
+    transition-all
+    drop-shadow-[0_6px_18px_rgba(0,0,0,1)]
+  "
+/>
+
+                 <p
+  className="
+    mt-3
+    text-sm
+    font-semibold
+    text-white
+    drop-shadow-[0_4px_10px_rgba(0,0,0,1)]
+  "
+>Video 03 — Ad Edit</p>
                 </div>
               </div>
             </div>
@@ -115,27 +173,84 @@ const WorkGridVideo = ({
               {/* Video Card 4 */}
               <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(4)}>
                 <img src={videos[3].thumbnail} alt="Video 04 Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
-                  <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 04 — Product</p>
+                  <Play
+  className="
+    w-16 h-16
+    text-white/90
+    group-hover:text-white
+    group-hover:scale-110
+    transition-all
+    drop-shadow-[0_6px_18px_rgba(0,0,0,1)]
+  "
+/>
+
+                  <p
+  className="
+    mt-3
+    text-sm
+    font-semibold
+    text-white
+    drop-shadow-[0_4px_10px_rgba(0,0,0,1)]
+  "
+>Video 04 — Talking-Head Video</p>
                 </div>
               </div>
 
               {/* Video Card 5 */}
               <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(5)}>
                 <img src={videos[4].thumbnail} alt="Video 05 Thumbnail" className="absolute inset-0 w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
-                  <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 05 — Social</p>
+                  <Play
+  className="
+    w-16 h-16
+    text-white/90
+    group-hover:text-white
+    group-hover:scale-110
+    transition-all
+    drop-shadow-[0_6px_18px_rgba(0,0,0,1)]
+  "
+/>
+
+                  <p
+  className="
+    mt-3
+    text-sm
+    font-semibold
+    text-white
+    drop-shadow-[0_4px_10px_rgba(0,0,0,1)]
+  "
+>Video 05 — Brand Feature Showcase</p>
                 </div>
               </div>
 
               {/* Video Card 6 */}
               <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(6)}>
                 <img alt="Video 06 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src={videos[5].thumbnail} />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <Play className="w-16 h-16 text-white/90 group-hover:text-white group-hover:scale-110 transition-all drop-shadow-lg" />
-                  <p className="mt-3 text-sm font-semibold text-white drop-shadow-lg">Video 06 — Brand Film</p>
+                  <Play
+  className="
+    w-16 h-16
+    text-white/90
+    group-hover:text-white
+    group-hover:scale-110
+    transition-all
+    drop-shadow-[0_6px_18px_rgba(0,0,0,1)]
+  "
+/>
+
+                  <p
+  className="
+    mt-3
+    text-sm
+    font-semibold
+    text-white
+    drop-shadow-[0_4px_10px_rgba(0,0,0,1)]
+  "
+>Video 06 — Spotlight Recognition</p>
                 </div>
               </div>
             </div>

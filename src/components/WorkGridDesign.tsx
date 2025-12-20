@@ -179,6 +179,51 @@ const WorkGridDesign = ({ id, title }: WorkGridDesignProps) => {
                   <p className="text-sm font-semibold text-white">Design Project 9</p>
                 </div>
               </div>
+
+              {/* Design Card 10 */}
+              <div
+                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
+                onClick={() => setModalOpen(10)}
+              >
+                <img
+                  alt="Design Project 10 Thumbnail"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  src="/lovable-uploads/120b966a-2478-4876-9624-e343c2c9c626.jpg"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                  <p className="text-sm font-semibold text-white">Design Project 10</p>
+                </div>
+              </div>
+
+              {/* Design Card 11 */}
+              <div
+                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
+                onClick={() => setModalOpen(11)}
+              >
+                <img
+                  alt="Design Project 11 Thumbnail"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  src="/lovable-uploads/120b966a-2478-4876-9624-e343c2c9c626.jpg"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                  <p className="text-sm font-semibold text-white">Design Project 11</p>
+                </div>
+              </div>
+
+              {/* Design Card 12 */}
+              <div
+                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
+                onClick={() => setModalOpen(12)}
+              >
+                <img
+                  alt="Design Project 12 Thumbnail"
+                  className="absolute inset-0 w-full h-full object-cover"
+                  src="/lovable-uploads/120b966a-2478-4876-9624-e343c2c9c626.jpg"
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                  <p className="text-sm font-semibold text-white">Design Project 12</p>
+                </div>
+              </div>
             </div>
 
             {/* Decorative shapes */}
