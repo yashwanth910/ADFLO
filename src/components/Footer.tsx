@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Brand Column */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">FLYN STUDIOS</h3>
+            <h3 className="text-2xl font-bold">​ADFLO.IN</h3>
             <p className="text-sm text-muted-foreground">
               Crafting visual stories that captivate and inspire.
             </p>
