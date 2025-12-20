@@ -214,10 +214,10 @@ const WorkGridDesign = ({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <img src="/placeholder.svg" alt="Design Project 5 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" />
+            <img alt="Design Project 5 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" src="/lovable-uploads/7e78a077-06e6-480d-8724-4dddfe31e4f2.jpg" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 5</h3>
-              <p className="text-sm text-muted-foreground">​Event Flyer</p>
+              <p className="text-sm text-muted-foreground">Creative concepts</p>
             </div>
           </div>
         </div>}
@@ -233,7 +233,7 @@ const WorkGridDesign = ({
             <img src="/placeholder.svg" alt="Design Project 6 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 6</h3>
-              <p className="text-sm text-muted-foreground">Digital artwork</p>
+              <p className="text-sm text-muted-foreground">​LinkedIn Banner</p>
             </div>
           </div>
         </div>}
