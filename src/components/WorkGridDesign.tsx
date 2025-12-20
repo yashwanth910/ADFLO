@@ -310,7 +310,7 @@ const WorkGridDesign = ({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <img alt="Design Project 11 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" src="/lovable-uploads/3f831250-54e9-4fc1-8c41-cba35cb71c7f.jpg" />
+            <img alt="Design Project 11 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" src="/lovable-uploads/cb067773-def1-4ab8-ab2a-83db5427f70b.jpg" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 11</h3>
               <p className="text-sm text-muted-foreground">​Social Media Post </p>
