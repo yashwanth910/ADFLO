@@ -185,7 +185,7 @@ const WorkGridDesign = ({
             <img src="/placeholder.svg" alt="Design Project 3 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 3</h3>
-              <p className="text-sm text-muted-foreground">Social graphics design</p>
+              <p className="text-sm text-muted-foreground">​Brand Design Identity    </p>
             </div>
           </div>
         </div>}
