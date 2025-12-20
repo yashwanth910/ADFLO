@@ -53,7 +53,7 @@ const WorkGridDesign = ({
 
               {/* Design Card 3 */}
               <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(3)}>
-                <img alt="Design Project 3 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/dcaafb1f-ff91-4efa-b2f7-c5f4983003b2.jpg" />
+                <img alt="Design Project 3 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/cb228b35-0266-45f4-a1b4-c1a43becca7a.jpg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <p className="text-sm font-semibold text-white">Design Project 3</p>
                 </div>
@@ -109,7 +109,7 @@ const WorkGridDesign = ({
 
               {/* Design Card 10 */}
               <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(10)}>
-                <img alt="Design Project 10 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/7b321939-0eb5-4c02-a90d-12eaa4f0f77b.png" />
+                <img alt="Design Project 10 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/59c4eb29-2b0a-4af3-9824-f2312dd03584.jpg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <p className="text-sm font-semibold text-white">Design Project 10</p>
                 </div>
