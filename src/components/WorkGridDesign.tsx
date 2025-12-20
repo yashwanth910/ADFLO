@@ -1,40 +1,30 @@
 import { useState } from "react";
 import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape3 from "@/assets/geometric-shape-3.png";
-
 interface WorkGridDesignProps {
   id: string;
   title: string;
 }
-
-const WorkGridDesign = ({ id, title }: WorkGridDesignProps) => {
+const WorkGridDesign = ({
+  id,
+  title
+}: WorkGridDesignProps) => {
   const [modalOpen, setModalOpen] = useState<number | null>(null);
-
   const closeModal = () => {
     setModalOpen(null);
   };
-
-  return (
-    <>
+  return <>
       <section id={id} className="relative py-32 px-6 overflow-visible">
         {/* Geometric shapes */}
-        <img
-          src={geometricShape1}
-          alt=""
-          className="geometric-shape bottom-32 left-[12%] w-72 h-72 opacity-[0.04] blur-3xl"
-          style={{
-            transform: "rotate(200deg)",
-            maskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)",
-            WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)",
-          }}
-        />
+        <img src={geometricShape1} alt="" className="geometric-shape bottom-32 left-[12%] w-72 h-72 opacity-[0.04] blur-3xl" style={{
+        transform: "rotate(200deg)",
+        maskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)",
+        WebkitMaskImage: "radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0) 100%)"
+      }} />
         <img src={geometricShape3} alt="" className="geometric-shape top-32 right-[8%] w-80 h-80 opacity-[0.04] blur-3xl" />
-        <img
-          src={geometricShape1}
-          alt=""
-          className="geometric-shape bottom-20 left-[12%] w-64 h-64 opacity-[0.05] blur-2xl"
-          style={{ transform: "rotate(12deg)" }}
-        />
+        <img src={geometricShape1} alt="" className="geometric-shape bottom-20 left-[12%] w-64 h-64 opacity-[0.05] blur-2xl" style={{
+        transform: "rotate(12deg)"
+      }} />
 
         <div className="container mx-auto">
           <div className="text-center mb-16 space-y-4">
@@ -46,180 +36,96 @@ const WorkGridDesign = ({ id, title }: WorkGridDesignProps) => {
           <div className="relative">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Design Card 1 - Thumbnail editable separately */}
-              <div
-                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
-                onClick={() => setModalOpen(1)}
-              >
-                <img
-                  alt="Design Project 1 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src="/lovable-uploads/e1c96da1-122d-4310-a5ee-e9904cb69a21.jpg"
-                />
+              <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(1)}>
+                <img alt="Design Project 1 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/e1c96da1-122d-4310-a5ee-e9904cb69a21.jpg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <p className="text-sm font-semibold text-white">Design Project 1</p>
                 </div>
               </div>
 
               {/* Design Card 2 */}
-              <div
-                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
-                onClick={() => setModalOpen(2)}
-              >
-                <img
-                  alt="Design Project 2 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src="/lovable-uploads/2f17df63-a1be-4dd3-926a-38a3b412e546.jpg"
-                />
+              <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(2)}>
+                <img alt="Design Project 2 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/2f17df63-a1be-4dd3-926a-38a3b412e546.jpg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <p className="text-sm font-semibold text-white">Design Project 2</p>
                 </div>
               </div>
 
               {/* Design Card 3 */}
-              <div
-                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
-                onClick={() => setModalOpen(3)}
-              >
-                <img
-                  alt="Design Project 3 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src="/lovable-uploads/dcaafb1f-ff91-4efa-b2f7-c5f4983003b2.jpg"
-                />
+              <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(3)}>
+                <img alt="Design Project 3 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/dcaafb1f-ff91-4efa-b2f7-c5f4983003b2.jpg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <p className="text-sm font-semibold text-white">Design Project 3</p>
                 </div>
               </div>
 
               {/* Design Card 4 */}
-              <div
-                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
-                onClick={() => setModalOpen(4)}
-              >
-                <img
-                  alt="Design Project 4 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src="/lovable-uploads/704b5a20-0183-4daa-85e6-9a97085c68e1.jpg"
-                />
+              <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(4)}>
+                <img alt="Design Project 4 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/704b5a20-0183-4daa-85e6-9a97085c68e1.jpg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <p className="text-sm font-semibold text-white">Design Project 4</p>
                 </div>
               </div>
 
               {/* Design Card 5 */}
-              <div
-                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
-                onClick={() => setModalOpen(5)}
-              >
-                <img
-                  alt="Design Project 5 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src="/lovable-uploads/b181ccaf-ead2-41a5-92c0-8dbe69c7fae5.jpg"
-                />
+              <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(5)}>
+                <img alt="Design Project 5 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/b181ccaf-ead2-41a5-92c0-8dbe69c7fae5.jpg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <p className="text-sm font-semibold text-white">Design Project 5</p>
                 </div>
               </div>
 
               {/* Design Card 6 */}
-              <div
-                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
-                onClick={() => setModalOpen(6)}
-              >
-                <img
-                  alt="Design Project 6 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src="/lovable-uploads/13604ad6-fd68-446a-a63a-f600535d29a3.jpg"
-                />
+              <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(6)}>
+                <img alt="Design Project 6 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/13604ad6-fd68-446a-a63a-f600535d29a3.jpg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <p className="text-sm font-semibold text-white">Design Project 6</p>
                 </div>
               </div>
 
               {/* Design Card 7 */}
-              <div
-                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
-                onClick={() => setModalOpen(7)}
-              >
-                <img
-                  alt="Design Project 7 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src="/lovable-uploads/2037c3bd-dacc-430a-bd14-f6caafeb382e.jpg"
-                />
+              <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(7)}>
+                <img alt="Design Project 7 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/2037c3bd-dacc-430a-bd14-f6caafeb382e.jpg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <p className="text-sm font-semibold text-white">Design Project 7</p>
                 </div>
               </div>
 
               {/* Design Card 8 */}
-              <div
-                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
-                onClick={() => setModalOpen(8)}
-              >
-                <img
-                  alt="Design Project 8 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src="/lovable-uploads/120b966a-2478-4876-9624-e343c2c9c626.jpg"
-                />
+              <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(8)}>
+                <img alt="Design Project 8 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/120b966a-2478-4876-9624-e343c2c9c626.jpg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <p className="text-sm font-semibold text-white">Design Project 8</p>
                 </div>
               </div>
 
               {/* Design Card 9 */}
-              <div
-                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
-                onClick={() => setModalOpen(9)}
-              >
-                <img
-                  alt="Design Project 9 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src="/lovable-uploads/46584cef-e925-4141-8951-3fd095aea5d8.jpg"
-                />
+              <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(9)}>
+                <img alt="Design Project 9 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/46584cef-e925-4141-8951-3fd095aea5d8.jpg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <p className="text-sm font-semibold text-white">Design Project 9</p>
                 </div>
               </div>
 
               {/* Design Card 10 */}
-              <div
-                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
-                onClick={() => setModalOpen(10)}
-              >
-                <img
-                  alt="Design Project 10 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src="/lovable-uploads/120b966a-2478-4876-9624-e343c2c9c626.jpg"
-                />
+              <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(10)}>
+                <img alt="Design Project 10 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/7b321939-0eb5-4c02-a90d-12eaa4f0f77b.png" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <p className="text-sm font-semibold text-white">Design Project 10</p>
                 </div>
               </div>
 
               {/* Design Card 11 */}
-              <div
-                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
-                onClick={() => setModalOpen(11)}
-              >
-                <img
-                  alt="Design Project 11 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src="/lovable-uploads/120b966a-2478-4876-9624-e343c2c9c626.jpg"
-                />
+              <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(11)}>
+                <img alt="Design Project 11 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/a9b4a403-0d11-42bb-b1a5-6d4a996f1758.jpg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <p className="text-sm font-semibold text-white">Design Project 11</p>
                 </div>
               </div>
 
               {/* Design Card 12 */}
-              <div
-                className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl"
-                onClick={() => setModalOpen(12)}
-              >
-                <img
-                  alt="Design Project 12 Thumbnail"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  src="/lovable-uploads/120b966a-2478-4876-9624-e343c2c9c626.jpg"
-                />
+              <div className="glass-card aspect-video group hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 cursor-pointer relative overflow-hidden rounded-xl" onClick={() => setModalOpen(12)}>
+                <img alt="Design Project 12 Thumbnail" className="absolute inset-0 w-full h-full object-cover" src="/lovable-uploads/f19b79ac-b588-4579-83ad-05317b83f9a5.jpg" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
                   <p className="text-sm font-semibold text-white">Design Project 12</p>
                 </div>
@@ -236,205 +142,149 @@ const WorkGridDesign = ({ id, title }: WorkGridDesignProps) => {
       {/* ===== MODALS - Each with SEPARATELY editable full image ===== */}
 
       {/* Modal 1 */}
-      {modalOpen === 1 && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
-          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={(e) => e.stopPropagation()}>
+      {modalOpen === 1 && <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
+          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={e => e.stopPropagation()}>
             <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={closeModal}>
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
             {/* SEPARATE EDITABLE IMAGE for modal */}
-            <img
-              src="/lovable-uploads/6ad463dc-ea13-45f1-b57a-cb5c0aac1eff.jpg"
-              alt="Design Project 1 Full"
-              className="max-w-full max-h-[75vh] object-contain rounded-xl"
-            />
+            <img src="/lovable-uploads/6ad463dc-ea13-45f1-b57a-cb5c0aac1eff.jpg" alt="Design Project 1 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 1</h3>
               <p className="text-sm text-muted-foreground">Brand identity design work</p>
             </div>
           </div>
-        </div>
-      )}
+        </div>}
 
       {/* Modal 2 */}
-      {modalOpen === 2 && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
-          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={(e) => e.stopPropagation()}>
+      {modalOpen === 2 && <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
+          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={e => e.stopPropagation()}>
             <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={closeModal}>
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <img
-              src="/placeholder.svg"
-              alt="Design Project 2 Full"
-              className="max-w-full max-h-[75vh] object-contain rounded-xl"
-            />
+            <img src="/placeholder.svg" alt="Design Project 2 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 2</h3>
               <p className="text-sm text-muted-foreground">Visual assets design</p>
             </div>
           </div>
-        </div>
-      )}
+        </div>}
 
       {/* Modal 3 */}
-      {modalOpen === 3 && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
-          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={(e) => e.stopPropagation()}>
+      {modalOpen === 3 && <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
+          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={e => e.stopPropagation()}>
             <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={closeModal}>
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <img
-              src="/placeholder.svg"
-              alt="Design Project 3 Full"
-              className="max-w-full max-h-[75vh] object-contain rounded-xl"
-            />
+            <img src="/placeholder.svg" alt="Design Project 3 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 3</h3>
               <p className="text-sm text-muted-foreground">Social graphics design</p>
             </div>
           </div>
-        </div>
-      )}
+        </div>}
 
       {/* Modal 4 */}
-      {modalOpen === 4 && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
-          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={(e) => e.stopPropagation()}>
+      {modalOpen === 4 && <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
+          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={e => e.stopPropagation()}>
             <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={closeModal}>
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <img
-              src="/placeholder.svg"
-              alt="Design Project 4 Full"
-              className="max-w-full max-h-[75vh] object-contain rounded-xl"
-            />
+            <img src="/placeholder.svg" alt="Design Project 4 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 4</h3>
               <p className="text-sm text-muted-foreground">Marketing materials</p>
             </div>
           </div>
-        </div>
-      )}
+        </div>}
 
       {/* Modal 5 */}
-      {modalOpen === 5 && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
-          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={(e) => e.stopPropagation()}>
+      {modalOpen === 5 && <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
+          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={e => e.stopPropagation()}>
             <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={closeModal}>
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <img
-              src="/placeholder.svg"
-              alt="Design Project 5 Full"
-              className="max-w-full max-h-[75vh] object-contain rounded-xl"
-            />
+            <img src="/placeholder.svg" alt="Design Project 5 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 5</h3>
               <p className="text-sm text-muted-foreground">Creative concepts</p>
             </div>
           </div>
-        </div>
-      )}
+        </div>}
 
       {/* Modal 6 */}
-      {modalOpen === 6 && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
-          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={(e) => e.stopPropagation()}>
+      {modalOpen === 6 && <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
+          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={e => e.stopPropagation()}>
             <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={closeModal}>
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <img
-              src="/placeholder.svg"
-              alt="Design Project 6 Full"
-              className="max-w-full max-h-[75vh] object-contain rounded-xl"
-            />
+            <img src="/placeholder.svg" alt="Design Project 6 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 6</h3>
               <p className="text-sm text-muted-foreground">Digital artwork</p>
             </div>
           </div>
-        </div>
-      )}
+        </div>}
 
       {/* Modal 7 */}
-      {modalOpen === 7 && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
-          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={(e) => e.stopPropagation()}>
+      {modalOpen === 7 && <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
+          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={e => e.stopPropagation()}>
             <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={closeModal}>
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <img
-              src="/placeholder.svg"
-              alt="Design Project 7 Full"
-              className="max-w-full max-h-[75vh] object-contain rounded-xl"
-            />
+            <img src="/placeholder.svg" alt="Design Project 7 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 7</h3>
               <p className="text-sm text-muted-foreground">Print design</p>
             </div>
           </div>
-        </div>
-      )}
+        </div>}
 
       {/* Modal 8 */}
-      {modalOpen === 8 && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
-          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={(e) => e.stopPropagation()}>
+      {modalOpen === 8 && <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
+          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={e => e.stopPropagation()}>
             <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={closeModal}>
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <img
-              src="/placeholder.svg"
-              alt="Design Project 8 Full"
-              className="max-w-full max-h-[75vh] object-contain rounded-xl"
-            />
+            <img src="/placeholder.svg" alt="Design Project 8 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 8</h3>
               <p className="text-sm text-muted-foreground">UI/UX design</p>
             </div>
           </div>
-        </div>
-      )}
+        </div>}
 
       {/* Modal 9 */}
-      {modalOpen === 9 && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
-          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={(e) => e.stopPropagation()}>
+      {modalOpen === 9 && <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-6" onClick={closeModal}>
+          <div className="relative max-w-5xl w-full flex flex-col items-center" onClick={e => e.stopPropagation()}>
             <button className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors" onClick={closeModal}>
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <img
-              src="/placeholder.svg"
-              alt="Design Project 9 Full"
-              className="max-w-full max-h-[75vh] object-contain rounded-xl"
-            />
+            <img src="/placeholder.svg" alt="Design Project 9 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 9</h3>
               <p className="text-sm text-muted-foreground">Illustration work</p>
             </div>
           </div>
-        </div>
-      )}
-    </>
-  );
+        </div>}
+    </>;
 };
-
 export default WorkGridDesign;
