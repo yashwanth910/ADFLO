@@ -246,7 +246,7 @@ const WorkGridDesign = ({
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <img src="/placeholder.svg" alt="Design Project 7 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" />
+            <img alt="Design Project 7 Full" className="max-w-full max-h-[75vh] object-contain rounded-xl" src="/lovable-uploads/dcb31846-62a7-4b6b-b3b8-379cb5d5a926.jpg" />
             <div className="glass-card mt-4 p-4 rounded-lg max-w-2xl text-center">
               <h3 className="text-xl font-semibold mb-2">Design Project 7</h3>
               <p className="text-sm text-muted-foreground">​Tech Meet Flyer</p>
