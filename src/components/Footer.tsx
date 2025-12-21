@@ -27,16 +27,28 @@ const Footer = () => {
           {/* Contact Column */}
           <div className="space-y-4">
             <h4 className="font-semibold">Get in Touch</h4>
-            <a href="mailto:cypher.ark.yt@gmail.com" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <a href="mailto:contact@adflo.in" className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
               <Mail className="w-4 h-4" />
-              cypher.ark.yt@gmail.com
+              contact@adflo.in
             </a>
+            {/* Legal / Info Links */}
+  <div className="pt-2 flex flex-col gap-2 text-sm text-muted-foreground">
+    <a href="/privacy-policy" className="hover:text-foreground transition-colors">
+      Privacy Policy
+    </a>
+    <a href="/terms-and-conditions" className="hover:text-foreground transition-colors">
+      Terms & Conditions
+    </a>
+    <a href="/about" className="hover:text-foreground transition-colors">
+      About
+    </a>
+  </div>
           </div>
         </div>
         
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-white/10 text-center text-sm text-muted-foreground">
-          <p>© 2025 FLYN STUDIOS. All rights reserved.</p>
+          <p>© 2025 ADFLO . All rights reserved.</p>
         </div>
       </div>
     </footer>;

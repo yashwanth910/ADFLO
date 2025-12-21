@@ -39,7 +39,7 @@ const Team = () => {
                 {/* EDITABLE: Left decorative dot */}
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
                 {/* EDITABLE: Mail link - click to edit href */}
-                <a href="mailto:wanth404@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
+                <a href="mailto:yashwanth@adflo.in" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
                   <Mail className="w-5 h-5" />
                 </a>
                 {/* EDITABLE: Right decorative dot */}
@@ -63,7 +63,7 @@ const Team = () => {
               <p className="text-sm text-muted-foreground mb-3">Post-Production Lead</p>
               <div className="flex justify-center items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
-                <a href="mailto:aadarshkrishna585@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
+                <a href="mailto:aadarshkrishna@adflo.in" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
                   <Mail className="w-5 h-5" />
                 </a>
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
@@ -86,7 +86,7 @@ const Team = () => {
               <p className="text-sm text-muted-foreground mb-3">Video-Editing Lead</p>
               <div className="flex justify-center items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
-                <a href="mailto:rahulsabaris7@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
+                <a href="mailto:rahulsabaris@adflo.in" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
                   <Mail className="w-5 h-5" />
                 </a>
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
@@ -109,7 +109,7 @@ const Team = () => {
               <p className="text-sm text-muted-foreground mb-3">Production Manager</p>
               <div className="flex justify-center items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
-                <a href="mailto:kannamukesh2006@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
+                <a href="mailto:mukeshkanna@adflo.in" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
                   <Mail className="w-5 h-5" />
                 </a>
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
@@ -132,7 +132,7 @@ const Team = () => {
               <p className="text-sm text-muted-foreground mb-3">Graphic-Design Lead</p>
               <div className="flex justify-center items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
-                <a href="mailto:bhuvanesh2035@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
+                <a href="mailto:bhuvaneshram@adflo.in" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
                   <Mail className="w-5 h-5" />
                 </a>
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
@@ -155,7 +155,7 @@ const Team = () => {
               <p className="text-sm text-muted-foreground mb-3">Content Strategist</p>
               <div className="flex justify-center items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
-                <a href="mailto:ashielraj05@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
+                <a href="mailto:ashiel@adflo.in" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
                   <Mail className="w-5 h-5" />
                 </a>
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
@@ -186,9 +186,9 @@ const Team = () => {
                 {/* EDITABLE: Bio */}
                 <p className="text-muted-foreground">Deciding the visual direction, overall style, and project tone.</p>
                 {/* EDITABLE: Email link */}
-                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:wanth404@gmail.com">
+                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:yashwanth@adflo.in">
                   <Mail className="w-4 h-4" />
-                  wanth404@gmail.com
+                  yashwanth@adflo.in
                 </a>
               </div>
             </div>
@@ -211,9 +211,9 @@ const Team = () => {
                 <h3 className="text-3xl font-bold">Aadarsh Krishna</h3>
                 <p className="text-lg text-muted-foreground">Post-Production Lead</p>
                 <p className="text-muted-foreground">Supervising the entire editing process, ensuring consistency across all outputs.</p>
-                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:aadarshkrishna585@gmail.com">
+                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:aadarshkrishna@adflo.in">
                   <Mail className="w-4 h-4" />
-                  aadarshkrishna585@gmail.com
+                  aadarshkrishna@adflo.in
                 </a>
               </div>
             </div>
@@ -236,9 +236,9 @@ const Team = () => {
                 <h3 className="text-3xl font-bold">Rahul Sabaris</h3>
                 <p className="text-lg text-muted-foreground">Video-Editing Lead</p>
                 <p className="text-muted-foreground">Supervising the video editing processes and managing the outputs.</p>
-                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:rahulsabaris7@gmail.com">
+                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:rahulsabaris@adflo.in">
                   <Mail className="w-4 h-4" />
-                  rahulsabaris7@gmail.com
+                  rahulsabaris@adflo.in
                 </a>
               </div>
             </div>
@@ -261,9 +261,9 @@ const Team = () => {
                 <h3 className="text-3xl font-bold">Mukesh Kanna</h3>
                 <p className="text-lg text-muted-foreground">Production Manager</p>
                 <p className="text-muted-foreground">Communicating with clients, managing deadlines, revisions, organizing the pipeline.</p>
-                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:kannamukesh2006@gmail.com">
+                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:mukeshkanna@adflo.in">
                   <Mail className="w-4 h-4" />
-                  kannamukesh2006@gmail.com
+                  mukeshkanna@adflo.in
                 </a>
               </div>
             </div>
@@ -286,9 +286,9 @@ const Team = () => {
                 <h3 className="text-3xl font-bold">Bhuvaneshram MR</h3>
                 <p className="text-lg text-muted-foreground">Graphic-Design Lead</p>
                 <p className="text-muted-foreground">Leading all graphic design initiatives and visual branding.</p>
-                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:bhuvanesh2035@gmail.com">
+                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:bhuvaneshram@adflo.in">
                   <Mail className="w-4 h-4" />
-                  bhuvanesh2035@gmail.com
+                  bhuvaneshram@adflo.in
                 </a>
               </div>
             </div>
@@ -311,9 +311,9 @@ const Team = () => {
                 <h3 className="text-3xl font-bold">Ashiel JR</h3>
                 <p className="text-lg text-muted-foreground">Content Strategist</p>
                 <p className="text-muted-foreground">Developing content strategy and creative direction for all projects.</p>
-                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:ashielraj05@gmail.com">
+                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:ashiel@adflo.in">
                   <Mail className="w-4 h-4" />
-                  ashielraj05@gmail.com
+                  ashiel@adflo.in
                 </a>
               </div>
             </div>

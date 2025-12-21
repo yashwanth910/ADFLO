@@ -77,8 +77,8 @@ const Contact = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-muted-foreground pt-4">
             <span className="flex items-center gap-2">
               <span>Email:</span>
-              <a href="mailto:cypher.ark.yt@gmail.com" className="hover:text-foreground transition-colors">
-                cypher.ark.yt@gmail.com
+              <a href="mailto:contact@adflo.in" className="hover:text-foreground transition-colors">
+                contact@adflo.in
               </a>
             </span>
           </div>
