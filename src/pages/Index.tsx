@@ -23,7 +23,7 @@ const Index = () => {
         />
         <meta
           name="keywords"
-          content="video editing, cinematic video, brand films, documentary editing, adflo"
+          content="video editing, cinematic video, brand films, documentary editing, adflo, adflow, ad production"
         />
         <link rel="canonical" href="https://adflo.in/" />
       </Helmet>
