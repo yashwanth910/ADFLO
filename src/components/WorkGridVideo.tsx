@@ -21,7 +21,7 @@ const videos = [
   {
     id: 3,
     title: "Video 03 — Ad Edit",
-    thumbnail: "/lovable-uploads/video3-thumb.jpg",
+    thumbnail: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/jatti.thumbnail.jpeg",
     videoUrl: "https://github.com/yashwanth910/portfolio-media/releases/download/v1/jatti.promo.mp4",
   },
   {
