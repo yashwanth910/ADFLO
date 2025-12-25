@@ -29,10 +29,16 @@ const Contact = () => {
         body: data
       });
 
-      if (error) throw error;
-      
-      toast.success("Message received, we'll contact you soon");
-      (e.target as HTMLFormElement).reset();
+     if (error) throw error;
+
+// ✅ TRACK SUCCESSFUL SUBMISSION
+if (typeof window !== "undefined") {
+  window.va?.track("contact_form_submitted");
+}
+
+toast.success("Message received, we'll contact you soon");
+(e.target as HTMLFormElement).reset();
+ 
     } catch (error) {
       console.error("Form error:", error);
       toast.error("An error occurred. Please try again later.");
