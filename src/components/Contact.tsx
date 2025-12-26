@@ -32,6 +32,7 @@ const Contact = () => {
     headers: {
       "Content-Type": "application/json",
       "Accept": "application/json",
+      "apikey": import.meta.env.VITE_SUPABASE_ANON_KEY,
     },
     body: JSON.stringify(data),
   }
