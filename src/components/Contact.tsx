@@ -23,20 +23,23 @@ const Contact = () => {
     };
 
     try {
-  const { supabase } = await import("@/integrations/supabase/client");
-  
-  const { error } = await supabase.functions.invoke(
-  "send-contact-email",
+  const response = await fetch(
+  "https://swlmvnhnwlhashelnmlt.supabase.co/functions/v1/send-contact-email",
   {
-    body: data,
+    method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
+    body: JSON.stringify(data),
   }
 );
 
+if (!response.ok) {
+  const text = await response.text();
+  console.error("Function error:", text);
+  throw new Error(text);
+}
 
-  if (error) throw error;
 
 
 // ✅ TRACK SUCCESSFUL SUBMISSION
