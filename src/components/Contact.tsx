@@ -37,7 +37,7 @@ const Contact = () => {
     body: JSON.stringify(data),
   }
 );
-
+ 
 if (!response.ok) {
   const text = await response.text();
   console.error("Function error:", text);
