@@ -38,11 +38,13 @@ const Contact = () => {
   }
 );
  
-if (!response.ok) {
-  const text = await response.text();
-  console.error("Function error:", text);
-  throw new Error(text || "Email service error");
+const result = await response.json();
+
+if (!response.ok || !result.success) {
+  console.error("Function error:", result);
+  throw new Error("Email service error");
 }
+
  
 
 
@@ -56,7 +58,7 @@ toast.success("Message received, we'll contact you soon");
  
     } catch (error) {
       console.error("Form error:", error);
-      toast.error("Failed to send message. Please try again or \nEMAIL US DIRECTLY.");
+      toast.error("Failed to send message. Please try again or EMAIL US DIRECTLY.");
     } finally {
       setIsSubmitting(false);
     }
