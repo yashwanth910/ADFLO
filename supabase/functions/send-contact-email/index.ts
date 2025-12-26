@@ -5,9 +5,11 @@ const recipientEmail = Deno.env.get("RECIPIENT_EMAIL");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, apikey, content-type",
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type",
   "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
+
 
 
 interface ContactRequest {
@@ -20,11 +22,7 @@ const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
   return new Response(null, {
     status: 204,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "content-type",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-    },
+    headers: corsHeaders,
   });
 }
 
