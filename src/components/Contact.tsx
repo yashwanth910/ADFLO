@@ -31,6 +31,7 @@ const Contact = () => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "Accept": "application/json",
     },
     body: JSON.stringify(data),
   }
@@ -39,7 +40,7 @@ const Contact = () => {
 if (!response.ok) {
   const text = await response.text();
   console.error("Function error:", text);
-  throw new Error(text);
+  throw new Error("Email service error");
 }
 
 
