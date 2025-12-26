@@ -23,13 +23,20 @@ const Contact = () => {
     };
 
     try {
-      const { supabase } = await import("@/integrations/supabase/client");
-      
-      const { error } = await supabase.functions.invoke("send-contact-email", {
-        body: data
-      });
+  const { supabase } = await import("@/integrations/supabase/client");
+  
+  const { error } = await supabase.functions.invoke(
+    "send-contact-email",
+    {
+      body: data,
+      headers: {
+        apikey: import.meta.env.VITE_SUPABASE_ANON_KEY
+      }
+    }
+  );
 
-     if (error) throw error;
+  if (error) throw error;
+
 
 // ✅ TRACK SUCCESSFUL SUBMISSION
 if (typeof window !== "undefined") {
