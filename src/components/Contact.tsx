@@ -24,44 +24,49 @@ const Contact = () => {
 };
 
 
-    try {
+   try {
   const response = await fetch(
-  "https://swlmvnhnwlhashelnmlt.supabase.co/functions/v1/send-contact-email",
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json",
-      "apikey": import.meta.env.VITE_SUPABASE_ANON_KEY,
-    },
-    body: JSON.stringify(data),
-  }
-);
- 
-const result = await response.json();
-
-if (!response.ok || !result.success) {
-  console.error("Function error:", result);
-  throw new Error("Email service error");
-}
-
- 
-
-
-// ✅ TRACK SUCCESSFUL SUBMISSION
-if (typeof window !== "undefined") {
-  window.va?.track("contact_form_submitted");
-}
-
-toast.success("Message received, we'll contact you soon");
-(e.target as HTMLFormElement).reset();
- 
-    } catch (error) {
-      console.error("Form error:", error);
-      toast.error("Failed to send message. Please try again or EMAIL US DIRECTLY.");
-    } finally {
-      setIsSubmitting(false);
+    "https://swlmvnhnwlhashelnmlt.supabase.co/functions/v1/send-contact-email",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
+      },
+      body: JSON.stringify(data),
     }
+  );
+
+  // ✅ Trust HTTP status
+  if (response.status !== 200) {
+    const text = await response.text();
+    console.error("Function failed:", text);
+    throw new Error("Email service error");
+  }
+
+  // Optional: try reading JSON, but don't depend on it
+  try {
+    const result = await response.json();
+    console.log("Function success:", result);
+  } catch {
+    // Ignore JSON parse issues
+  }
+
+  // ✅ TRACK SUCCESSFUL SUBMISSION (Vercel Analytics)
+  if (typeof window !== "undefined") {
+    window.va?.track("contact_form_submitted");
+  }
+
+  toast.success("Message received, we'll contact you soon");
+  (e.target as HTMLFormElement).reset();
+
+} catch (error) {
+  console.error("Form error:", error);
+  toast.error("Failed to send message. Please try again or EMAIL US DIRECTLY.");
+} finally {
+  setIsSubmitting(false);
+}
+
   };
 
   return (
