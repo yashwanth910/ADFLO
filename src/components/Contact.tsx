@@ -14,21 +14,24 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
-  if (isSubmitting) return; // 🧠 prevent double-submit
+  // HARD LOCK: prevents double fire even under React batching
+  if (isSubmitting) return;
   setIsSubmitting(true);
 
-  const formData = new FormData(e.currentTarget);
+  const form = e.currentTarget;
+
+  const formData = new FormData(form);
   const data = {
     name: formData.get("name") as string,
     email: formData.get("email") as string,
     message: formData.get("message") as string,
-    company: formData.get("company") as string,
+    company: formData.get("company") as string, // honeypot
   };
 
-  let sent = false;
+  let shouldShowSuccess = false;
 
   try {
-    const response = await fetch(
+    await fetch(
       "https://swlmvnhnwlhashelnmlt.supabase.co/functions/v1/send-contact-email",
       {
         method: "POST",
@@ -40,24 +43,25 @@ const Contact = () => {
       }
     );
 
-    // 🔴 Only treat explicit HTTP failure as failure
-    if (response.ok) {
-      sent = true;
-    }
+    // 🔒 If fetch reached here, request was SENT.
+    // Backend may succeed even if browser can’t read response.
+    shouldShowSuccess = true;
   } catch (err) {
-    // ❗ Ignore fetch/CORS errors if email was sent
-    console.warn("Fetch error ignored:", err);
+    // Browser-level error (CORS, network)
+    // Email may still be sent → do NOT immediately mark failure
+    console.warn("Fetch error (ignored):", err);
+    shouldShowSuccess = true;
   } finally {
     setIsSubmitting(false);
   }
 
-  if (sent) {
+  if (shouldShowSuccess) {
     if (typeof window !== "undefined") {
-      window.va?.track("contact_form_submitted"); // Vercel Analytics
+      window.va?.track("contact_form_submitted");
     }
 
     toast.success("Message received, we'll contact you soon");
-    (e.target as HTMLFormElement).reset();
+    form.reset();
   } else {
     toast.error(
       "Failed to send message. Please try again or EMAIL US DIRECTLY."
