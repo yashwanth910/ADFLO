@@ -13,6 +13,8 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
+
+  if (isSubmitting) return; // 🧠 prevent double-submit
   setIsSubmitting(true);
 
   const formData = new FormData(e.currentTarget);
@@ -20,8 +22,10 @@ const Contact = () => {
     name: formData.get("name") as string,
     email: formData.get("email") as string,
     message: formData.get("message") as string,
-    company: formData.get("company") as string, // honeypot
+    company: formData.get("company") as string,
   };
+
+  let sent = false;
 
   try {
     const response = await fetch(
@@ -36,30 +40,31 @@ const Contact = () => {
       }
     );
 
-    if (!response.ok) {
-      const text = await response.text();
-      console.error("Function failed:", response.status, text);
-      throw new Error("Email service error");
+    // 🔴 Only treat explicit HTTP failure as failure
+    if (response.ok) {
+      sent = true;
     }
+  } catch (err) {
+    // ❗ Ignore fetch/CORS errors if email was sent
+    console.warn("Fetch error ignored:", err);
+  } finally {
+    setIsSubmitting(false);
+  }
 
-    // ✅ SUCCESS PATH — STOP HERE
+  if (sent) {
     if (typeof window !== "undefined") {
       window.va?.track("contact_form_submitted"); // Vercel Analytics
     }
 
     toast.success("Message received, we'll contact you soon");
     (e.target as HTMLFormElement).reset();
-
-    return; // 🔴 THIS IS THE IMPORTANT LINE
-  } catch (error) {
-    console.error("Form error:", error);
+  } else {
     toast.error(
       "Failed to send message. Please try again or EMAIL US DIRECTLY."
     );
-  } finally {
-    setIsSubmitting(false);
   }
 };
+
 
 
   return (
