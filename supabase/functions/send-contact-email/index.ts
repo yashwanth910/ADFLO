@@ -42,6 +42,7 @@ const message = body.message ?? "";
       headers: {
         "Authorization": `Bearer ${resendApiKey}`,
         "Content-Type": "application/json",
+        "Accept": "application/json",
       },
       body: JSON.stringify({
         from: "ADFLO <contact@adflo.in>",
