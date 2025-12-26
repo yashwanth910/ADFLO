@@ -17,10 +17,12 @@ const Contact = () => {
 
     const formData = new FormData(e.currentTarget);
     const data = {
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      message: formData.get("message") as string
-    };
+  name: formData.get("name") as string,
+  email: formData.get("email") as string,
+  message: formData.get("message") as string,
+  company: formData.get("company") as string, // honeypot
+};
+
 
     try {
   const response = await fetch(
@@ -52,7 +54,7 @@ toast.success("Message received, we'll contact you soon");
  
     } catch (error) {
       console.error("Form error:", error);
-      toast.error("An error occurred. Please try again later.");
+      toast.error("Failed to send message. Please try again or EMAIL US DIRECTLY.");
     } finally {
       setIsSubmitting(false);
     }
@@ -103,6 +105,14 @@ toast.success("Message received, we'll contact you soon");
 
         <div className="relative z-10 max-w-2xl mx-auto glass-card p-10 hover:shadow-2xl hover:shadow-muted/10 transition-all duration-500">
           <form onSubmit={handleSubmit} className="space-y-6">
+            <input
+  type="text"
+  name="company"
+  tabIndex={-1}
+  autoComplete="off"
+  className="hidden"
+/>
+
             <div className="space-y-2">
               <label htmlFor="name" className="text-sm font-medium">
                 Name

@@ -20,7 +20,20 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { name, email, message }: ContactRequest = await req.json();
+    const body = await req.json();
+
+// 🛑 Honeypot check (bots fill this, humans don't)
+if (body.company) {
+  return new Response(JSON.stringify({ success: true }), {
+    status: 200,
+    headers: corsHeaders,
+  });
+}
+
+const name = body.name ?? "Unknown";
+const email = body.email ?? "no-reply@example.com";
+const message = body.message ?? "";
+
 
     console.log("Sending contact email from:", email, "name:", name);
 
@@ -31,7 +44,7 @@ const handler = async (req: Request): Promise<Response> => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Contact Form <onboarding@resend.dev>",
+        from: "ADFLO <contact@adflo.in>",
         to: [recipientEmail],
         reply_to: email,
         subject: `New Contact Form Message from ${name}`,
