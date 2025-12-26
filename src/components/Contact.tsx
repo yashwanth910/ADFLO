@@ -12,57 +12,55 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  e.preventDefault();
+  setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget);
-    const data = {
-  name: formData.get("name") as string,
-  email: formData.get("email") as string,
-  message: formData.get("message") as string,
-  company: formData.get("company") as string, // honeypot
-};
+  const formData = new FormData(e.currentTarget);
+  const data = {
+    name: formData.get("name") as string,
+    email: formData.get("email") as string,
+    message: formData.get("message") as string,
+    company: formData.get("company") as string, // honeypot
+  };
 
+  try {
+    const response = await fetch(
+      "https://swlmvnhnwlhashelnmlt.supabase.co/functions/v1/send-contact-email",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
+        },
+        body: JSON.stringify(data),
+      }
+    );
 
-   try {
-  const response = await fetch(
-  "https://swlmvnhnwlhashelnmlt.supabase.co/functions/v1/send-contact-email",
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-    },
-    body: JSON.stringify(data),
-  }
-);
+    if (!response.ok) {
+      const text = await response.text();
+      console.error("Function failed:", response.status, text);
+      throw new Error("Email service error");
+    }
 
+    // ✅ SUCCESS PATH — STOP HERE
+    if (typeof window !== "undefined") {
+      window.va?.track("contact_form_submitted"); // Vercel Analytics
+    }
 
-  // 🔥 LOG EVERYTHING
-  console.log("Status:", response.status);
-  console.log("Type:", response.type);
-
-  // 🚨 Treat ANY 2xx as success
-  if (response.status >= 200 && response.status < 300) {
     toast.success("Message received, we'll contact you soon");
     (e.target as HTMLFormElement).reset();
 
-    if (typeof window !== "undefined") {
-      window.va?.track("contact_form_submitted");
-    }
-  } else {
-    throw new Error("Non-2xx response");
+    return; // 🔴 THIS IS THE IMPORTANT LINE
+  } catch (error) {
+    console.error("Form error:", error);
+    toast.error(
+      "Failed to send message. Please try again or EMAIL US DIRECTLY."
+    );
+  } finally {
+    setIsSubmitting(false);
   }
+};
 
-} catch (error) {
-  console.error("Form error:", error);
-  toast.error("Failed to send message. Please try again or EMAIL US DIRECTLY.");
-} finally {
-  setIsSubmitting(false);
-}
-
-
-  };
 
   return (
     <section id="contact" className="relative py-32 px-6 overflow-hidden">
