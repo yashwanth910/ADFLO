@@ -66,8 +66,8 @@ const message = body.message ?? "";
 
 
 
-    const responseData = await emailResponse.json();
-    console.log("Email sent successfully:", responseData);
+    console.log("Email sent successfully");
+
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
