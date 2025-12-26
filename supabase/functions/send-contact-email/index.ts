@@ -5,8 +5,10 @@ const recipientEmail = Deno.env.get("RECIPIENT_EMAIL");
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
+  "Access-Control-Allow-Headers": "authorization, apikey, content-type",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
 };
+
 
 interface ContactRequest {
   name: string;
@@ -16,8 +18,11 @@ interface ContactRequest {
 
 const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
-    return new Response(null, { headers: corsHeaders });
-  }
+  return new Response(null, {
+    status: 204,
+    headers: corsHeaders,
+  });
+}
 
   try {
     const body = await req.json();
@@ -69,13 +74,17 @@ const message = body.message ?? "";
     console.log("Email sent successfully");
 
 
-    return new Response(JSON.stringify({ success: true }), {
-      status: 200,
-      headers: {
-        "Content-Type": "application/json",
-        ...corsHeaders,
-      },
-    });
+    return new Response(
+  JSON.stringify({ success: true }),
+  {
+    status: 200,
+    headers: {
+      ...corsHeaders,
+      "Content-Type": "application/json",
+    },
+  }
+);
+
   } catch (error: any) {
     console.error("Error sending email:", error);
     return new Response(
