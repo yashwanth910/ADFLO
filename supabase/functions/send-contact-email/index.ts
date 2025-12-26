@@ -45,7 +45,7 @@ const message = body.message ?? "";
         "Accept": "application/json",
       },
       body: JSON.stringify({
-        from: "ADFLO <contact@adflo.in>",
+        from: "ADFLO <onboarding@resend.dev>",
         to: [recipientEmail],
         reply_to: email,
         subject: `New Contact Form Message from ${name}`,
