@@ -81,12 +81,7 @@ const message = body.message ?? "";
   JSON.stringify({ success: true }),
   {
     status: 200,
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "content-type",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
-      "Content-Type": "application/json",
-    },
+    headers: corsHeaders,
   }
 );
 
