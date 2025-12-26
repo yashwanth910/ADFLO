@@ -38,11 +38,12 @@ const Contact = () => {
   );
 
   // ✅ Trust HTTP status
-  if (response.status !== 200) {
-    const text = await response.text();
-    console.error("Function failed:", text);
-    throw new Error("Email service error");
-  }
+  if (!response.ok) {
+  const text = await response.text();
+  console.error("Function failed:", text);
+  throw new Error("Email service error");
+}
+
 
   // Optional: try reading JSON, but don't depend on it
   try {
