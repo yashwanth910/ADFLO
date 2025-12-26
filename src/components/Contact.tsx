@@ -37,23 +37,18 @@ const Contact = () => {
     }
   );
 
-  // ✅ Trust HTTP status
+  // ❗ Only failure condition
   if (!response.ok) {
-  const text = await response.text();
-  console.error("Function failed:", text);
-  throw new Error("Email service error");
-}
-
-
-  // Optional: try reading JSON, but don't depend on it
-  try {
-    const result = await response.json();
-    console.log("Function success:", result);
-  } catch {
-    // Ignore JSON parse issues
+    const text = await response.text();
+    console.error("Function failed:", response.status, text);
+    throw new Error("Email service error");
   }
 
-  // ✅ TRACK SUCCESSFUL SUBMISSION (Vercel Analytics)
+  // 🔕 DO NOT parse JSON unless you really need it
+  // Supabase may return 204 No Content
+  console.log("Contact form sent successfully");
+
+  // ✅ Analytics (Vercel only)
   if (typeof window !== "undefined") {
     window.va?.track("contact_form_submitted");
   }
