@@ -30,33 +30,27 @@ const Contact = () => {
     {
       method: "POST",
       headers: {
-  "Content-Type": "application/json",
-  "Authorization": `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
-  "apikey": import.meta.env.VITE_SUPABASE_ANON_KEY,
-},
-
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data),
     }
   );
 
-  // ❗ Only failure condition
-  if (!response.ok) {
-    const text = await response.text();
-    console.error("Function failed:", response.status, text);
-    throw new Error("Email service error");
+  // 🔥 LOG EVERYTHING
+  console.log("Status:", response.status);
+  console.log("Type:", response.type);
+
+  // 🚨 Treat ANY 2xx as success
+  if (response.status >= 200 && response.status < 300) {
+    toast.success("Message received, we'll contact you soon");
+    (e.target as HTMLFormElement).reset();
+
+    if (typeof window !== "undefined") {
+      window.va?.track("contact_form_submitted");
+    }
+  } else {
+    throw new Error("Non-2xx response");
   }
-
-  // 🔕 DO NOT parse JSON unless you really need it
-  // Supabase may return 204 No Content
-  console.log("Contact form sent successfully");
-
-  // ✅ Analytics (Vercel only)
-  if (typeof window !== "undefined") {
-    window.va?.track("contact_form_submitted");
-  }
-
-  toast.success("Message received, we'll contact you soon");
-  (e.target as HTMLFormElement).reset();
 
 } catch (error) {
   console.error("Form error:", error);
@@ -64,6 +58,7 @@ const Contact = () => {
 } finally {
   setIsSubmitting(false);
 }
+
 
   };
 

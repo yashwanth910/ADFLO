@@ -20,9 +20,14 @@ const handler = async (req: Request): Promise<Response> => {
   if (req.method === "OPTIONS") {
   return new Response(null, {
     status: 204,
-    headers: corsHeaders,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "content-type",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+    },
   });
 }
+
 
   try {
     const body = await req.json();
@@ -79,11 +84,14 @@ const message = body.message ?? "";
   {
     status: 200,
     headers: {
-      ...corsHeaders,
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "content-type",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
       "Content-Type": "application/json",
     },
   }
 );
+
 
   } catch (error: any) {
     console.error("Error sending email:", error);
