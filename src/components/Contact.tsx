@@ -43,7 +43,7 @@ if (!response.ok) {
   console.error("Function error:", text);
   throw new Error(text || "Email service error");
 }
-
+ 
 
 
 // ✅ TRACK SUCCESSFUL SUBMISSION
