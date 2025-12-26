@@ -44,7 +44,7 @@ const message = body.message ?? "";
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Contact Form <onboarding@resend.dev>",
+        from: "Contact Form <contact@adflo>",
         to: [recipientEmail],
         reply_to: email,
         subject: `New Contact Form Message from ${name}`,
