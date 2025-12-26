@@ -41,7 +41,7 @@ const Contact = () => {
 if (!response.ok) {
   const text = await response.text();
   console.error("Function error:", text);
-  throw new Error("Email service error");
+  throw new Error(text || "Email service error");
 }
 
 
