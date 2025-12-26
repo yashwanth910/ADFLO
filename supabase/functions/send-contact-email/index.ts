@@ -44,7 +44,7 @@ const message = body.message ?? "";
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Contact Form <contact@adflo>",
+        from: "Contact Form <contact@adflo.in>",
         to: [recipientEmail],
         reply_to: email,
         subject: `New Contact Form Message from ${name}`,
@@ -59,10 +59,12 @@ const message = body.message ?? "";
     });
 
     if (!emailResponse.ok) {
-      const errorData = await emailResponse.text();
-      console.error("Resend API error:", errorData);
-      throw new Error(`Failed to send email: ${errorData}`);
-    }
+  const errorText = await emailResponse.text();
+  console.error("Resend API error:", errorText);
+  throw new Error(errorText);
+}
+
+
 
     const responseData = await emailResponse.json();
     console.log("Email sent successfully:", responseData);

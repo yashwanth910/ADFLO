@@ -56,7 +56,7 @@ toast.success("Message received, we'll contact you soon");
  
     } catch (error) {
       console.error("Form error:", error);
-      toast.error("Failed to send message. Please try again or EMAIL US DIRECTLY.");
+      toast.error("Failed to send message. Please try again or \nEMAIL US DIRECTLY.");
     } finally {
       setIsSubmitting(false);
     }
