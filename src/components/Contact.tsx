@@ -12,6 +12,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    console.count("handleSubmit called");
   e.preventDefault();
 
   if (isSubmitting) return;
