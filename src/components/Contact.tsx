@@ -14,21 +14,18 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
-  // HARD LOCK: prevents double fire even under React batching
   if (isSubmitting) return;
   setIsSubmitting(true);
 
   const form = e.currentTarget;
-
   const formData = new FormData(form);
-  const data = {
-    name: formData.get("name") as string,
-    email: formData.get("email") as string,
-    message: formData.get("message") as string,
-    company: formData.get("company") as string, // honeypot
-  };
 
-  let shouldShowSuccess = false;
+  const payload = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    message: formData.get("message"),
+    company: formData.get("company"), // honeypot
+  };
 
   try {
     await fetch(
@@ -39,35 +36,29 @@ const Contact = () => {
           "Content-Type": "application/json",
           apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       }
     );
 
-    // 🔒 If fetch reached here, request was SENT.
-    // Backend may succeed even if browser can’t read response.
-    shouldShowSuccess = true;
-  } catch (err) {
-    // Browser-level error (CORS, network)
-    // Email may still be sent → do NOT immediately mark failure
-    console.warn("Fetch error (ignored):", err);
-    shouldShowSuccess = true;
-  } finally {
-    setIsSubmitting(false);
-  }
+    // ✅ Always treat as success
+    toast.success("Message received, we'll contact you soon");
 
-  if (shouldShowSuccess) {
     if (typeof window !== "undefined") {
       window.va?.track("contact_form_submitted");
     }
 
-    toast.success("Message received, we'll contact you soon");
     form.reset();
-  } else {
+  } catch (err) {
+    // Extremely rare now
     toast.error(
       "Failed to send message. Please try again or EMAIL US DIRECTLY."
     );
+    console.error(err);
+  } finally {
+    setIsSubmitting(false);
   }
 };
+
 
 
 
