@@ -48,9 +48,9 @@ const Contact = () => {
     // ✅ ONE success path
     toast.success("Message received, we'll contact you soon");
 
-    if (typeof window !== "undefined") {
-      window.va?.track("contact_form_submitted");
-    }
+   // if (typeof window !== "undefined") {
+   //   window.va?.track("contact_form_submitted");
+   // }
 
     form.reset(); // ✅ ALWAYS resets on success
   } catch (error) {
