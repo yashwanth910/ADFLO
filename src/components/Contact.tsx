@@ -3,6 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import palmLeaf2 from "@/assets/palm-leaf-2.png";
 import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape2 from "@/assets/geometric-shape-2.png";
@@ -47,6 +48,7 @@ const Contact = () => {
 
     // ✅ ONE success path
     toast.success("Message received, we'll contact you soon");
+    track("contact_form_submitted");
 
    // if (typeof window !== "undefined") {
    //   window.va?.track("contact_form_submitted");
