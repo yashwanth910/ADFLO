@@ -28,42 +28,39 @@ const Contact = () => {
   };
 
   try {
-    const response = await fetch(
-      "https://swlmvnhnwlhashelnmlt.supabase.co/functions/v1/send-contact-email",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
-        },
-        body: JSON.stringify(payload),
-      }
-    );
-
-    // 🔴 SINGLE SOURCE OF TRUTH
-    if (!response.ok) {
-      const text = await response.text();
-      console.error("Contact function failed:", response.status, text);
-      throw new Error("Contact function failed");
+  const response = await fetch(
+    "https://swlmvnhnwlhashelnmlt.supabase.co/functions/v1/send-contact-email",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
+      },
+      body: JSON.stringify(payload),
     }
+  );
 
-    // ✅ SUCCESS (ONLY HERE)
-    toast.success("Message received, we'll contact you soon");
-
-    if (typeof window !== "undefined") {
-      window.va?.track("contact_form_submitted");
-    }
-
-    form.reset();
-  } catch (error) {
-    console.error("Contact form error:", error);
-    toast.error(
-      "Failed to send message. Please try again or EMAIL US DIRECTLY."
-    );
-
-  } finally {
-    setIsSubmitting(false);
+  if (!response.ok) {
+    throw new Error("Contact function failed");
   }
+
+  toast.dismiss();
+  toast.success("Message received, we'll contact you soon");
+
+  if (typeof window !== "undefined") {
+    window.va?.track("contact_form_submitted");
+  }
+
+  form.reset();
+} catch (error) {
+  toast.dismiss();
+  toast.error(
+    "Failed to send message. Please try again or EMAIL US DIRECTLY."
+  );
+} finally {
+  setIsSubmitting(false);
+}
+
 };
 
   return (
