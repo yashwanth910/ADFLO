@@ -28,40 +28,43 @@ const Contact = () => {
   };
 
   try {
-  const response = await fetch(
-    "https://swlmvnhnwlhashelnmlt.supabase.co/functions/v1/send-contact-email",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
-      },
-      body: JSON.stringify(payload),
+    const response = await fetch(
+      "https://swlmvnhnwlhashelnmlt.supabase.co/functions/v1/send-contact-email",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: import.meta.env.VITE_SUPABASE_ANON_KEY,
+        },
+        body: JSON.stringify(payload),
+      }
+    );
+
+    if (!response.ok) {
+      // ❌ ONE failure path
+      throw new Error("Request failed");
     }
-  );
 
-  if (!response.ok) {
-    throw new Error("Contact function failed");
+    // ✅ ONE success path
+    toast.success("Message received, we'll contact you soon");
+
+    if (typeof window !== "undefined") {
+      window.va?.track("contact_form_submitted");
+    }
+
+    form.reset(); // ✅ ALWAYS resets on success
+  } catch (error) {
+    // ❌ ONLY shown if response.ok === false OR fetch truly fails
+    toast.error(
+      "Failed to send message. Please try again or EMAIL US DIRECTLY."
+    );
+    console.error("Contact form error:", error);
+  } finally {
+    // ✅ ALWAYS unlocks button
+    setIsSubmitting(false);
   }
-
-  toast.dismiss();
-  toast.success("Message received, we'll contact you soon");
-
-  if (typeof window !== "undefined") {
-    window.va?.track("contact_form_submitted");
-  }
-
-  form.reset();
-} catch (error) {
-  toast.dismiss();
-  toast.error(
-    "Failed to send message. Please try again or EMAIL US DIRECTLY."
-  );
-} finally {
-  setIsSubmitting(false);
-}
-
 };
+
 
   return (
     <section id="contact" className="relative py-32 px-6 overflow-hidden">
