@@ -16,16 +16,28 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>ADFLO | Cinematic Video & Design Studio</title>
+        <title>ADFLO | Creative Agency</title>
         <meta
           name="description"
-          content="ADFLO is a creative studio specializing in cinematic video editing, documentaries, brand films, and visual storytelling."
+          content="ADFLO is a creative studio specializing in cinematic video editing, website development, brand films, and visual storytelling."
         />
-        <meta
-          name="keywords"
-          content="video editing, cinematic video, brand films, documentary editing, adflo, adflow, ad production"
-        />
-        <link rel="canonical" href="https://adflo.in/" />
+       <meta name="robots" content="index, follow" />
+       <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="canonical" href="https://www.adflo.in/" />
+
+  <meta property="og:title" content="ADFLO — Visual Storytelling Studio" />
+  <meta
+    property="og:description"
+    content="Crafting cinematic videos, brand films, and digital experiences that captivate and convert."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.adflo.in/" />
+  <meta property="og:image" content="https://www.adflo.in/og-image.png" />
+
+  <meta name="twitter:title" content="ADFLO | Creative Agency" />
+  <meta name="twitter:description" content="Cinematic video & visual storytelling for brands and creators." />
+  <meta name="twitter:image" content="https://www.adflo.in/og-image.png" />
       </Helmet>
 
       <div className="min-h-screen">
