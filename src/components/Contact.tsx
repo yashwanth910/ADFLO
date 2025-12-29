@@ -12,7 +12,6 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    console.count("handleSubmit called");
   e.preventDefault();
 
   if (isSubmitting) return;
@@ -29,7 +28,7 @@ const Contact = () => {
   };
 
   try {
-    await fetch(
+    const response = await fetch(
       "https://swlmvnhnwlhashelnmlt.supabase.co/functions/v1/send-contact-email",
       {
         method: "POST",
@@ -41,7 +40,14 @@ const Contact = () => {
       }
     );
 
-    // ✅ Always treat as success
+    // 🔴 SINGLE SOURCE OF TRUTH
+    if (!response.ok) {
+      const text = await response.text();
+      console.error("Contact function failed:", response.status, text);
+      throw new Error("Contact function failed");
+    }
+
+    // ✅ SUCCESS (ONLY HERE)
     toast.success("Message received, we'll contact you soon");
 
     if (typeof window !== "undefined") {
@@ -49,19 +55,16 @@ const Contact = () => {
     }
 
     form.reset();
-  } catch (err) {
-    // Extremely rare now
+  } catch (error) {
+    console.error("Contact form error:", error);
     toast.error(
       "Failed to send message. Please try again or EMAIL US DIRECTLY."
     );
-    console.error(err);
+
   } finally {
     setIsSubmitting(false);
   }
 };
-
-
-
 
   return (
     <section id="contact" className="relative py-32 px-6 overflow-hidden">
