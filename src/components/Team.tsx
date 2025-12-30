@@ -33,7 +33,7 @@ const Team = () => {
               {/* EDITABLE: Name */}
               <p className="font-semibold text-lg">Yashwanth</p>
               {/* EDITABLE: Role */}
-              <p className="text-sm text-muted-foreground mb-3">Creative Director</p>
+              <p className="text-sm text-muted-foreground mb-3">Founder | Creative Director</p>
               {/* Mail icon with decorative dots - ALL EDITABLE */}
               <div className="flex justify-center items-center gap-3">
                 {/* EDITABLE: Left decorative dot */}
@@ -60,7 +60,7 @@ const Team = () => {
             </div>
             <div className="text-center flex-1 flex flex-col justify-center">
               <p className="font-semibold text-lg">Aadarsh Krishna</p>
-              <p className="text-sm text-muted-foreground mb-3">Post-Production Lead</p>
+              <p className="text-sm text-muted-foreground mb-3">Co-Founder | Post Production Lead</p>
               <div className="flex justify-center items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
                 <a href="mailto:aadarsh@adflo.in" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
@@ -83,7 +83,7 @@ const Team = () => {
             </div>
             <div className="text-center flex-1 flex flex-col justify-center">
               <p className="font-semibold text-lg">Rahul Sabaris</p>
-              <p className="text-sm text-muted-foreground mb-3">Video-Editing Lead</p>
+              <p className="text-sm text-muted-foreground mb-3">Video Editing Lead</p>
               <div className="flex justify-center items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
                 <a href="mailto:rahul@adflo.in" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
@@ -129,7 +129,7 @@ const Team = () => {
             </div>
             <div className="text-center flex-1 flex flex-col justify-center">
               <p className="font-semibold text-lg">Bhuvaneshram MR</p>
-              <p className="text-sm text-muted-foreground mb-3">Graphic-Design Lead</p>
+              <p className="text-sm text-muted-foreground mb-3">Graphic Design Lead</p>
               <div className="flex justify-center items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
                 <a href="mailto:bhuvaneshram@adflo.in" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
@@ -182,7 +182,7 @@ const Team = () => {
                 {/* EDITABLE: Name */}
                 <h3 className="text-3xl font-bold">Yashwanth</h3>
                 {/* EDITABLE: Role */}
-                <p className="text-lg text-muted-foreground">Creative Director</p>
+                <p className="text-lg text-muted-foreground">Founder | Creative Director</p>
                 {/* EDITABLE: Bio */}
                 <p className="text-muted-foreground">Deciding the visual direction, overall style, and project tone.</p>
                 {/* EDITABLE: Email link */}
@@ -209,7 +209,7 @@ const Team = () => {
           }} />
               <div className="flex-1 space-y-4 text-center md:text-left">
                 <h3 className="text-3xl font-bold">Aadarsh Krishna</h3>
-                <p className="text-lg text-muted-foreground">Post-Production Lead</p>
+                <p className="text-lg text-muted-foreground">Co-Founder | Post Production Lead</p>
                 <p className="text-muted-foreground">Supervising the entire editing process, ensuring consistency across all outputs.</p>
                 <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:aadarsh@adflo.in">
                   <Mail className="w-4 h-4" />
@@ -234,7 +234,7 @@ const Team = () => {
           }} />
               <div className="flex-1 space-y-4 text-center md:text-left">
                 <h3 className="text-3xl font-bold">Rahul Sabaris</h3>
-                <p className="text-lg text-muted-foreground">Video-Editing Lead</p>
+                <p className="text-lg text-muted-foreground">Video Editing Lead</p>
                 <p className="text-muted-foreground">Supervising the video editing processes and managing the outputs.</p>
                 <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:rahul@adflo.in">
                   <Mail className="w-4 h-4" />
@@ -284,7 +284,7 @@ const Team = () => {
           }} />
               <div className="flex-1 space-y-4 text-center md:text-left">
                 <h3 className="text-3xl font-bold">Bhuvaneshram MR</h3>
-                <p className="text-lg text-muted-foreground">Graphic-Design Lead</p>
+                <p className="text-lg text-muted-foreground">Graphic Design Lead</p>
                 <p className="text-muted-foreground">Leading all graphic design initiatives and visual branding.</p>
                 <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:bhuvaneshram@adflo.in">
                   <Mail className="w-4 h-4" />
