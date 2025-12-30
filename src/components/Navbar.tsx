@@ -25,7 +25,7 @@ const Navbar = () => {
             <img
               alt="Studio Logo"
               className="h-12 w-24 object-cover rounded-xl"
-              src="/lovable-uploads/b29e94c7-ea4e-433a-81c3-e23b9b2f3a04.png"
+              src="https://github.com/yashwanth910/portfolio-media/releases/download/v1/adflo.logo.on.website.png"
             />
           </div>
 

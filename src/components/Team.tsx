@@ -27,7 +27,7 @@ const Team = () => {
             border: '6px solid rgba(255, 255, 255, 0.08)'
           }}>
               {/* EDITABLE: Team member photo */}
-              <img alt="Team Member 1" className="w-full h-full object-cover" src="/lovable-uploads/26493cc3-4292-4b24-b1a6-c6ab42152007.jpg" />
+              <img alt="Team Member 1" className="w-full h-full object-cover" src="https://github.com/yashwanth910/portfolio-media/releases/download/v1/yash.dp.for.website.jpg" />
             </div>
             <div className="text-center flex-1 flex flex-col justify-center">
               {/* EDITABLE: Name */}
@@ -175,7 +175,7 @@ const Team = () => {
             </button>
             <div className="flex flex-col md:flex-row gap-8 items-center">
               {/* EDITABLE: Modal photo */}
-              <img src="/lovable-uploads/26493cc3-4292-4b24-b1a6-c6ab42152007.jpg" alt="Team Member 1" className="w-48 h-48 rounded-full object-cover" style={{
+              <img src="https://github.com/yashwanth910/portfolio-media/releases/download/v1/yash.dp.for.website.jpg" alt="Team Member 1" className="w-48 h-48 rounded-full object-cover" style={{
             border: '8px solid rgba(255, 255, 255, 0.08)'
           }} />
               <div className="flex-1 space-y-4 text-center md:text-left">
