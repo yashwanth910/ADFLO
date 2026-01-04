@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CheckCircle, Zap, Award, Users, Video, Palette, Sparkles, TrendingUp, ChevronDown } from "lucide-react";
+import { CheckCircle, Zap, Award, Users, Video, Palette, Sparkles, ChevronDown, Globe } from "lucide-react";
 import geometricShape1 from "@/assets/geometric-shape-1.png";
 import geometricShape2 from "@/assets/geometric-shape-2.png";
 const AboutUs = () => {
@@ -95,9 +95,9 @@ const AboutUs = () => {
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {/* Capability Card 4 */}
               <div className="glass-card p-8 space-y-4 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300">
-                <TrendingUp className="w-10 h-10 text-muted-foreground" />
-                <h3 className="text-xl font-semibold">Content Strategy</h3>
-                <p className="text-sm text-muted-foreground">Data-driven creative decisions</p>
+                <Globe className="w-10 h-10 text-muted-foreground" />
+                <h3 className="text-xl font-semibold">​Web Development </h3>
+                <p className="text-sm text-muted-foreground">Functional websites like this and more</p>
               </div>
 
               {/* Capability Card 5 */}

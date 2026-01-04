@@ -1,4 +1,4 @@
-import { Film, Smartphone, Layers, RefreshCw, Award } from "lucide-react";
+import { Film, Smartphone, Layers, Award, Globe } from "lucide-react";
 import geometricShape2 from "@/assets/geometric-shape-2.png";
 import geometricShape3 from "@/assets/geometric-shape-3.png";
 const Services = () => {
@@ -61,9 +61,9 @@ const Services = () => {
 
             {/* Service Card 5 - Content Repurposing */}
             <div className="glass-card p-8 space-y-4 hover:-translate-y-2 hover:shadow-xl hover:shadow-muted/10 transition-all duration-300 group">
-              <RefreshCw className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
-              <h3 className="text-2xl font-semibold">Content Repurposing</h3>
-              <p className="text-muted-foreground">Transform one piece of content into multiple formats across all platforms.</p>
+              <Globe className="w-12 h-12 text-muted-foreground group-hover:text-foreground transition-colors" />
+              <h3 className="text-2xl font-semibold">​Web Development </h3>
+              <p className="text-muted-foreground">Building Stunning and Functional websites that attract and hold traffic.</p>
             </div>
           </div>
 
