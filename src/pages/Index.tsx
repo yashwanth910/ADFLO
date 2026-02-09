@@ -24,7 +24,7 @@ const Index = () => {
        <meta name="robots" content="index, follow" />
        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <link rel="canonical" href="https://www.adflo.in/" />
+        <link rel="canonical" href="https://adflo.in/" />
 
   <meta property="og:title" content="ADFLO — Visual Storytelling Studio" />
   <meta
