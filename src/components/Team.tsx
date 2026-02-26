@@ -132,7 +132,7 @@ const Team = () => {
               <p className="text-sm text-muted-foreground mb-3">Web Development Lead</p>
               <div className="flex justify-center items-center gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
-                <a href="mailto:ram@adflo.in" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
+                <a href="mailto:rampranesh@adflo.in" className="text-muted-foreground hover:text-foreground transition-colors" onClick={e => e.stopPropagation()}>
                   <Mail className="w-5 h-5" />
                 </a>
                 <span className="w-1.5 h-1.5 rounded-full bg-white/20"></span>
@@ -286,9 +286,9 @@ const Team = () => {
                 <h3 className="text-3xl font-bold">Ram Pranesh</h3>
                 <p className="text-lg text-muted-foreground">Web Development Lead</p>
                 <p className="text-muted-foreground">Makes all decisions about the website, ensures development and deployment.</p>
-                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:ram@adflo.in">
+                <a className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors" href="mailto:rampranesh@adflo.in">
                   <Mail className="w-4 h-4" />
-                  ram@adflo.in
+                  rampranesh@adflo.in
                 </a>
               </div>
             </div>
