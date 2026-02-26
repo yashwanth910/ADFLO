@@ -27,7 +27,7 @@ const Team = () => {
             border: '6px solid rgba(255, 255, 255, 0.08)'
           }}>
               {/* EDITABLE: Team member photo */}
-              <img alt="Team Member 1" className="w-full h-full object-cover" src="https://github.com/yashwanth910/portfolio-media/releases/download/v1/yash.dp.for.website.jpg" />
+              <img alt="Team Member 1" className="w-full h-full object-cover" src="https://github.com/yashwanth910/portfolio-media/releases/download/v1/yash.website.dp.png" />
             </div>
             <div className="text-center flex-1 flex flex-col justify-center">
               {/* EDITABLE: Name */}
@@ -125,7 +125,7 @@ const Team = () => {
             <div className="w-[170px] h-[170px] mx-auto rounded-full overflow-hidden" style={{
             border: '6px solid rgba(255, 255, 255, 0.08)'
           }}>
-              <img alt="Team Member 5" className="w-full h-full object-cover" src="/lovable-uploads/31767f83-d52d-4716-9be7-50849a304c92.jpg" />
+              <img alt="Team Member 5" className="w-full h-full object-cover" src="https://github.com/yashwanth910/portfolio-media/releases/download/v1/Picsart_26-02-27_03-23-12-447.png" />
             </div>
             <div className="text-center flex-1 flex flex-col justify-center">
               <p className="font-semibold text-lg">Ram Pranesh</p>
@@ -175,7 +175,7 @@ const Team = () => {
             </button>
             <div className="flex flex-col md:flex-row gap-8 items-center">
               {/* EDITABLE: Modal photo */}
-              <img src="https://github.com/yashwanth910/portfolio-media/releases/download/v1/yash.dp.for.website.jpg" alt="Team Member 1" className="w-48 h-48 rounded-full object-cover" style={{
+              <img src="https://github.com/yashwanth910/portfolio-media/releases/download/v1/yash.website.dp.png" alt="Team Member 1" className="w-48 h-48 rounded-full object-cover" style={{
             border: '8px solid rgba(255, 255, 255, 0.08)'
           }} />
               <div className="flex-1 space-y-4 text-center md:text-left">
@@ -279,7 +279,7 @@ const Team = () => {
               </svg>
             </button>
             <div className="flex flex-col md:flex-row gap-8 items-center">
-              <img src="/lovable-uploads/31767f83-d52d-4716-9be7-50849a304c92.jpg" alt="Team Member 5" className="w-48 h-48 rounded-full object-cover" style={{
+              <img src="https://github.com/yashwanth910/portfolio-media/releases/download/v1/Picsart_26-02-27_03-23-12-447.png" alt="Team Member 5" className="w-48 h-48 rounded-full object-cover" style={{
             border: '8px solid rgba(255, 255, 255, 0.08)'
           }} />
               <div className="flex-1 space-y-4 text-center md:text-left">
